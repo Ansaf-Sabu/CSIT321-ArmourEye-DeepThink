@@ -1,0 +1,2 @@
+Poster[[:space:]]&[[:space:]]Videos/*.mp4 filter=lfs diff=lfs merge=lfs -text
+Poster[[:space:]]&[[:space:]]Videos/*.mov filter=lfs diff=lfs merge=lfs -text

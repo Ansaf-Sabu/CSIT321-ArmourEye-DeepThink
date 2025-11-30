@@ -58,13 +58,13 @@ const scanHistoryFile = path.join(dataDir, 'scan-history.json');
 });
 
 const cleanDirectoryContents = (dirPath) => {
-  if (!fs.existsSync(dirPath)) return;
-  for (const entry of fs.readdirSync(dirPath)) {
-    const entryPath = path.join(dirPath, entry);
-    fs.rmSync(entryPath, { recursive: true, force: true });
-  }
-};
-
+    if (!fs.existsSync(dirPath)) return;
+    for (const entry of fs.readdirSync(dirPath)) {
+      const entryPath = path.join(dirPath, entry);
+      fs.rmSync(entryPath, { recursive: true, force: true });
+    }
+  };
+  
 const resetScanArtifacts = () => {
   cleanDirectoryContents(scanLogsDir);
   cleanDirectoryContents(scanResultsDir);
@@ -1647,16 +1647,16 @@ app.post('/api/ai/analyze', authenticateToken, async (req, res) => {
       
       // Process batch in parallel
       const batchPromises = batch.map(async (pkg) => {
-        try {
-          const fastApiResult = await aiClient.analyzePackage(pkg.package, pkg.version, {
-            summarizeWithLLM: false
-          });
+      try {
+        const fastApiResult = await aiClient.analyzePackage(pkg.package, pkg.version, {
+          summarizeWithLLM: false
+        });
           
           const report = fastApiResult?.structured_report || {};
           const foundInDb = report.found_in_database === true;
           
           return { pkg, fastApiResult, foundInDb, error: null };
-        } catch (err) {
+      } catch (err) {
           // Track the error but don't fail the whole batch
           console.warn(`[AI] Failed to analyze ${pkg.package}@${pkg.version}: ${err.message}`);
           return { 
@@ -1678,10 +1678,10 @@ app.post('/api/ai/analyze', authenticateToken, async (req, res) => {
           return res.status(503).json({ 
             error: 'AI service became unavailable during analysis. Please check your AI endpoint connection.',
             details: batchResults[0]?.error || 'Connection failed'
-          });
-        }
+        });
       }
-      
+    }
+
       allResults.push(...batchResults);
       
       // Log progress for found packages in this batch
@@ -2113,6 +2113,8 @@ app.get('/api/dashboard/stats', authenticateToken, async (req, res) => {
     }
 
     // Count AI analysis results and vulnerabilities from AI scans
+    // Also collect AI analysis activities for recent activity
+    const aiAnalysisActivities = [];
     if (fs.existsSync(aiResultsDir)) {
       try {
         const aiDirs = fs.readdirSync(aiResultsDir);
@@ -2122,11 +2124,26 @@ app.get('/api/dashboard/stats', authenticateToken, async (req, res) => {
             const files = fs.readdirSync(dirPath).filter(f => f.startsWith('analysis-'));
             aiScansCount += files.length;
             
-            // Count vulnerabilities from each AI analysis file
+            // Count vulnerabilities from each AI analysis file and collect activity
             files.forEach(file => {
               try {
                 const filePath = path.join(dirPath, file);
                 const analysisData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+                
+                // Extract timestamp from file or data
+                const requestedAt = analysisData.requestedAt || 
+                                  (file.match(/analysis-(\d+)/) ? new Date(parseInt(file.match(/analysis-(\d+)/)[1])).toISOString() : null);
+                
+                // Add to AI analysis activities
+                if (requestedAt) {
+                  const targetInfo = analysisData.target || analysisData.response?.target || {};
+                  const targetName = targetInfo.name || targetInfo.image || dir.slice(0, 12) || 'Unknown';
+                  aiAnalysisActivities.push({
+                    timestamp: requestedAt,
+                    target: targetName,
+                    packagesCount: (analysisData.response?.packages || analysisData.packages || []).length
+                  });
+                }
                 
                 // The packages are in response.packages
                 const packages = analysisData.response?.packages || analysisData.packages || [];
@@ -2153,6 +2170,56 @@ app.get('/api/dashboard/stats', authenticateToken, async (req, res) => {
         console.warn('Failed to count AI results:', e.message);
       }
     }
+
+    // Combine scan activities and AI analysis activities, then sort by timestamp
+    const allActivities = [];
+    
+    // Add scan activities with proper timestamps (re-read from history for consistency)
+    if (fs.existsSync(scanHistoryFile)) {
+      try {
+        const history = JSON.parse(fs.readFileSync(scanHistoryFile, 'utf-8'));
+        const scans = Array.isArray(history) ? history : Object.values(history);
+        scans.forEach(scan => {
+          if (scan.startedAt || scan.startTime) {
+            const status = scan.status === 'completed' ? 'success' : 
+                          scan.status === 'failed' ? 'error' : 'info';
+            allActivities.push({
+              timestamp: scan.startedAt || scan.startTime,
+              action: `Scan ${scan.status || 'started'}`,
+              target: scan.targetData?.name || scan.targetData?.image || scan.targetId?.slice(0, 12) || 'Unknown',
+              status
+            });
+          }
+        });
+      } catch (e) {
+        // Ignore
+      }
+    }
+    
+    // Add AI analysis activities with proper timestamps
+    aiAnalysisActivities.forEach(activity => {
+      allActivities.push({
+        timestamp: activity.timestamp,
+        action: 'AI Analysis completed',
+        target: activity.target,
+        status: 'success'
+      });
+    });
+    
+    // Sort all activities by timestamp (most recent first) and take top 5
+    const sortedActivities = allActivities
+      .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp))
+      .slice(0, 5)
+      .map(activity => ({
+        action: activity.action,
+        target: activity.target,
+        time: getTimeAgo(activity.timestamp),
+        status: activity.status
+      }));
+    
+    // Replace recentActivity with properly sorted combined list
+    recentActivity.length = 0;
+    recentActivity.push(...sortedActivities);
 
     // Count downloaded reports (files in results dir with certain extensions)
     if (fs.existsSync(scanResultsDir)) {
@@ -2307,4 +2374,4 @@ process.on('uncaughtException', (error) => {
 process.on('unhandledRejection', (reason, promise) => {
   console.error('Unhandled Rejection at:', promise, 'reason:', reason);
   process.exit(1);
-});
+}); 
