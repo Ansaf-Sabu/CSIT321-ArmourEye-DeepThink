@@ -43,10 +43,11 @@ logs/
 *.temp
 .tmp.driveupload/
 
-# Large binary files (if needed, uncomment)
-# *.tar
-# *.tar.gz
-# *.zip
+# Large binary files - Docker images for testing
+Docker Images for Testing/*.tar
+Docker Images for Testing/*.tar.gz
+*.tar
+*.tar.gz
 
 # Git
 .git/
