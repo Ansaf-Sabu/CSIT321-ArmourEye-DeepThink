@@ -2,7 +2,7 @@
 
 **CSIT321 Final Project by Team DeepThink**
 
-A comprehensive security testing platform that allows users to upload Docker images and perform automated vulnerability scanning with AI-driven analysis and insights.
+A comprehensive security testing platform that allows users to upload Docker images and perform automated vulnerability scanning with AI-driven analysis and insights. A more detailed README.md file is present in the ArmourEye-main folder
 
 ## 📁 Repository Structure
 
