@@ -1,0 +1,104 @@
+[
+  {
+    "source_file": "dolibarr_fingerprint.json",
+    "image_name": "tuxgasy/dolibarr",
+    "os_family": "debian",
+    "os_name": "10.13"
+  },
+  {
+    "source_file": "drupal_fingerprint.json",
+    "image_name": "drupal",
+    "os_family": "debian",
+    "os_name": "13.1"
+  },
+  {
+    "source_file": "glpi_fingerprint.json",
+    "image_name": "diouxx/glpi",
+    "os_family": "debian",
+    "os_name": "12.5"
+  },
+  {
+    "source_file": "jenkins_fingerprint.json",
+    "image_name": "jenkins/jenkins",
+    "os_family": "debian",
+    "os_name": "13.1"
+  },
+  {
+    "source_file": "joomla_fingerprint.json",
+    "image_name": "joomla",
+    "os_family": "debian",
+    "os_name": "13.1"
+  },
+  {
+    "source_file": "mediawiki_fingerprint.json",
+    "image_name": "mediawiki",
+    "os_family": "debian",
+    "os_name": "13.1"
+  },
+  {
+    "source_file": "phpmyadmin_fingerprint.json",
+    "image_name": "phpmyadmin/phpmyadmin",
+    "os_family": "debian",
+    "os_name": "13.1"
+  },
+  {
+    "source_file": "roundcube_fingerprint.json",
+    "image_name": "roundcube/roundcubemail",
+    "os_family": "debian",
+    "os_name": "13.1"
+  },
+  {
+    "source_file": "tomcat_fingerprint.json",
+    "image_name": "tomcat",
+    "os_family": "ubuntu",
+    "os_name": "24.04"
+  },
+  {
+    "source_file": "wordpress_fingerprint.json",
+    "image_name": "wordpress",
+    "os_family": "debian",
+    "os_name": "13.1"
+  },
+  {
+    "source_file": "zabbix_fingerprint.json",
+    "image_name": "zabbix/zabbix-server-mysql",
+    "os_family": "alpine",
+    "os_name": "3.22.1"
+  },
+  {
+    "source_file": "dvwa_trivy.json",
+    "image_name": "vulnerables/web-dvwa",
+    "os_family": "debian",
+    "os_name": "9.5"
+  },
+  {
+    "source_file": "juice_trivy.json",
+    "image_name": "bkimminich/juice-shop:latest",
+    "os_family": "debian",
+    "os_name": "12.11"
+  },
+  {
+    "source_file": "metasploitable_trivy.json",
+    "image_name": "tleemcjr/metasploitable2:latest",
+    "os_family": "ubuntu",
+    "os_name": "8.04"
+  },
+  {
+    "source_file": "dvwa_trivy.json",
+    "image_name": "vulnerables/web-dvwa",
+    "os_family": "debian",
+    "os_name": "9.5"
+  },
+  {
+    "source_file": "juice_trivy.json",
+    "image_name": "bkimminich/juice-shop:latest",
+    "os_family": "debian",
+    "os_name": "12.11"
+  },
+  {
+    "source_file": "metasploitable_trivy.json",
+    "image_name": "tleemcjr/metasploitable2:latest",
+    "os_family": "ubuntu",
+    "os_name": "8.04"
+  }
+]

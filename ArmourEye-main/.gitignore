@@ -1,0 +1,59 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.scanner-docker-config/
+.env
+.clean-shutdown-flag
+
+# Temporary files and sync artifacts
+.tmp.driveupload/
+*.tmp
+*.temp
+
+# Python
+.venv-ai/
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Scans (temporary data)
+scans/
+uploads/*.tar
+uploads/*.tar.gz
+uploads/*.zip
+
+# User data (keep structure, ignore user-specific content)
+backend/data/ai-settings.json
+backend/data/user-images.json
+
+# Large media files (optional - uncomment if videos are too large for GitHub)
+# *.mp4
+# *.mov
+# *.avi
+# *.mkv
+# Videos over 100MB should use Git LFS

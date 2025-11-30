@@ -1,0 +1,77 @@
+version: '3.9'
+
+services:
+  # Backend API
+  api:
+    build: ./backend
+    ports:
+      - "3001:3001"
+    environment:
+      - PORT=3001
+      - JWT_SECRET=dev-secret-key-change-in-production
+      - DATABASE_URL=postgres://postgres:postgres@db:5432/armoureye
+      - REDIS_URL=redis://redis:6379
+    volumes:
+      - ./backend:/app
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./uploads:/app/uploads
+    depends_on:
+      - db
+      - redis
+    restart: unless-stopped
+
+  # PostgreSQL Database
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: armoureye
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+
+  # Redis (for job queues)
+  redis:
+    image: redis:7
+    ports:
+      - "6379:6379"
+    restart: unless-stopped
+
+  # Security Scanner
+  scanner:
+    build:
+      context: ./backend
+      dockerfile: docker/scanner.Dockerfile
+    volumes:
+      - scanner_results:/scans/results
+      - scanner_logs:/scans/logs
+      - /var/run/docker.sock:/var/run/docker.sock
+      - scanner_docker_config:/root/.docker
+    network_mode: bridge
+    privileged: true
+    environment:
+      - DOCKER_CONFIG=/root/.docker
+    restart: unless-stopped
+    profiles:
+      - scanner
+
+  # Frontend (served via Caddy)
+  ui:
+    image: caddy:2
+    ports:
+      - "8080:80"
+    volumes:
+      - ./dist:/usr/share/caddy
+      - ./caddy/Caddyfile:/etc/caddy/Caddyfile
+    depends_on:
+      - api
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+  scanner_results:
+  scanner_logs:
+  scanner_docker_config:

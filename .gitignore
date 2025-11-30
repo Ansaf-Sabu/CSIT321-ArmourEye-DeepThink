@@ -1,0 +1,54 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build outputs
+dist/
+**/dist/
+build/
+**/build/
+
+# Environment variables
+.env
+**/.env
+*.env
+
+# Python
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+**/venv/
+.venv/
+**/.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Logs
+*.log
+**/*.log
+logs/
+**/logs/
+
+# Temporary files
+*.tmp
+*.temp
+.tmp.driveupload/
+
+# Large binary files (if needed, uncomment)
+# *.tar
+# *.tar.gz
+# *.zip
+
+# Git
+.git/
+**/.git/
+

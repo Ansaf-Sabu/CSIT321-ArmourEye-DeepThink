@@ -1,0 +1,92 @@
+[
+  {
+    "cve_id": "CVE-2014-6271",
+    "package": "bash",
+    "version": "3.2-0ubuntu16",
+    "severity": "CRITICAL",
+    "title": "bash: specially-crafted environment variables can be used to inject shell commands",
+    "primary_url": "https://avd.aquasec.com/nvd/cve-2014-6271",
+    "description": "GNU Bash through 4.3 processes trailing strings after function definitions in the values of environment variables, which allows remote attackers to execute arbitrary code via a crafted environment, as demonstrated by vectors involving the ForceCommand feature in OpenSSH sshd, the mod_cgi and mod_cgid modules in the Apache HTTP Server, scripts executed by unspecified DHCP clients, and other situations in which setting the environment occurs across a privilege boundary from Bash execution, aka \"ShellShock.\" NOTE: the original fix for this issue was incorrect; CVE-2014-7169 has been assigned to cover the vulnerability that is still present after the incorrect fix."
+  },
+  {
+    "cve_id": "CVE-2014-7169",
+    "package": "bash",
+    "version": "3.2-0ubuntu16",
+    "severity": "CRITICAL",
+    "title": "bash: incorrect fix for \"Shellshock\" vulnerability",
+    "primary_url": "https://avd.aquasec.com/nvd/cve-2014-7169",
+    "description": "The fix for the Shellshock vulnerability in GNU Bash through 4.3 does not properly parse function definitions in the values of environment variables, which allows remote attackers to execute arbitrary code via a crafted environment that contains properly-terminated function definitions followed by additional shell commands, as demonstrated by vectors involving the ForceCommand feature in OpenSSH sshd, the mod_cgi and mod_cgid modules in the Apache HTTP Server, scripts executed by unspecified DHCP clients, and other situations in which setting the environment occurs across a privilege boundary from Bash execution.  NOTE: this issue exists because of an incomplete fix for CVE-2014-6271."
+  },
+  {
+    "cve_id": "CVE-2019-18276",
+    "package": "bash",
+    "version": "3.2-0ubuntu16",
+    "severity": "HIGH",
+    "title": "bash: when effective UID is not equal to real UID the bounding set is not cleared",
+    "primary_url": "https://avd.aquasec.com/nvd/cve-2019-18276",
+    "description": "An issue was discovered in GNU Bash through 5.0 patch 11. By default, if Bash is run with the effective UID not equal to the real UID, it will drop privileges by setting the effective UID to the real UID. However, it does so before parsing command-line options. If the `-i` option is used or the `-c` option is used with a command string, Bash executes commands with the privileges of the effective UID. This can be abused by an attacker to execute commands with elevated privileges, if they can specify the command-line options to Bash. This is the case for most SUID binaries that are not correctly written, that call shell commands via `execlp()`, `execvp()`, `system()`, `popen()`, etc. Some examples of such programs are `sudo` when the `use_login_shell` option is enabled, and `man`."
+  },
+  {
+    "cve_id": "CVE-2009-2692",
+    "package": "distcc",
+    "version": "2.18.3-4.1ubuntu1",
+    "severity": "HIGH",
+    "title": "distcc: arbitrary command execution",
+    "primary_url": "https://avd.aquasec.com/nvd/cve-2009-2692",
+    "description": "The distcc daemon in distcc 2.x, as used in openSUSE, Gentoo, and possibly other operating systems, allows remote attackers to execute arbitrary commands via a client request that contains a \"#\" character in a filename, which is interpreted as a separator for shell commands."
+  },
+  {
+    "cve_id": "CVE-2006-6563",
+    "package": "proftpd-basic",
+    "version": "1.3.1-12ubuntu3",
+    "severity": "MEDIUM",
+    "title": "proftpd: mod_ctrls has an off-by-one error",
+    "primary_url": "https://avd.aquasec.com/nvd/cve-2006-6563",
+    "description": "Off-by-one error in the mod_ctrls module in ProFTPD before 1.3.1rc1 allows local users to trigger a buffer overflow and possibly execute arbitrary code via a crafted configuration file."
+  },
+  {
+    "cve_id": "CVE-2007-2447",
+    "package": "samba-common",
+    "version": "3.0.28a-1ubuntu4.10",
+    "severity": "MEDIUM",
+    "title": "samba: Remote arbitrary command execution from username",
+    "primary_url": "https://avd.aquasec.com/nvd/cve-2007-2447",
+    "description": "The MS-RPC functionality in smbd in Samba 3.0.0 through 3.0.25rc3 allows remote attackers to execute arbitrary commands via shell metacharacters in a username."
+  },
+  {
+    "cve_id": "CVE-2011-3374",
+    "package": "libapt-pkg4.6",
+    "version": "0.7.9ubuntu17",
+    "severity": "LOW",
+    "title": "apt: Incorrect handling of 'dot dot' in relative pathnames",
+    "primary_url": "https://avd.aquasec.com/nvd/cve-2011-3374",
+    "description": "apt-get, and other clients of libapt, do not properly handle pathnames containing '..'. When downloading a file with the http method, if the remote server returns a redirect to a location with '..' in the path, apt will write the downloaded file outside of its intended destination directory. An attacker who can control a remote server that apt is downloading from (for example, by compromising a mirror) can use this to overwrite arbitrary files on the client's filesystem."
+  },
+  {
+    "cve_id": "CVE-2007-4663",
+    "package": "libgadu3",
+    "version": "1:1.7~rc2-2ubuntu0.8.04.1",
+    "severity": "LOW",
+    "title": "libgadu: directory traversal vulnerability",
+    "primary_url": "https://avd.aquasec.com/nvd/cve-2007-4663",
+    "description": "Directory traversal vulnerability in libgadu in ekg 1.7-rc2 and earlier allows remote attackers to create or overwrite arbitrary files via a .. (dot dot) in an avatar filename."
+  },
+  {
+    "cve_id": "CVE-2010-1321",
+    "package": "libkrb53",
+    "version": "1.6.dfsg.3~beta1-2ubuntu1.8",
+    "severity": "LOW",
+    "title": "Heimdal: telnetd allows privileges elevation via the -f option",
+    "primary_url": "https://avd.aquasec.com/nvd/cve-2010-1321",
+    "description": "The telnetd in Heimdal 0.6.3, 0.7.2, and other versions before 1.3.2, when debugging is enabled, allows local users to gain privileges by creating a file with a name that matches a debugging log-file name, but is located in a different directory, and is followed by a symlink attack."
+  },
+  {
+    "cve_id": "CVE-2006-5051",
+    "package": "openssh-client",
+    "version": "1:4.7p1-8ubuntu1.2",
+    "severity": "UNKNOWN",
+    "title": "openssh: Untrusted search path vulnerability",
+    "primary_url": "https://avd.aquasec.com/nvd/cve-2006-5051",
+    "description": "Untrusted search path vulnerability in scp in OpenSSH 4.4 and earlier, when using the -F option, allows local users to execute arbitrary commands by modifying the PATH environment variable and creating a malicious ssh program in a directory that will be searched before the system's ssh program, because scp does not use an absolute path when invoking ssh."
+  }
+]

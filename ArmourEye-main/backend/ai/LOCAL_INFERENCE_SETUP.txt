@@ -1,0 +1,117 @@
+ArmourEye Local AI Inference Setup
+==================================
+
+This document explains how to spin up the FastAPI inference service on any
+machine (including this one) so the ArmourEye GUI can use the “Local”
+AI toggle without touching the codebase.
+
+Prerequisites
+-------------
+1. Python 3.10+ (3.11 recommended).
+2. GPU with ≥8 GB VRAM for 4-bit quantized Mistral 7B (CPU will work but slower).
+3. Latest CUDA-compatible PyTorch (if using NVIDIA GPU).
+4. The model weights already live at:
+   `backend/ai/models/mistral/`
+   (copy this folder to the new machine if it is missing).
+5. The Chroma vector store lives at:
+   `backend/ai/vectorestore/chroma_db_v2/`
+   (copy this folder as well).
+
+Python Environment
+------------------
+Open PowerShell (or VS Code terminal) at the repo root:
+
+```
+cd C:\Users\Demo_\Downloads\TESTING\ArmourEye-main
+python -m venv .venv-ai
+.venv-ai\Scripts\activate
+python -m pip install --upgrade pip
+```
+
+Install Dependencies
+--------------------
+Install PyTorch with CUDA 12.1 wheels (adjust if you have a different CUDA version):
+
+```
+pip install torch --index-url https://download.pytorch.org/whl/cu121
+```
+
+Install FastAPI + NLP stack:
+
+```
+pip install fastapi uvicorn[standard] transformers accelerate bitsandbytes
+pip install langchain-community sentence-transformers chromadb
+```
+
+*If bitsandbytes has issues on Windows, install inside WSL or fall back
+to CPU by setting `MISTRAL_QUANTIZATION=cpu` (see Environment section below).*
+
+Environment Variables (optional)
+--------------------------------
+`backend/ai/inference/server.py` reads these env vars:
+
+- `MISTRAL_MODEL_PATH` (default: `backend/ai/models/mistral`)
+- `MISTRAL_QUANTIZATION` (`4bit` by default; set to `cpu` or `none` for CPU/full)
+- `MISTRAL_MAX_NEW_TOKENS` (default `512`)
+- `MISTRAL_TEMPERATURE` (default `0.2`)
+- `VECTORSTORE_DIR` (default `backend/ai/vectorestore/chroma_db_v2`)
+- `AI_SERVER_HOST` / `AI_SERVER_PORT` (defaults `0.0.0.0:8000`)
+
+Run the Service
+---------------
+From the repo root (with the venv activated):
+
+```
+uvicorn backend.ai.inference.server:app --host 0.0.0.0 --port 8000
+```
+
+Leave this terminal open. The ArmourEye backend will target
+`http://localhost:8000` whenever the AI Insights toggle is set to “Local”.
+
+Health Check
+------------
+Verify the service is up:
+
+```
+curl http://localhost:8000/health
+```
+
+You should see JSON containing `vectorstore_ready` and model metadata.
+
+Remote Setup (Google Colab) - Recommended: Cloudflare Tunnel
+-------------------------------------------------------------
+If you want to run the inference server in Google Colab:
+
+1. Upload/clone the repo to Google Drive and mount it in Colab.
+2. Install the same pip packages in Colab.
+3. Run the same uvicorn command: `uvicorn backend.ai.inference.server:app --host 0.0.0.0 --port 8000`
+4. Install and start Cloudflare Tunnel (recommended - more reliable than ngrok):
+   ```python
+   !wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64
+   !chmod +x cloudflared-linux-amd64
+   !./cloudflared-linux-amd64 tunnel --url http://localhost:8000
+   ```
+   Copy the HTTPS URL (e.g., `https://xxxx.trycloudflare.com`).
+5. Set the ArmourEye backend "AI Source" toggle to Remote and enter the Cloudflare URL.
+
+Alternative: If you prefer ngrok, you'll need to sign up and configure an authtoken:
+```python
+!pip install pyngrok
+from pyngrok import ngrok
+ngrok.set_auth_token("YOUR_NGROK_AUTHTOKEN")
+public_url = ngrok.connect(8000)
+print(f"Public URL: {public_url}")
+```
+
+Switching Machines
+------------------
+When moving the repo to another PC:
+1. Copy `backend/ai/models/mistral` and `backend/ai/vectorestore/chroma_db_v2`.
+2. Re-run the dependency installation steps above.
+3. Start the FastAPI server; the front-end toggle is the only change needed.
+
+
+For Remote Mode
+
+cd C:\Users\Demo_\Downloads\TESTING\ArmourEye-main\backend
+node ai/update_remote_url.js <url here>

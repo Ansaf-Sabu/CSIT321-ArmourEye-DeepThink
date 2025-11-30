@@ -1,0 +1,1846 @@
+[
+  {
+    "package": "adduser",
+    "version": "3.152"
+  },
+  {
+    "package": "apache2",
+    "version": "2.4.65"
+  },
+  {
+    "package": "apache2-bin",
+    "version": "2.4.65"
+  },
+  {
+    "package": "apache2-data",
+    "version": "2.4.65"
+  },
+  {
+    "package": "apache2-utils",
+    "version": "2.4.65"
+  },
+  {
+    "package": "apt",
+    "version": "3.0.3"
+  },
+  {
+    "package": "autoconf",
+    "version": "2.72"
+  },
+  {
+    "package": "base-files",
+    "version": "13.8+deb13u1"
+  },
+  {
+    "package": "base-passwd",
+    "version": "3.6.7"
+  },
+  {
+    "package": "bash",
+    "version": "5.2.37"
+  },
+  {
+    "package": "binutils",
+    "version": "2.44"
+  },
+  {
+    "package": "binutils-common",
+    "version": "2.44"
+  },
+  {
+    "package": "binutils-x86-64-linux-gnu",
+    "version": "2.44"
+  },
+  {
+    "package": "bsdutils",
+    "version": "2.41"
+  },
+  {
+    "package": "bzip2",
+    "version": "1.0.8"
+  },
+  {
+    "package": "ca-certificates",
+    "version": "20250419"
+  },
+  {
+    "package": "coreutils",
+    "version": "9.7"
+  },
+  {
+    "package": "cpp",
+    "version": "14.2.0"
+  },
+  {
+    "package": "cpp-14",
+    "version": "14.2.0"
+  },
+  {
+    "package": "cpp-14-x86-64-linux-gnu",
+    "version": "14.2.0"
+  },
+  {
+    "package": "cpp-x86-64-linux-gnu",
+    "version": "14.2.0"
+  },
+  {
+    "package": "curl",
+    "version": "8.14.1"
+  },
+  {
+    "package": "dash",
+    "version": "0.5.12"
+  },
+  {
+    "package": "debconf",
+    "version": "1.5.91"
+  },
+  {
+    "package": "debian-archive-keyring",
+    "version": "2025.1"
+  },
+  {
+    "package": "debianutils",
+    "version": "5.23.2"
+  },
+  {
+    "package": "diffutils",
+    "version": "3.10"
+  },
+  {
+    "package": "dpkg",
+    "version": "1.22.21"
+  },
+  {
+    "package": "dpkg-dev",
+    "version": "1.22.21"
+  },
+  {
+    "package": "file",
+    "version": "5.46"
+  },
+  {
+    "package": "findutils",
+    "version": "4.10.0"
+  },
+  {
+    "package": "fontconfig-config",
+    "version": "2.15.0"
+  },
+  {
+    "package": "fonts-urw-base35",
+    "version": "20200910"
+  },
+  {
+    "package": "g++",
+    "version": "14.2.0"
+  },
+  {
+    "package": "g++-14",
+    "version": "14.2.0"
+  },
+  {
+    "package": "g++-14-x86-64-linux-gnu",
+    "version": "14.2.0"
+  },
+  {
+    "package": "g++-x86-64-linux-gnu",
+    "version": "14.2.0"
+  },
+  {
+    "package": "gcc",
+    "version": "14.2.0"
+  },
+  {
+    "package": "gcc-14",
+    "version": "14.2.0"
+  },
+  {
+    "package": "gcc-14-base",
+    "version": "14.2.0"
+  },
+  {
+    "package": "gcc-14-x86-64-linux-gnu",
+    "version": "14.2.0"
+  },
+  {
+    "package": "gcc-x86-64-linux-gnu",
+    "version": "14.2.0"
+  },
+  {
+    "package": "ghostscript",
+    "version": "10.05.1~dfsg"
+  },
+  {
+    "package": "girepository-tools",
+    "version": "2.84.4"
+  },
+  {
+    "package": "grep",
+    "version": "3.11"
+  },
+  {
+    "package": "gzip",
+    "version": "1.13"
+  },
+  {
+    "package": "hostname",
+    "version": "3.25"
+  },
+  {
+    "package": "imagemagick-7-common",
+    "version": "7.1.1.43+dfsg1"
+  },
+  {
+    "package": "init-system-helpers",
+    "version": "1.69~deb13u1"
+  },
+  {
+    "package": "libacl1",
+    "version": "2.3.2"
+  },
+  {
+    "package": "libapr1t64",
+    "version": "1.7.5"
+  },
+  {
+    "package": "libaprutil1-dbd-sqlite3",
+    "version": "1.6.3"
+  },
+  {
+    "package": "libaprutil1-ldap",
+    "version": "1.6.3"
+  },
+  {
+    "package": "libaprutil1t64",
+    "version": "1.6.3"
+  },
+  {
+    "package": "libapt-pkg7.0",
+    "version": "3.0.3"
+  },
+  {
+    "package": "libargon2-1",
+    "version": "0~20190702+dfsg"
+  },
+  {
+    "package": "libasan8",
+    "version": "14.2.0"
+  },
+  {
+    "package": "libatomic1",
+    "version": "14.2.0"
+  },
+  {
+    "package": "libattr1",
+    "version": "2.5.2"
+  },
+  {
+    "package": "libaudit-common",
+    "version": "4.0.2"
+  },
+  {
+    "package": "libaudit1",
+    "version": "4.0.2"
+  },
+  {
+    "package": "libavahi-client3",
+    "version": "0.8"
+  },
+  {
+    "package": "libavahi-common-data",
+    "version": "0.8"
+  },
+  {
+    "package": "libavahi-common3",
+    "version": "0.8"
+  },
+  {
+    "package": "libbinutils",
+    "version": "2.44"
+  },
+  {
+    "package": "libblkid-dev",
+    "version": "2.41"
+  },
+  {
+    "package": "libblkid1",
+    "version": "2.41"
+  },
+  {
+    "package": "libbrotli1",
+    "version": "1.1.0"
+  },
+  {
+    "package": "libbsd0",
+    "version": "0.12.2"
+  },
+  {
+    "package": "libbz2-1.0",
+    "version": "1.0.8"
+  },
+  {
+    "package": "libc-bin",
+    "version": "2.41"
+  },
+  {
+    "package": "libc-dev-bin",
+    "version": "2.41"
+  },
+  {
+    "package": "libc6",
+    "version": "2.41"
+  },
+  {
+    "package": "libc6-dev",
+    "version": "2.41"
+  },
+  {
+    "package": "libcap-ng0",
+    "version": "0.8.5"
+  },
+  {
+    "package": "libcap2",
+    "version": "2.75"
+  },
+  {
+    "package": "libcc1-0",
+    "version": "14.2.0"
+  },
+  {
+    "package": "libcom-err2",
+    "version": "1.47.2"
+  },
+  {
+    "package": "libcrypt-dev",
+    "version": "4.4.38"
+  },
+  {
+    "package": "libcrypt1",
+    "version": "4.4.38"
+  },
+  {
+    "package": "libctf-nobfd0",
+    "version": "2.44"
+  },
+  {
+    "package": "libctf0",
+    "version": "2.44"
+  },
+  {
+    "package": "libcups2t64",
+    "version": "2.4.10"
+  },
+  {
+    "package": "libcurl4t64",
+    "version": "8.14.1"
+  },
+  {
+    "package": "libdav1d7",
+    "version": "1.5.1"
+  },
+  {
+    "package": "libdb5.3t64",
+    "version": "5.3.28+dfsg2"
+  },
+  {
+    "package": "libdbus-1-3",
+    "version": "1.16.2"
+  },
+  {
+    "package": "libde265-0",
+    "version": "1.0.15"
+  },
+  {
+    "package": "libdebconfclient0",
+    "version": "0.280"
+  },
+  {
+    "package": "libdeflate0",
+    "version": "1.23"
+  },
+  {
+    "package": "libdpkg-perl",
+    "version": "1.22.21"
+  },
+  {
+    "package": "libelf1t64",
+    "version": "0.192"
+  },
+  {
+    "package": "libexpat1",
+    "version": "2.7.1"
+  },
+  {
+    "package": "libffi-dev",
+    "version": "3.4.8"
+  },
+  {
+    "package": "libffi8",
+    "version": "3.4.8"
+  },
+  {
+    "package": "libfftw3-double3",
+    "version": "3.3.10"
+  },
+  {
+    "package": "libfontconfig1",
+    "version": "2.15.0"
+  },
+  {
+    "package": "libfontenc1",
+    "version": "1.1.8"
+  },
+  {
+    "package": "libfreetype6",
+    "version": "2.13.3+dfsg"
+  },
+  {
+    "package": "libgcc-14-dev",
+    "version": "14.2.0"
+  },
+  {
+    "package": "libgcc-s1",
+    "version": "14.2.0"
+  },
+  {
+    "package": "libgdbm-compat4t64",
+    "version": "1.24"
+  },
+  {
+    "package": "libgdbm6t64",
+    "version": "1.24"
+  },
+  {
+    "package": "libgio-2.0-dev",
+    "version": "2.84.4"
+  },
+  {
+    "package": "libgio-2.0-dev-bin",
+    "version": "2.84.4"
+  },
+  {
+    "package": "libgirepository-2.0-0",
+    "version": "2.84.4"
+  },
+  {
+    "package": "libglib2.0-0t64",
+    "version": "2.84.4"
+  },
+  {
+    "package": "libglib2.0-bin",
+    "version": "2.84.4"
+  },
+  {
+    "package": "libglib2.0-data",
+    "version": "2.84.4"
+  },
+  {
+    "package": "libglib2.0-dev",
+    "version": "2.84.4"
+  },
+  {
+    "package": "libglib2.0-dev-bin",
+    "version": "2.84.4"
+  },
+  {
+    "package": "libgmp10",
+    "version": "6.3.0+dfsg"
+  },
+  {
+    "package": "libgnutls30t64",
+    "version": "3.8.9"
+  },
+  {
+    "package": "libgomp1",
+    "version": "14.2.0"
+  },
+  {
+    "package": "libgprofng0",
+    "version": "2.44"
+  },
+  {
+    "package": "libgs-common",
+    "version": "10.05.1~dfsg"
+  },
+  {
+    "package": "libgs10",
+    "version": "10.05.1~dfsg"
+  },
+  {
+    "package": "libgs10-common",
+    "version": "10.05.1~dfsg"
+  },
+  {
+    "package": "libgssapi-krb5-2",
+    "version": "1.21.3"
+  },
+  {
+    "package": "libhashkit2t64",
+    "version": "1.1.4"
+  },
+  {
+    "package": "libheif-plugin-dav1d",
+    "version": "1.19.8"
+  },
+  {
+    "package": "libheif-plugin-libde265",
+    "version": "1.19.8"
+  },
+  {
+    "package": "libheif1",
+    "version": "1.19.8"
+  },
+  {
+    "package": "libhogweed6t64",
+    "version": "3.10.1"
+  },
+  {
+    "package": "libhwasan0",
+    "version": "14.2.0"
+  },
+  {
+    "package": "libice6",
+    "version": "1.1.1"
+  },
+  {
+    "package": "libicu76",
+    "version": "76.1"
+  },
+  {
+    "package": "libidn12",
+    "version": "1.43"
+  },
+  {
+    "package": "libidn2-0",
+    "version": "2.3.8"
+  },
+  {
+    "package": "libijs-0.35",
+    "version": "0.35"
+  },
+  {
+    "package": "libisl23",
+    "version": "0.27"
+  },
+  {
+    "package": "libitm1",
+    "version": "14.2.0"
+  },
+  {
+    "package": "libjansson4",
+    "version": "2.14"
+  },
+  {
+    "package": "libjbig0",
+    "version": "2.1"
+  },
+  {
+    "package": "libjbig2dec0",
+    "version": "0.20"
+  },
+  {
+    "package": "libjpeg62-turbo",
+    "version": "2.1.5"
+  },
+  {
+    "package": "libk5crypto3",
+    "version": "1.21.3"
+  },
+  {
+    "package": "libkeyutils1",
+    "version": "1.6.3"
+  },
+  {
+    "package": "libkrb5-3",
+    "version": "1.21.3"
+  },
+  {
+    "package": "libkrb5support0",
+    "version": "1.21.3"
+  },
+  {
+    "package": "liblastlog2-2",
+    "version": "2.41"
+  },
+  {
+    "package": "liblcms2-2",
+    "version": "2.16"
+  },
+  {
+    "package": "libldap2",
+    "version": "2.6.10+dfsg"
+  },
+  {
+    "package": "liblerc4",
+    "version": "4.0.0+ds"
+  },
+  {
+    "package": "liblqr-1-0",
+    "version": "0.4.2"
+  },
+  {
+    "package": "liblsan0",
+    "version": "14.2.0"
+  },
+  {
+    "package": "libltdl7",
+    "version": "2.5.4"
+  },
+  {
+    "package": "liblua5.4-0",
+    "version": "5.4.7"
+  },
+  {
+    "package": "liblz4-1",
+    "version": "1.10.0"
+  },
+  {
+    "package": "liblzma5",
+    "version": "5.8.1"
+  },
+  {
+    "package": "libmagic-mgc",
+    "version": "5.46"
+  },
+  {
+    "package": "libmagic1t64",
+    "version": "5.46"
+  },
+  {
+    "package": "libmagickcore-7.q16-10",
+    "version": "7.1.1.43+dfsg1"
+  },
+  {
+    "package": "libmagickwand-7.q16-10",
+    "version": "7.1.1.43+dfsg1"
+  },
+  {
+    "package": "libmd0",
+    "version": "1.1.0"
+  },
+  {
+    "package": "libmemcached11t64",
+    "version": "1.1.4"
+  },
+  {
+    "package": "libmount-dev",
+    "version": "2.41"
+  },
+  {
+    "package": "libmount1",
+    "version": "2.41"
+  },
+  {
+    "package": "libmpc3",
+    "version": "1.3.1"
+  },
+  {
+    "package": "libmpfr6",
+    "version": "4.2.2"
+  },
+  {
+    "package": "libncursesw6",
+    "version": "6.5+20250216"
+  },
+  {
+    "package": "libnettle8t64",
+    "version": "3.10.1"
+  },
+  {
+    "package": "libnghttp2-14",
+    "version": "1.64.0"
+  },
+  {
+    "package": "libnghttp3-9",
+    "version": "1.8.0"
+  },
+  {
+    "package": "libonig5",
+    "version": "6.9.9"
+  },
+  {
+    "package": "libopenjp2-7",
+    "version": "2.5.3"
+  },
+  {
+    "package": "libp11-kit0",
+    "version": "0.25.5"
+  },
+  {
+    "package": "libpam-modules",
+    "version": "1.7.0"
+  },
+  {
+    "package": "libpam-modules-bin",
+    "version": "1.7.0"
+  },
+  {
+    "package": "libpam-runtime",
+    "version": "1.7.0"
+  },
+  {
+    "package": "libpam0g",
+    "version": "1.7.0"
+  },
+  {
+    "package": "libpaper2",
+    "version": "2.2.5"
+  },
+  {
+    "package": "libpcre2-16-0",
+    "version": "10.46"
+  },
+  {
+    "package": "libpcre2-32-0",
+    "version": "10.46"
+  },
+  {
+    "package": "libpcre2-8-0",
+    "version": "10.46"
+  },
+  {
+    "package": "libpcre2-dev",
+    "version": "10.46"
+  },
+  {
+    "package": "libpcre2-posix3",
+    "version": "10.46"
+  },
+  {
+    "package": "libperl5.40",
+    "version": "5.40.1"
+  },
+  {
+    "package": "libpkgconf3",
+    "version": "1.8.1"
+  },
+  {
+    "package": "libpng16-16t64",
+    "version": "1.6.48"
+  },
+  {
+    "package": "libpq5",
+    "version": "17.6"
+  },
+  {
+    "package": "libproc2-0",
+    "version": "4.0.4"
+  },
+  {
+    "package": "libpsl5t64",
+    "version": "0.21.2"
+  },
+  {
+    "package": "libpython3-stdlib",
+    "version": "3.13.5"
+  },
+  {
+    "package": "libpython3.13-minimal",
+    "version": "3.13.5"
+  },
+  {
+    "package": "libpython3.13-stdlib",
+    "version": "3.13.5"
+  },
+  {
+    "package": "libquadmath0",
+    "version": "14.2.0"
+  },
+  {
+    "package": "libraw23t64",
+    "version": "0.21.4"
+  },
+  {
+    "package": "libreadline8t64",
+    "version": "8.2"
+  },
+  {
+    "package": "librtmp1",
+    "version": "2.4+20151223.gitfa8646d.1"
+  },
+  {
+    "package": "libsasl2-2",
+    "version": "2.1.28+dfsg1"
+  },
+  {
+    "package": "libsasl2-modules-db",
+    "version": "2.1.28+dfsg1"
+  },
+  {
+    "package": "libseccomp2",
+    "version": "2.6.0"
+  },
+  {
+    "package": "libselinux1",
+    "version": "3.8.1"
+  },
+  {
+    "package": "libselinux1-dev",
+    "version": "3.8.1"
+  },
+  {
+    "package": "libsemanage-common",
+    "version": "3.8.1"
+  },
+  {
+    "package": "libsemanage2",
+    "version": "3.8.1"
+  },
+  {
+    "package": "libsepol-dev",
+    "version": "3.8.1"
+  },
+  {
+    "package": "libsepol2",
+    "version": "3.8.1"
+  },
+  {
+    "package": "libsframe1",
+    "version": "2.44"
+  },
+  {
+    "package": "libsharpyuv0",
+    "version": "1.5.0"
+  },
+  {
+    "package": "libsm6",
+    "version": "1.2.6"
+  },
+  {
+    "package": "libsmartcols1",
+    "version": "2.41"
+  },
+  {
+    "package": "libsodium23",
+    "version": "1.0.18"
+  },
+  {
+    "package": "libsqlite3-0",
+    "version": "3.46.1"
+  },
+  {
+    "package": "libssh2-1t64",
+    "version": "1.11.1"
+  },
+  {
+    "package": "libssl3t64",
+    "version": "3.5.1"
+  },
+  {
+    "package": "libstdc++-14-dev",
+    "version": "14.2.0"
+  },
+  {
+    "package": "libstdc++6",
+    "version": "14.2.0"
+  },
+  {
+    "package": "libsysprof-capture-4-dev",
+    "version": "48.0"
+  },
+  {
+    "package": "libsystemd0",
+    "version": "257.8"
+  },
+  {
+    "package": "libtasn1-6",
+    "version": "4.20.0"
+  },
+  {
+    "package": "libtiff6",
+    "version": "4.7.0"
+  },
+  {
+    "package": "libtinfo6",
+    "version": "6.5+20250216"
+  },
+  {
+    "package": "libtsan2",
+    "version": "14.2.0"
+  },
+  {
+    "package": "libubsan1",
+    "version": "14.2.0"
+  },
+  {
+    "package": "libudev1",
+    "version": "257.8"
+  },
+  {
+    "package": "libunistring5",
+    "version": "1.3"
+  },
+  {
+    "package": "libuuid1",
+    "version": "2.41"
+  },
+  {
+    "package": "libwebp7",
+    "version": "1.5.0"
+  },
+  {
+    "package": "libwebpdemux2",
+    "version": "1.5.0"
+  },
+  {
+    "package": "libwebpmux3",
+    "version": "1.5.0"
+  },
+  {
+    "package": "libx11-6",
+    "version": "1.8.12"
+  },
+  {
+    "package": "libx11-data",
+    "version": "1.8.12"
+  },
+  {
+    "package": "libxau6",
+    "version": "1.0.11"
+  },
+  {
+    "package": "libxcb1",
+    "version": "1.17.0"
+  },
+  {
+    "package": "libxdmcp6",
+    "version": "1.1.5"
+  },
+  {
+    "package": "libxext6",
+    "version": "1.3.4"
+  },
+  {
+    "package": "libxml2",
+    "version": "2.12.7+dfsg+really2.9.14"
+  },
+  {
+    "package": "libxt6t64",
+    "version": "1.2.1"
+  },
+  {
+    "package": "libxxhash0",
+    "version": "0.8.3"
+  },
+  {
+    "package": "libzip5",
+    "version": "1.11.3"
+  },
+  {
+    "package": "libzstd1",
+    "version": "1.5.7+dfsg"
+  },
+  {
+    "package": "linux-libc-dev",
+    "version": "6.12.48"
+  },
+  {
+    "package": "login",
+    "version": "4.16.0-2+really2.41"
+  },
+  {
+    "package": "login.defs",
+    "version": "4.17.4"
+  },
+  {
+    "package": "m4",
+    "version": "1.4.19"
+  },
+  {
+    "package": "make",
+    "version": "4.4.1"
+  },
+  {
+    "package": "mawk",
+    "version": "1.3.4.20250131"
+  },
+  {
+    "package": "media-types",
+    "version": "13.0.0"
+  },
+  {
+    "package": "mount",
+    "version": "2.41"
+  },
+  {
+    "package": "native-architecture",
+    "version": "0.2.6"
+  },
+  {
+    "package": "ncurses-base",
+    "version": "6.5+20250216"
+  },
+  {
+    "package": "ncurses-bin",
+    "version": "6.5+20250216"
+  },
+  {
+    "package": "netbase",
+    "version": "6.5"
+  },
+  {
+    "package": "openssl",
+    "version": "3.5.1"
+  },
+  {
+    "package": "openssl-provider-legacy",
+    "version": "3.5.1"
+  },
+  {
+    "package": "passwd",
+    "version": "4.17.4"
+  },
+  {
+    "package": "patch",
+    "version": "2.8"
+  },
+  {
+    "package": "perl",
+    "version": "5.40.1"
+  },
+  {
+    "package": "perl-base",
+    "version": "5.40.1"
+  },
+  {
+    "package": "perl-modules-5.40",
+    "version": "5.40.1"
+  },
+  {
+    "package": "pkg-config",
+    "version": "1.8.1"
+  },
+  {
+    "package": "pkgconf",
+    "version": "1.8.1"
+  },
+  {
+    "package": "pkgconf-bin",
+    "version": "1.8.1"
+  },
+  {
+    "package": "poppler-data",
+    "version": "0.4.12"
+  },
+  {
+    "package": "procps",
+    "version": "4.0.4"
+  },
+  {
+    "package": "python3",
+    "version": "3.13.5"
+  },
+  {
+    "package": "python3-minimal",
+    "version": "3.13.5"
+  },
+  {
+    "package": "python3-packaging",
+    "version": "25.0"
+  },
+  {
+    "package": "python3.13",
+    "version": "3.13.5"
+  },
+  {
+    "package": "python3.13-minimal",
+    "version": "3.13.5"
+  },
+  {
+    "package": "re2c",
+    "version": "4.1"
+  },
+  {
+    "package": "readline-common",
+    "version": "8.2"
+  },
+  {
+    "package": "rpcsvc-proto",
+    "version": "1.4.3"
+  },
+  {
+    "package": "sed",
+    "version": "4.9"
+  },
+  {
+    "package": "sqv",
+    "version": "1.3.0"
+  },
+  {
+    "package": "sysvinit-utils",
+    "version": "3.14"
+  },
+  {
+    "package": "tar",
+    "version": "1.35+dfsg"
+  },
+  {
+    "package": "tzdata",
+    "version": "2025b"
+  },
+  {
+    "package": "util-linux",
+    "version": "2.41"
+  },
+  {
+    "package": "uuid-dev",
+    "version": "2.41"
+  },
+  {
+    "package": "x11-common",
+    "version": "7.7+24"
+  },
+  {
+    "package": "xfonts-encodings",
+    "version": "1.0.4"
+  },
+  {
+    "package": "xfonts-utils",
+    "version": "7.7+7"
+  },
+  {
+    "package": "xz-utils",
+    "version": "5.8.1"
+  },
+  {
+    "package": "zlib1g",
+    "version": "1.3.dfsg+really1.3.1"
+  },
+  {
+    "package": "zlib1g-dev",
+    "version": "1.3.dfsg+really1.3.1"
+  },
+  {
+    "package": "zstd",
+    "version": "1.5.7+dfsg"
+  },
+  {
+    "package": "apache2",
+    "version": "2.4.65-2"
+  },
+  {
+    "package": "apache2-bin",
+    "version": "2.4.65-2"
+  },
+  {
+    "package": "apache2-data",
+    "version": "2.4.65-2"
+  },
+  {
+    "package": "apache2-utils",
+    "version": "2.4.65-2"
+  },
+  {
+    "package": "bash",
+    "version": "5.2.37-2+b5"
+  },
+  {
+    "package": "binutils",
+    "version": "2.44-3"
+  },
+  {
+    "package": "binutils-common",
+    "version": "2.44-3"
+  },
+  {
+    "package": "binutils-x86-64-linux-gnu",
+    "version": "2.44-3"
+  },
+  {
+    "package": "bsdutils",
+    "version": "1:2.41-5"
+  },
+  {
+    "package": "coreutils",
+    "version": "9.7-3"
+  },
+  {
+    "package": "curl",
+    "version": "8.14.1-2"
+  },
+  {
+    "package": "ghostscript",
+    "version": "10.05.1~dfsg-1+deb13u1"
+  },
+  {
+    "package": "girepository-tools",
+    "version": "2.84.4-3~deb13u1"
+  },
+  {
+    "package": "imagemagick-7-common",
+    "version": "8:7.1.1.43+dfsg1-1+deb13u2"
+  },
+  {
+    "package": "libavahi-client3",
+    "version": "0.8-16"
+  },
+  {
+    "package": "libavahi-common-data",
+    "version": "0.8-16"
+  },
+  {
+    "package": "libavahi-common3",
+    "version": "0.8-16"
+  },
+  {
+    "package": "libbinutils",
+    "version": "2.44-3"
+  },
+  {
+    "package": "libblkid-dev",
+    "version": "2.41-5"
+  },
+  {
+    "package": "libblkid1",
+    "version": "2.41-5"
+  },
+  {
+    "package": "libc-bin",
+    "version": "2.41-12"
+  },
+  {
+    "package": "libc-dev-bin",
+    "version": "2.41-12"
+  },
+  {
+    "package": "libc6",
+    "version": "2.41-12"
+  },
+  {
+    "package": "libc6-dev",
+    "version": "2.41-12"
+  },
+  {
+    "package": "libctf-nobfd0",
+    "version": "2.44-3"
+  },
+  {
+    "package": "libctf0",
+    "version": "2.44-3"
+  },
+  {
+    "package": "libcups2t64",
+    "version": "2.4.10-3+deb13u1"
+  },
+  {
+    "package": "libcurl4t64",
+    "version": "8.14.1-2"
+  },
+  {
+    "package": "libde265-0",
+    "version": "1.0.15-1+b3"
+  },
+  {
+    "package": "libelf1t64",
+    "version": "0.192-4"
+  },
+  {
+    "package": "libexpat1",
+    "version": "2.7.1-2"
+  },
+  {
+    "package": "libgio-2.0-dev",
+    "version": "2.84.4-3~deb13u1"
+  },
+  {
+    "package": "libgio-2.0-dev-bin",
+    "version": "2.84.4-3~deb13u1"
+  },
+  {
+    "package": "libgirepository-2.0-0",
+    "version": "2.84.4-3~deb13u1"
+  },
+  {
+    "package": "libglib2.0-0t64",
+    "version": "2.84.4-3~deb13u1"
+  },
+  {
+    "package": "libglib2.0-bin",
+    "version": "2.84.4-3~deb13u1"
+  },
+  {
+    "package": "libglib2.0-data",
+    "version": "2.84.4-3~deb13u1"
+  },
+  {
+    "package": "libglib2.0-dev",
+    "version": "2.84.4-3~deb13u1"
+  },
+  {
+    "package": "libglib2.0-dev-bin",
+    "version": "2.84.4-3~deb13u1"
+  },
+  {
+    "package": "libgnutls30t64",
+    "version": "3.8.9-3"
+  },
+  {
+    "package": "libgprofng0",
+    "version": "2.44-3"
+  },
+  {
+    "package": "libgs-common",
+    "version": "10.05.1~dfsg-1+deb13u1"
+  },
+  {
+    "package": "libgs10",
+    "version": "10.05.1~dfsg-1+deb13u1"
+  },
+  {
+    "package": "libgs10-common",
+    "version": "10.05.1~dfsg-1+deb13u1"
+  },
+  {
+    "package": "libgssapi-krb5-2",
+    "version": "1.21.3-5"
+  },
+  {
+    "package": "libjansson4",
+    "version": "2.14-2+b3"
+  },
+  {
+    "package": "libjbig0",
+    "version": "2.1-6.1+b2"
+  },
+  {
+    "package": "libjbig2dec0",
+    "version": "0.20-1+b3"
+  },
+  {
+    "package": "libk5crypto3",
+    "version": "1.21.3-5"
+  },
+  {
+    "package": "libkrb5-3",
+    "version": "1.21.3-5"
+  },
+  {
+    "package": "libkrb5support0",
+    "version": "1.21.3-5"
+  },
+  {
+    "package": "liblastlog2-2",
+    "version": "2.41-5"
+  },
+  {
+    "package": "liblcms2-2",
+    "version": "2.16-2"
+  },
+  {
+    "package": "libldap2",
+    "version": "2.6.10+dfsg-1"
+  },
+  {
+    "package": "liblz4-1",
+    "version": "1.10.0-4"
+  },
+  {
+    "package": "libmagickcore-7.q16-10",
+    "version": "8:7.1.1.43+dfsg1-1+deb13u2"
+  },
+  {
+    "package": "libmagickwand-7.q16-10",
+    "version": "8:7.1.1.43+dfsg1-1+deb13u2"
+  },
+  {
+    "package": "libmount-dev",
+    "version": "2.41-5"
+  },
+  {
+    "package": "libmount1",
+    "version": "2.41-5"
+  },
+  {
+    "package": "libncursesw6",
+    "version": "6.5+20250216-2"
+  },
+  {
+    "package": "libopenjp2-7",
+    "version": "2.5.3-2.1~deb13u1"
+  },
+  {
+    "package": "libperl5.40",
+    "version": "5.40.1-6"
+  },
+  {
+    "package": "libpng16-16t64",
+    "version": "1.6.48-1"
+  },
+  {
+    "package": "libpython3.13-minimal",
+    "version": "3.13.5-2"
+  },
+  {
+    "package": "libpython3.13-stdlib",
+    "version": "3.13.5-2"
+  },
+  {
+    "package": "libraw23t64",
+    "version": "0.21.4-2"
+  },
+  {
+    "package": "libsframe1",
+    "version": "2.44-3"
+  },
+  {
+    "package": "libsmartcols1",
+    "version": "2.41-5"
+  },
+  {
+    "package": "libsqlite3-0",
+    "version": "3.46.1-7"
+  },
+  {
+    "package": "libsystemd0",
+    "version": "257.8-1~deb13u2"
+  },
+  {
+    "package": "libtiff6",
+    "version": "4.7.0-3+deb13u1"
+  },
+  {
+    "package": "libtinfo6",
+    "version": "6.5+20250216-2"
+  },
+  {
+    "package": "libudev1",
+    "version": "257.8-1~deb13u2"
+  },
+  {
+    "package": "libuuid1",
+    "version": "2.41-5"
+  },
+  {
+    "package": "libxml2",
+    "version": "2.12.7+dfsg+really2.9.14-2.1+deb13u1"
+  },
+  {
+    "package": "linux-libc-dev",
+    "version": "6.12.48-1"
+  },
+  {
+    "package": "login",
+    "version": "1:4.16.0-2+really2.41-5"
+  },
+  {
+    "package": "login.defs",
+    "version": "1:4.17.4-2"
+  },
+  {
+    "package": "m4",
+    "version": "1.4.19-8"
+  },
+  {
+    "package": "mount",
+    "version": "2.41-5"
+  },
+  {
+    "package": "ncurses-base",
+    "version": "6.5+20250216-2"
+  },
+  {
+    "package": "ncurses-bin",
+    "version": "6.5+20250216-2"
+  },
+  {
+    "package": "passwd",
+    "version": "1:4.17.4-2"
+  },
+  {
+    "package": "patch",
+    "version": "2.8-2"
+  },
+  {
+    "package": "perl",
+    "version": "5.40.1-6"
+  },
+  {
+    "package": "perl-base",
+    "version": "5.40.1-6"
+  },
+  {
+    "package": "perl-modules-5.40",
+    "version": "5.40.1-6"
+  },
+  {
+    "package": "python3.13",
+    "version": "3.13.5-2"
+  },
+  {
+    "package": "python3.13-minimal",
+    "version": "3.13.5-2"
+  },
+  {
+    "package": "re2c",
+    "version": "4.1-1"
+  },
+  {
+    "package": "sysvinit-utils",
+    "version": "3.14-4"
+  },
+  {
+    "package": "tar",
+    "version": "1.35+dfsg-3.1"
+  },
+  {
+    "package": "util-linux",
+    "version": "2.41-5"
+  },
+  {
+    "package": "uuid-dev",
+    "version": "2.41-5"
+  },
+  {
+    "package": "algo26-matthias/idna-convert",
+    "version": "v4.2.1"
+  },
+  {
+    "package": "brick/math",
+    "version": "0.12.3"
+  },
+  {
+    "package": "composer/ca-bundle",
+    "version": "1.5.8"
+  },
+  {
+    "package": "defuse/php-encryption",
+    "version": "v2.4.0"
+  },
+  {
+    "package": "doctrine/inflector",
+    "version": "2.1.0"
+  },
+  {
+    "package": "dragonmantank/cron-expression",
+    "version": "v3.4.0"
+  },
+  {
+    "package": "enshrined/svg-sanitize",
+    "version": "0.22.0"
+  },
+  {
+    "package": "fig/link-util",
+    "version": "1.2.0"
+  },
+  {
+    "package": "google/recaptcha",
+    "version": "1.3.1"
+  },
+  {
+    "package": "guzzlehttp/promises",
+    "version": "2.3.0"
+  },
+  {
+    "package": "guzzlehttp/psr7",
+    "version": "2.8.0"
+  },
+  {
+    "package": "jakeasmith/http_build_url",
+    "version": "1.0.1"
+  },
+  {
+    "package": "jfcherng/php-color-output",
+    "version": "3.0.0"
+  },
+  {
+    "package": "jfcherng/php-diff",
+    "version": "6.16.2"
+  },
+  {
+    "package": "jfcherng/php-mb-string",
+    "version": "2.0.1"
+  },
+  {
+    "package": "jfcherng/php-sequence-matcher",
+    "version": "4.0.3"
+  },
+  {
+    "package": "joomla/application",
+    "version": "4.0.0"
+  },
+  {
+    "package": "joomla/archive",
+    "version": "4.0.0"
+  },
+  {
+    "package": "joomla/authentication",
+    "version": "4.0.0"
+  },
+  {
+    "package": "joomla/console",
+    "version": "4.0.0"
+  },
+  {
+    "package": "joomla/crypt",
+    "version": "4.0.0"
+  },
+  {
+    "package": "joomla/data",
+    "version": "4.0.0"
+  },
+  {
+    "package": "joomla/database",
+    "version": "4.0.0"
+  },
+  {
+    "package": "joomla/di",
+    "version": "4.0.0"
+  },
+  {
+    "package": "joomla/event",
+    "version": "4.0.0"
+  },
+  {
+    "package": "joomla/filesystem",
+    "version": "4.1.0"
+  },
+  {
+    "package": "joomla/filter",
+    "version": "4.0.1"
+  },
+  {
+    "package": "joomla/http",
+    "version": "4.0.0"
+  },
+  {
+    "package": "joomla/input",
+    "version": "4.0.0"
+  },
+  {
+    "package": "joomla/language",
+    "version": "4.0.0"
+  },
+  {
+    "package": "joomla/oauth1",
+    "version": "4.0.1"
+  },
+  {
+    "package": "joomla/oauth2",
+    "version": "4.0.1"
+  },
+  {
+    "package": "joomla/registry",
+    "version": "4.0.0"
+  },
+  {
+    "package": "joomla/router",
+    "version": "4.0.0"
+  },
+  {
+    "package": "joomla/session",
+    "version": "4.0.0"
+  },
+  {
+    "package": "joomla/string",
+    "version": "4.0.0"
+  },
+  {
+    "package": "joomla/uri",
+    "version": "4.0.0"
+  },
+  {
+    "package": "joomla/utilities",
+    "version": "4.0.0"
+  },
+  {
+    "package": "laminas/laminas-diactoros",
+    "version": "3.6.0"
+  },
+  {
+    "package": "lcobucci/clock",
+    "version": "3.3.1"
+  },
+  {
+    "package": "lcobucci/jwt",
+    "version": "4.3.0"
+  },
+  {
+    "package": "paragonie/constant_time_encoding",
+    "version": "v2.8.2"
+  },
+  {
+    "package": "paragonie/sodium_compat",
+    "version": "v1.21.2"
+  },
+  {
+    "package": "php-debugbar/php-debugbar",
+    "version": "v2.2.4"
+  },
+  {
+    "package": "php-tuf/php-tuf",
+    "version": "1.0.3"
+  },
+  {
+    "package": "phpmailer/phpmailer",
+    "version": "v6.10.0"
+  },
+  {
+    "package": "phpseclib/bcmath_compat",
+    "version": "2.0.3"
+  },
+  {
+    "package": "phpseclib/phpseclib",
+    "version": "3.0.46"
+  },
+  {
+    "package": "psr/cache",
+    "version": "3.0.0"
+  },
+  {
+    "package": "psr/clock",
+    "version": "1.0.0"
+  },
+  {
+    "package": "psr/container",
+    "version": "2.0.2"
+  },
+  {
+    "package": "psr/event-dispatcher",
+    "version": "1.0.0"
+  },
+  {
+    "package": "psr/http-client",
+    "version": "1.0.3"
+  },
+  {
+    "package": "psr/http-factory",
+    "version": "1.1.0"
+  },
+  {
+    "package": "psr/http-message",
+    "version": "2.0"
+  },
+  {
+    "package": "psr/link",
+    "version": "1.1.1"
+  },
+  {
+    "package": "psr/log",
+    "version": "3.0.2"
+  },
+  {
+    "package": "ralouphie/getallheaders",
+    "version": "3.0.3"
+  },
+  {
+    "package": "spomky-labs/cbor-php",
+    "version": "3.1.1"
+  },
+  {
+    "package": "spomky-labs/pki-framework",
+    "version": "1.3.0"
+  },
+  {
+    "package": "symfony/console",
+    "version": "v7.3.3"
+  },
+  {
+    "package": "symfony/deprecation-contracts",
+    "version": "v3.6.0"
+  },
+  {
+    "package": "symfony/error-handler",
+    "version": "v7.3.2"
+  },
+  {
+    "package": "symfony/http-client",
+    "version": "v7.3.3"
+  },
+  {
+    "package": "symfony/http-client-contracts",
+    "version": "v3.6.0"
+  },
+  {
+    "package": "symfony/ldap",
+    "version": "v7.3.1"
+  },
+  {
+    "package": "symfony/options-resolver",
+    "version": "v7.3.3"
+  },
+  {
+    "package": "symfony/polyfill-ctype",
+    "version": "v1.33.0"
+  },
+  {
+    "package": "symfony/polyfill-intl-grapheme",
+    "version": "v1.33.0"
+  },
+  {
+    "package": "symfony/polyfill-intl-normalizer",
+    "version": "v1.33.0"
+  },
+  {
+    "package": "symfony/polyfill-mbstring",
+    "version": "v1.33.0"
+  },
+  {
+    "package": "symfony/polyfill-uuid",
+    "version": "v1.33.0"
+  },
+  {
+    "package": "symfony/service-contracts",
+    "version": "v3.6.0"
+  },
+  {
+    "package": "symfony/string",
+    "version": "v7.3.3"
+  },
+  {
+    "package": "symfony/translation-contracts",
+    "version": "v3.6.0"
+  },
+  {
+    "package": "symfony/uid",
+    "version": "v6.4.24"
+  },
+  {
+    "package": "symfony/validator",
+    "version": "v6.4.25"
+  },
+  {
+    "package": "symfony/var-dumper",
+    "version": "v7.3.3"
+  },
+  {
+    "package": "symfony/web-link",
+    "version": "v6.4.24"
+  },
+  {
+    "package": "symfony/yaml",
+    "version": "v6.4.25"
+  },
+  {
+    "package": "tobscure/json-api",
+    "version": "dev-joomla-backports"
+  },
+  {
+    "package": "wamania/php-stemmer",
+    "version": "v4.0.0"
+  },
+  {
+    "package": "web-auth/cose-lib",
+    "version": "4.4.2"
+  },
+  {
+    "package": "web-auth/metadata-service",
+    "version": "4.5.2"
+  },
+  {
+    "package": "web-auth/webauthn-lib",
+    "version": "4.5.2"
+  },
+  {
+    "package": "web-token/jwt-library",
+    "version": "3.4.8"
+  },
+  {
+    "package": "webmozart/assert",
+    "version": "1.11.0"
+  },
+  {
+    "package": "willdurand/negotiation",
+    "version": "3.1.0"
+  }
+]

@@ -1,0 +1,83 @@
+INSTRCUTIONS
+
+1. Start the local infrastructure
+
+Docker Desktop
+
+Launch Docker Desktop and wait until it says “Docker is running.”
+If you plan to use docker-compose, run from repo root:
+
+cd <your-path-to>/ArmourEye-main
+docker compose up -d
+
+If you don’t use compose, just make sure Docker is on; the backend spins up containers on demand.
+
+
+
+Backend API (Node)
+
+New PowerShell window:
+
+cd <your-path-to>/ArmourEye-main/backend
+npm install   # first time only
+npm run start
+
+Leave this running; it serves http://localhost:3001.
+
+
+
+Frontend (Vite React app)
+Another PowerShell window:
+
+cd <your-path-to>/ArmourEye-main
+npm install   # first time only
+npm run dev
+
+Visit the URL shown (usually http://localhost:5173).
+
+
+
+Sure—here’s the full local FastAPI setup you just went through, step by step, so you can repeat it on any machine with a GPU/VRA​M:
+
+Install Python 3.11 (from python.org) and ensure it’s on PATH.
+Install Microsoft Visual C++ Build Tools (Desktop development with C++ workload) so pip can compile packages like hnswlib.
+
+Create a virtual environment in the repo root:
+
+cd <your-path-to>/ArmourEye-main
+python -m venv .venv-ai
+.venv-ai\Scripts\activate   
+python -m pip install --upgrade pip
+
+Install dependencies inside that venv (GPU build of PyTorch plus the AI stack):
+   
+pip install torch --index-url https://download.pytorch.org/whl/cu121   
+pip install fastapi uvicorn[standard] transformers accelerate bitsandbytes langchain-community sentence-transformers chromadb sentencepiece
+
+Launch the inference server:
+   
+uvicorn backend.ai.inference.server:app --host 0.0.0.0 --port 8000
+
+Leave this terminal open while using the app.
+Those are the only downloads: Python 3.11, Visual C++ build tools, and the pip packages above. For Colab, you’d skip steps 1–2 and just run the same pip installs (including sentencepiece) plus the Drive path overrides before uvicorn. Let me know if you want a ready-made script or requirements file to automate this.
+
+
+https://www.python.org/ftp/python/3.11.9/python-3.11.9-amd64.exe
+
+and get the desktop development tools
+
+to run again
+
+cd <your-path-to>/ArmourEye-main
+.venv-ai\Scripts\activate
+
+uvicorn backend.ai.inference.server:app --host 0.0.0.0 --port 8000
+
+For Colab
+
+Run the codes in colab as per instructions and use the code below to update the url
+
+To update the url
+
+cd <your-path-to>/ArmourEye-main/backend
+node ai/update_remote_url.js <your-cloudflare-url>

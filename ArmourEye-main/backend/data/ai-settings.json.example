@@ -1,0 +1,9 @@
+{
+  "mode": "auto",
+  "localUrl": "http://localhost:8000",
+  "remoteUrl": "",
+  "lastHealthyEndpoint": null,
+  "updatedAt": null,
+  "lastHealthyAt": null
+}
+

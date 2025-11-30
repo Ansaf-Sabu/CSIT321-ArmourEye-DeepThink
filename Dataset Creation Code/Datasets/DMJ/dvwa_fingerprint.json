@@ -1,0 +1,446 @@
+﻿[
+    {
+        "package":  "apache2",
+        "version":  "2.4.25-3+deb9u5"
+    },
+    {
+        "package":  "apache2-bin",
+        "version":  "2.4.25-3+deb9u5"
+    },
+    {
+        "package":  "apache2-data",
+        "version":  "2.4.25-3+deb9u5"
+    },
+    {
+        "package":  "apache2-utils",
+        "version":  "2.4.25-3+deb9u5"
+    },
+    {
+        "package":  "apt",
+        "version":  "1.4.8"
+    },
+    {
+        "package":  "bsdutils",
+        "version":  "1:2.29.2-1+deb9u1"
+    },
+    {
+        "package":  "bzip2",
+        "version":  "1.0.6-8.1"
+    },
+    {
+        "package":  "dpkg",
+        "version":  "1.18.25"
+    },
+    {
+        "package":  "e2fslibs",
+        "version":  "1.43.4-2"
+    },
+    {
+        "package":  "e2fsprogs",
+        "version":  "1.43.4-2"
+    },
+    {
+        "package":  "file",
+        "version":  "1:5.30-1+deb9u2"
+    },
+    {
+        "package":  "gcc-6-base",
+        "version":  "6.3.0-18+deb9u1"
+    },
+    {
+        "package":  "gpgv",
+        "version":  "2.1.18-8~deb9u2"
+    },
+    {
+        "package":  "gzip",
+        "version":  "1.6-5+b1"
+    },
+    {
+        "package":  "inetutils-ping",
+        "version":  "2:1.9.4-2+b1"
+    },
+    {
+        "package":  "krb5-locales",
+        "version":  "1.15-1+deb9u1"
+    },
+    {
+        "package":  "libapache2-mod-php7.0",
+        "version":  "7.0.30-0+deb9u1"
+    },
+    {
+        "package":  "libapr1",
+        "version":  "1.5.2-5"
+    },
+    {
+        "package":  "libapt-pkg5.0",
+        "version":  "1.4.8"
+    },
+    {
+        "package":  "libblkid1",
+        "version":  "2.29.2-1+deb9u1"
+    },
+    {
+        "package":  "libbsd0",
+        "version":  "0.8.3-1"
+    },
+    {
+        "package":  "libbz2-1.0",
+        "version":  "1.0.6-8.1"
+    },
+    {
+        "package":  "libc6",
+        "version":  "2.24-11+deb9u3"
+    },
+    {
+        "package":  "libc-bin",
+        "version":  "2.24-11+deb9u3"
+    },
+    {
+        "package":  "libcomerr2",
+        "version":  "1.43.4-2"
+    },
+    {
+        "package":  "libdb5.3",
+        "version":  "5.3.28-12+deb9u1"
+    },
+    {
+        "package":  "libdbd-mysql-perl",
+        "version":  "4.041-2"
+    },
+    {
+        "package":  "libdbi-perl",
+        "version":  "1.636-1+b1"
+    },
+    {
+        "package":  "libelf1",
+        "version":  "0.168-1"
+    },
+    {
+        "package":  "libexpat1",
+        "version":  "2.2.0-2+deb9u1"
+    },
+    {
+        "package":  "libfdisk1",
+        "version":  "2.29.2-1+deb9u1"
+    },
+    {
+        "package":  "libfreetype6",
+        "version":  "2.6.3-3.2"
+    },
+    {
+        "package":  "libgcc1",
+        "version":  "1:6.3.0-18+deb9u1"
+    },
+    {
+        "package":  "libgcrypt20",
+        "version":  "1.7.6-2+deb9u3"
+    },
+    {
+        "package":  "libgd3",
+        "version":  "2.2.4-2+deb9u2"
+    },
+    {
+        "package":  "libgmp10",
+        "version":  "2:6.1.2+dfsg-1"
+    },
+    {
+        "package":  "libgnutls30",
+        "version":  "3.5.8-5+deb9u3"
+    },
+    {
+        "package":  "libgssapi-krb5-2",
+        "version":  "1.15-1+deb9u1"
+    },
+    {
+        "package":  "libhogweed4",
+        "version":  "3.3-1+b2"
+    },
+    {
+        "package":  "libicu57",
+        "version":  "57.1-6+deb9u2"
+    },
+    {
+        "package":  "libidn11",
+        "version":  "1.33-1"
+    },
+    {
+        "package":  "libjpeg62-turbo",
+        "version":  "1:1.5.1-2"
+    },
+    {
+        "package":  "libk5crypto3",
+        "version":  "1.15-1+deb9u1"
+    },
+    {
+        "package":  "libkrb5-3",
+        "version":  "1.15-1+deb9u1"
+    },
+    {
+        "package":  "libkrb5support0",
+        "version":  "1.15-1+deb9u1"
+    },
+    {
+        "package":  "libldap-2.4-2",
+        "version":  "2.4.44+dfsg-5+deb9u2"
+    },
+    {
+        "package":  "libldap-common",
+        "version":  "2.4.44+dfsg-5+deb9u2"
+    },
+    {
+        "package":  "liblz4-1",
+        "version":  "0.0~r131-2+b1"
+    },
+    {
+        "package":  "liblzma5",
+        "version":  "5.2.2-1.2+b1"
+    },
+    {
+        "package":  "libmagic1",
+        "version":  "1:5.30-1+deb9u2"
+    },
+    {
+        "package":  "libmagic-mgc",
+        "version":  "1:5.30-1+deb9u2"
+    },
+    {
+        "package":  "libmariadbclient18",
+        "version":  "10.1.26-0+deb9u1"
+    },
+    {
+        "package":  "libmount1",
+        "version":  "2.29.2-1+deb9u1"
+    },
+    {
+        "package":  "libncurses5",
+        "version":  "6.0+20161126-1+deb9u2"
+    },
+    {
+        "package":  "libncursesw5",
+        "version":  "6.0+20161126-1+deb9u2"
+    },
+    {
+        "package":  "libnettle6",
+        "version":  "3.3-1+b2"
+    },
+    {
+        "package":  "libnghttp2-14",
+        "version":  "1.18.1-1"
+    },
+    {
+        "package":  "libp11-kit0",
+        "version":  "0.23.3-2"
+    },
+    {
+        "package":  "libperl5.24",
+        "version":  "5.24.1-3+deb9u4"
+    },
+    {
+        "package":  "libpng16-16",
+        "version":  "1.6.28-1"
+    },
+    {
+        "package":  "libpq5",
+        "version":  "9.6.10-0+deb9u1"
+    },
+    {
+        "package":  "libsasl2-2",
+        "version":  "2.1.27~101-g0780600+dfsg-3"
+    },
+    {
+        "package":  "libsasl2-modules",
+        "version":  "2.1.27~101-g0780600+dfsg-3"
+    },
+    {
+        "package":  "libsasl2-modules-db",
+        "version":  "2.1.27~101-g0780600+dfsg-3"
+    },
+    {
+        "package":  "libsmartcols1",
+        "version":  "2.29.2-1+deb9u1"
+    },
+    {
+        "package":  "libsqlite3-0",
+        "version":  "3.16.2-5+deb9u1"
+    },
+    {
+        "package":  "libss2",
+        "version":  "1.43.4-2"
+    },
+    {
+        "package":  "libssl1.0.2",
+        "version":  "1.0.2l-2+deb9u3"
+    },
+    {
+        "package":  "libssl1.1",
+        "version":  "1.1.0f-3+deb9u2"
+    },
+    {
+        "package":  "libstdc++6",
+        "version":  "6.3.0-18+deb9u1"
+    },
+    {
+        "package":  "libsystemd0",
+        "version":  "232-25+deb9u4"
+    },
+    {
+        "package":  "libtiff5",
+        "version":  "4.0.8-2+deb9u2"
+    },
+    {
+        "package":  "libtinfo5",
+        "version":  "6.0+20161126-1+deb9u2"
+    },
+    {
+        "package":  "libudev1",
+        "version":  "232-25+deb9u4"
+    },
+    {
+        "package":  "libuuid1",
+        "version":  "2.29.2-1+deb9u1"
+    },
+    {
+        "package":  "libwebp6",
+        "version":  "0.5.2-1"
+    },
+    {
+        "package":  "libx11-6",
+        "version":  "2:1.6.4-3"
+    },
+    {
+        "package":  "libx11-data",
+        "version":  "2:1.6.4-3"
+    },
+    {
+        "package":  "libxml2",
+        "version":  "2.9.4+dfsg1-2.2+deb9u2"
+    },
+    {
+        "package":  "libxslt1.1",
+        "version":  "1.1.29-2.1"
+    },
+    {
+        "package":  "login",
+        "version":  "1:4.4-4.1"
+    },
+    {
+        "package":  "mariadb-client-10.1",
+        "version":  "10.1.26-0+deb9u1"
+    },
+    {
+        "package":  "mariadb-client-core-10.1",
+        "version":  "10.1.26-0+deb9u1"
+    },
+    {
+        "package":  "mariadb-common",
+        "version":  "10.1.26-0+deb9u1"
+    },
+    {
+        "package":  "mariadb-server",
+        "version":  "10.1.26-0+deb9u1"
+    },
+    {
+        "package":  "mariadb-server-10.1",
+        "version":  "10.1.26-0+deb9u1"
+    },
+    {
+        "package":  "mariadb-server-core-10.1",
+        "version":  "10.1.26-0+deb9u1"
+    },
+    {
+        "package":  "mount",
+        "version":  "2.29.2-1+deb9u1"
+    },
+    {
+        "package":  "multiarch-support",
+        "version":  "2.24-11+deb9u3"
+    },
+    {
+        "package":  "ncurses-base",
+        "version":  "6.0+20161126-1+deb9u2"
+    },
+    {
+        "package":  "ncurses-bin",
+        "version":  "6.0+20161126-1+deb9u2"
+    },
+    {
+        "package":  "openssl",
+        "version":  "1.1.0f-3+deb9u2"
+    },
+    {
+        "package":  "passwd",
+        "version":  "1:4.4-4.1"
+    },
+    {
+        "package":  "perl",
+        "version":  "5.24.1-3+deb9u4"
+    },
+    {
+        "package":  "perl-base",
+        "version":  "5.24.1-3+deb9u4"
+    },
+    {
+        "package":  "perl-modules-5.24",
+        "version":  "5.24.1-3+deb9u4"
+    },
+    {
+        "package":  "php7.0",
+        "version":  "7.0.30-0+deb9u1"
+    },
+    {
+        "package":  "php7.0-cli",
+        "version":  "7.0.30-0+deb9u1"
+    },
+    {
+        "package":  "php7.0-common",
+        "version":  "7.0.30-0+deb9u1"
+    },
+    {
+        "package":  "php7.0-gd",
+        "version":  "7.0.30-0+deb9u1"
+    },
+    {
+        "package":  "php7.0-json",
+        "version":  "7.0.30-0+deb9u1"
+    },
+    {
+        "package":  "php7.0-mysql",
+        "version":  "7.0.30-0+deb9u1"
+    },
+    {
+        "package":  "php7.0-opcache",
+        "version":  "7.0.30-0+deb9u1"
+    },
+    {
+        "package":  "php7.0-pgsql",
+        "version":  "7.0.30-0+deb9u1"
+    },
+    {
+        "package":  "php7.0-readline",
+        "version":  "7.0.30-0+deb9u1"
+    },
+    {
+        "package":  "php7.0-xml",
+        "version":  "7.0.30-0+deb9u1"
+    },
+    {
+        "package":  "php-pear",
+        "version":  "1:1.10.1+submodules+notgz-9"
+    },
+    {
+        "package":  "rsync",
+        "version":  "3.1.2-1+deb9u1"
+    },
+    {
+        "package":  "util-linux",
+        "version":  "2.29.2-1+deb9u1"
+    },
+    {
+        "package":  "xz-utils",
+        "version":  "5.2.2-1.2+b1"
+    },
+    {
+        "package":  "zlib1g",
+        "version":  "1:1.2.8.dfsg-5"
+    }
+]

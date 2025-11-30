@@ -1,0 +1,61 @@
+{
+  "image": "dvwa:latest",
+  "fingerprint": [
+    {"service": "apache", "package": "apache2", "version": "2.4.38", "ports": [80]},
+    {"service": "php", "package": "php7.3", "version": "7.3.11", "ports": []},
+    {"service": "mysql", "package": "mysql-server", "version": "5.7.31", "ports": [3306]}
+  ],
+  "cves": [
+    {"cve_id": "CVE-2012-2926", "description": "XML DOS vulnerability in Atlassian Tempo / JIRA", "cvss": 9.1},
+    {"cve_id": "CVE-2019-11043", "description": "PHP-FPM remote code execution", "cvss": 9.8}
+  ],
+  "exploits": [
+    {"title": "Atlassian Tempo / JIRA XML DoS", "type": "dos", "url": "https://www.exploit-db.com/exploits/37218"},
+    {"title": "PHP-FPM RCE PoC", "type": "rce", "url": "https://www.exploit-db.com/exploits/46592"}
+  ],
+  "fixes": [
+    {"recommended_version": "apache2 2.4.51", "mitigation": "Upgrade Apache to latest patched version"},
+    {"recommended_version": "php 7.4+", "mitigation": "Upgrade PHP to patched version and disable vulnerable FPM configs"}
+  ]
+}
+
+{
+  "image": "metasploitable:latest",
+  "fingerprint": [
+    {"service": "vsftpd", "package": "vsftpd", "version": "2.3.4", "ports": [21]},
+    {"service": "mysql", "package": "mysql-server", "version": "5.0.51", "ports": [3306]},
+    {"service": "apache", "package": "apache2", "version": "2.2.8", "ports": [80]}
+  ],
+  "cves": [
+    {"cve_id": "CVE-2011-2523", "description": "vsftpd backdoor vulnerability", "cvss": 10.0},
+    {"cve_id": "CVE-2010-3065", "description": "MySQL privilege escalation", "cvss": 7.5}
+  ],
+  "exploits": [
+    {"title": "vsftpd 2.3.4 backdoor exploit", "type": "rce", "url": "https://www.exploit-db.com/exploits/17402"},
+    {"title": "MySQL privilege escalation exploit", "type": "privilege escalation", "url": "https://www.exploit-db.com/exploits/14323"}
+  ],
+  "fixes": [
+    {"recommended_version": "vsftpd 3.0.3", "mitigation": "Upgrade vsftpd to patched version"},
+    {"recommended_version": "MySQL 5.7+", "mitigation": "Upgrade MySQL server and apply security patches"}
+  ]
+}
+
+{
+  "image": "juice-shop:latest",
+  "fingerprint": [
+    {"service": "nodejs", "package": "nodejs", "version": "10.15.3", "ports": [3000]},
+    {"service": "npm", "package": "npm", "version": "6.4.1", "ports": []}
+  ],
+  "cves": [
+    {"cve_id": "CVE-2018-16492", "description": "Node.js command injection in Express apps", "cvss": 8.8},
+    {"cve_id": "CVE-2019-10744", "description": "npm package path traversal", "cvss": 7.2}
+  ],
+  "exploits": [
+    {"title": "Node.js Express command injection", "type": "rce", "url": "https://www.exploit-db.com/exploits/45412"},
+    {"title": "npm path traversal exploit", "type": "path traversal", "url": "https://www.exploit-db.com/exploits/46821"}
+  ],
+  "fixes": [
+    {"recommended_version": "nodejs 12+", "mitigation": "Upgrade Node.js to patched version"},
+    {"recommended_version": "npm 6.14+", "mitigation": "Upgrade npm to latest version to prevent path traversal"}
+  ]
+}

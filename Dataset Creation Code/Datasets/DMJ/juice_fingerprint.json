@@ -1,0 +1,78 @@
+﻿[
+    {
+        "package":  "base64url",
+        "version":  "0.0.6"
+    },
+    {
+        "package":  "braces",
+        "version":  "2.3.2"
+    },
+    {
+        "package":  "crypto-js",
+        "version":  "3.3.0"
+    },
+    {
+        "package":  "express-jwt",
+        "version":  "0.1.3"
+    },
+    {
+        "package":  "http-cache-semantics",
+        "version":  "3.8.1"
+    },
+    {
+        "package":  "ip",
+        "version":  "2.0.1"
+    },
+    {
+        "package":  "jsonwebtoken",
+        "version":  "0.1.0"
+    },
+    {
+        "package":  "jsonwebtoken",
+        "version":  "0.4.0"
+    },
+    {
+        "package":  "jws",
+        "version":  "0.2.6"
+    },
+    {
+        "package":  "libc6",
+        "version":  "2.36-9+deb12u10"
+    },
+    {
+        "package":  "lodash",
+        "version":  "2.4.2"
+    },
+    {
+        "package":  "lodash.set",
+        "version":  "4.3.2"
+    },
+    {
+        "package":  "marsdb",
+        "version":  "0.6.11"
+    },
+    {
+        "package":  "moment",
+        "version":  "2.0.0"
+    },
+    {
+        "package":  "multer",
+        "version":  "1.4.5-lts.2"
+    },
+    {
+        "package":  "sanitize-html",
+        "version":  "1.4.2"
+    },
+    {
+        "package":  "tar-fs",
+        "version":  "2.1.3"
+    },
+    {
+        "package":  "vm2",
+        "version":  "3.9.17"
+    },
+    {
+        "package":  "ws",
+        "version":  "7.4.6"
+    }
+]

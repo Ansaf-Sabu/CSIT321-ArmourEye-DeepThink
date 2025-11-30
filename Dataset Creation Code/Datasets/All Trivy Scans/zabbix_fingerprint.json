@@ -1,0 +1,4038 @@
+{
+  "SchemaVersion": 2,
+  "CreatedAt": "2025-10-26T09:39:44.0431002+04:00",
+  "ArtifactName": "zabbix/zabbix-server-mysql",
+  "ArtifactType": "container_image",
+  "Metadata": {
+    "Size": 111660032,
+    "OS": {
+      "Family": "alpine",
+      "Name": "3.22.1"
+    },
+    "ImageID": "sha256:7388a0a812a2380cef3d6d9e29f51d073c1ec6caeb35eb80b21f4413eb7720f2",
+    "DiffIDs": [
+      "sha256:418dccb7d85a63a6aa574439840f7a6fa6fd2321b3e2394568a317735e867d35",
+      "sha256:55b58657ed17d2314f58ceb302fd4f61b3fbd781c20d3873e42614a2b1a4f36b",
+      "sha256:141bc3dd63ed4ba895cd7b15c7f9c02835e4b177771a051554d273259ff54a73",
+      "sha256:f3df9b053ae9a898e08f8a60ae116cd7bbc8d6da4c036fbdea1f681bd95dba5f",
+      "sha256:1b351ef20a023b2ecb43a4130abf5f7d98d058fee881c70f371c0bfb1d0e2eec",
+      "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6",
+      "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+      "sha256:a1f0baffc71a51adc33c8729fd1177d21ca43412ef0aadc8b3edfe9790aaaff2"
+    ],
+    "RepoTags": [
+      "zabbix/zabbix-server-mysql:latest"
+    ],
+    "RepoDigests": [
+      "zabbix/zabbix-server-mysql@sha256:7388a0a812a2380cef3d6d9e29f51d073c1ec6caeb35eb80b21f4413eb7720f2"
+    ],
+    "ImageConfig": {
+      "architecture": "amd64",
+      "created": "2025-10-03T07:48:40.70800072Z",
+      "history": [
+        {
+          "created": "2025-07-15T11:01:16Z",
+          "created_by": "ADD alpine-minirootfs-3.22.1-x86_64.tar.gz / # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2025-07-15T11:01:16Z",
+          "created_by": "CMD [\"/bin/sh\"]",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2025-10-03T07:48:37Z",
+          "created_by": "ARG MAJOR_VERSION=7.4",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2025-10-03T07:48:37Z",
+          "created_by": "ARG ZBX_VERSION=7.4.3",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2025-10-03T07:48:37Z",
+          "created_by": "ARG ZBX_SOURCES=https://git.zabbix.com/scm/zbx/zabbix.git",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2025-10-03T07:48:37Z",
+          "created_by": "ENV TERM=xterm ZBX_VERSION=7.4.3 ZBX_SOURCES=https://git.zabbix.com/scm/zbx/zabbix.git MIBDIRS=/usr/share/snmp/mibs:/var/lib/zabbix/mibs MIBS=+ALL NMAP_PRIVILEGED= ZABBIX_USER_HOME_DIR=/var/lib/zabbix ZABBIX_CONF_DIR=/etc/zabbix",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2025-10-03T07:48:37Z",
+          "created_by": "ENV ZBX_DB_NAME=dummy_db_name ZBX_FPINGLOCATION=/usr/sbin/fping ZBX_LOADMODULEPATH=/var/lib/zabbix/modules ZBX_SNMPTRAPPERFILE=/var/lib/zabbix/snmptraps/snmptraps.log ZBX_SSHKEYLOCATION=/var/lib/zabbix/ssh_keys/ ZBX_SSLCERTLOCATION=/var/lib/zabbix/ssl/certs/ ZBX_SSLKEYLOCATION=/var/lib/zabbix/ssl/keys/ ZBX_SSLCALOCATION=/var/lib/zabbix/ssl/ssl_ca/",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2025-10-03T07:48:37Z",
+          "created_by": "LABEL org.opencontainers.image.authors=Alexey Pustovalov \u003calexey.pustovalov@zabbix.com\u003e org.opencontainers.image.description=Zabbix server with MySQL database support org.opencontainers.image.documentation=https://www.zabbix.com/documentation/7.4/manual/installation/containers org.opencontainers.image.licenses=AGPL v3.0 org.opencontainers.image.source=https://git.zabbix.com/scm/zbx/zabbix.git org.opencontainers.image.title=Zabbix server (MySQL) org.opencontainers.image.url=https://zabbix.com/ org.opencontainers.image.vendor=Zabbix SIA org.opencontainers.image.version=7.4.3",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2025-10-03T07:48:37Z",
+          "created_by": "STOPSIGNAL SIGTERM",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2025-10-03T07:48:37Z",
+          "created_by": "COPY /tmp/zabbix-7.4.3-output/server/sbin/zabbix_server /usr/sbin/zabbix_server # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2025-10-03T07:48:37Z",
+          "created_by": "COPY /tmp/zabbix-7.4.3-output/general/bin/* /usr/bin/ # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2025-10-03T07:48:37Z",
+          "created_by": "COPY /tmp/zabbix-7.4.3-output/server/conf/ /etc/zabbix/ # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2025-10-03T07:48:37Z",
+          "created_by": "COPY /tmp/zabbix-7.4.3-output/server/database/mysql/create.sql.gz /usr/share/doc/zabbix-server-mysql/create.sql.gz # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2025-10-03T07:48:40Z",
+          "created_by": "RUN |3 MAJOR_VERSION=7.4 ZBX_VERSION=7.4.3 ZBX_SOURCES=https://git.zabbix.com/scm/zbx/zabbix.git /bin/sh -c set -eux \u0026\u0026     INSTALL_PKGS=\"bash             fping             traceroute             nmap             krb5             tzdata             iputils             openssl             c-ares             libcap             libcurl             libevent             libldap             libssh             libxml2             mariadb-client             mariadb-connector-c             net-snmp-agent-libs             openipmi-libs             pcre2             gzip             unixodbc             zlib\" \u0026\u0026     apk add             --no-cache             --clean-protected         ${INSTALL_PKGS} \u0026\u0026     addgroup             --system             --gid 1995         zabbix \u0026\u0026     adduser             --system             --gecos \"Zabbix monitoring system\"             --disabled-password             --uid 1997             --ingroup zabbix             --shell /sbin/nologin             --home ${ZABBIX_USER_HOME_DIR}         zabbix \u0026\u0026     adduser zabbix dialout \u0026\u0026     chgrp zabbix /usr/bin/nmap \u0026\u0026     setcap cap_net_raw+eip /usr/bin/nmap \u0026\u0026     chmod u+s /usr/sbin/fping \u0026\u0026     mkdir -p ${ZABBIX_CONF_DIR} \u0026\u0026     mkdir -p ${ZABBIX_USER_HOME_DIR} \u0026\u0026     mkdir -p ${ZABBIX_USER_HOME_DIR}/dbscripts \u0026\u0026     mkdir -p ${ZABBIX_USER_HOME_DIR}/enc \u0026\u0026     mkdir -p ${ZABBIX_USER_HOME_DIR}/enc_internal \u0026\u0026     mkdir -p ${ZABBIX_USER_HOME_DIR}/export \u0026\u0026     mkdir -p ${ZABBIX_USER_HOME_DIR}/mibs \u0026\u0026     mkdir -p ${ZABBIX_USER_HOME_DIR}/modules \u0026\u0026     mkdir -p ${ZABBIX_USER_HOME_DIR}/snmptraps \u0026\u0026     mkdir -p ${ZABBIX_USER_HOME_DIR}/ssh_keys \u0026\u0026     mkdir -p ${ZABBIX_USER_HOME_DIR}/ssl \u0026\u0026     mkdir -p ${ZABBIX_USER_HOME_DIR}/ssl/certs \u0026\u0026     mkdir -p ${ZABBIX_USER_HOME_DIR}/ssl/keys \u0026\u0026     mkdir -p ${ZABBIX_USER_HOME_DIR}/ssl/ssl_ca \u0026\u0026     mkdir -p /usr/lib/zabbix/alertscripts \u0026\u0026     mkdir -p /usr/lib/zabbix/externalscripts \u0026\u0026     mkdir -p /usr/share/doc/zabbix-server-mysql \u0026\u0026     chown --quiet -R zabbix:root ${ZABBIX_CONF_DIR}/zabbix_server_modules.conf ${ZABBIX_USER_HOME_DIR} \u0026\u0026     chown --quiet zabbix:root ${ZABBIX_CONF_DIR}/ \u0026\u0026     chgrp -R 0 ${ZABBIX_CONF_DIR}/zabbix_server_modules.conf ${ZABBIX_USER_HOME_DIR} \u0026\u0026     chgrp 0 ${ZABBIX_CONF_DIR} \u0026\u0026     chmod -R g=u ${ZABBIX_CONF_DIR}/zabbix_server_modules.conf ${ZABBIX_USER_HOME_DIR} \u0026\u0026     chmod g=u ${ZABBIX_CONF_DIR} \u0026\u0026     /usr/sbin/zabbix_server -V # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2025-10-03T07:48:40Z",
+          "created_by": "EXPOSE \u0026{[{{118 0} {118 0}}] 0xc0001470c0}",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2025-10-03T07:48:40Z",
+          "created_by": "WORKDIR /var/lib/zabbix",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2025-10-03T07:48:40Z",
+          "created_by": "VOLUME [/var/lib/zabbix/snmptraps /var/lib/zabbix/export]",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2025-10-03T07:48:40Z",
+          "created_by": "COPY docker-entrypoint.sh /usr/bin/ # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2025-10-03T07:48:40Z",
+          "created_by": "ENTRYPOINT [\"/usr/bin/docker-entrypoint.sh\"]",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2025-10-03T07:48:40Z",
+          "created_by": "USER 1997",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2025-10-03T07:48:40Z",
+          "created_by": "CMD [\"/usr/sbin/zabbix_server\" \"--foreground\" \"-c\" \"/etc/zabbix/zabbix_server.conf\"]",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        }
+      ],
+      "os": "linux",
+      "rootfs": {
+        "type": "layers",
+        "diff_ids": [
+          "sha256:418dccb7d85a63a6aa574439840f7a6fa6fd2321b3e2394568a317735e867d35",
+          "sha256:55b58657ed17d2314f58ceb302fd4f61b3fbd781c20d3873e42614a2b1a4f36b",
+          "sha256:141bc3dd63ed4ba895cd7b15c7f9c02835e4b177771a051554d273259ff54a73",
+          "sha256:f3df9b053ae9a898e08f8a60ae116cd7bbc8d6da4c036fbdea1f681bd95dba5f",
+          "sha256:1b351ef20a023b2ecb43a4130abf5f7d98d058fee881c70f371c0bfb1d0e2eec",
+          "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6",
+          "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+          "sha256:a1f0baffc71a51adc33c8729fd1177d21ca43412ef0aadc8b3edfe9790aaaff2"
+        ]
+      },
+      "config": {
+        "Cmd": [
+          "/usr/sbin/zabbix_server",
+          "--foreground",
+          "-c",
+          "/etc/zabbix/zabbix_server.conf"
+        ],
+        "Entrypoint": [
+          "/usr/bin/docker-entrypoint.sh"
+        ],
+        "Env": [
+          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "TERM=xterm",
+          "ZBX_VERSION=7.4.3",
+          "ZBX_SOURCES=https://git.zabbix.com/scm/zbx/zabbix.git",
+          "MIBDIRS=/usr/share/snmp/mibs:/var/lib/zabbix/mibs",
+          "MIBS=+ALL",
+          "NMAP_PRIVILEGED=",
+          "ZABBIX_USER_HOME_DIR=/var/lib/zabbix",
+          "ZABBIX_CONF_DIR=/etc/zabbix",
+          "ZBX_DB_NAME=dummy_db_name",
+          "ZBX_FPINGLOCATION=/usr/sbin/fping",
+          "ZBX_LOADMODULEPATH=/var/lib/zabbix/modules",
+          "ZBX_SNMPTRAPPERFILE=/var/lib/zabbix/snmptraps/snmptraps.log",
+          "ZBX_SSHKEYLOCATION=/var/lib/zabbix/ssh_keys/",
+          "ZBX_SSLCERTLOCATION=/var/lib/zabbix/ssl/certs/",
+          "ZBX_SSLKEYLOCATION=/var/lib/zabbix/ssl/keys/",
+          "ZBX_SSLCALOCATION=/var/lib/zabbix/ssl/ssl_ca/"
+        ],
+        "Labels": {
+          "org.opencontainers.image.authors": "Alexey Pustovalov \u003calexey.pustovalov@zabbix.com\u003e",
+          "org.opencontainers.image.created": "2025-10-03T07:47:54.594Z",
+          "org.opencontainers.image.description": "Zabbix server with MySQL database support",
+          "org.opencontainers.image.documentation": "https://www.zabbix.com/documentation/7.4/manual/installation/containers",
+          "org.opencontainers.image.licenses": "AGPL v3.0",
+          "org.opencontainers.image.revision": "b9037d85d7a9a6034036af179622a9ffe32cff34",
+          "org.opencontainers.image.source": "https://git.zabbix.com/scm/zbx/zabbix.git",
+          "org.opencontainers.image.title": "Zabbix server (MySQL)",
+          "org.opencontainers.image.url": "https://zabbix.com/",
+          "org.opencontainers.image.vendor": "Zabbix SIA",
+          "org.opencontainers.image.version": "7.4.3"
+        },
+        "User": "1997",
+        "Volumes": {
+          "/var/lib/zabbix/export": {},
+          "/var/lib/zabbix/snmptraps": {}
+        },
+        "WorkingDir": "/var/lib/zabbix",
+        "ExposedPorts": {
+          "10051/tcp": {}
+        },
+        "ArgsEscaped": true,
+        "StopSignal": "SIGTERM"
+      }
+    },
+    "Layers": [
+      {
+        "Size": 8596480,
+        "Digest": "sha256:9824c27679d3b27c5e1cb00a73adb6f4f8d556994111c12db3c5d61a0c843df8",
+        "DiffID": "sha256:418dccb7d85a63a6aa574439840f7a6fa6fd2321b3e2394568a317735e867d35"
+      },
+      {
+        "Size": 5869568,
+        "Digest": "sha256:e54d7f961c13d74fc8a1d081eb8995b539753e0a87af8eaa509f820204f66a5e",
+        "DiffID": "sha256:55b58657ed17d2314f58ceb302fd4f61b3fbd781c20d3873e42614a2b1a4f36b"
+      },
+      {
+        "Size": 623616,
+        "Digest": "sha256:977a2acb4b0d72bbb43b5f142210fbdda55c1f7214df589c621daef3a03460bc",
+        "DiffID": "sha256:141bc3dd63ed4ba895cd7b15c7f9c02835e4b177771a051554d273259ff54a73"
+      },
+      {
+        "Size": 89600,
+        "Digest": "sha256:aaf94a40e0211cbce52f78870fffe5a5bdfdb80f5b5ee9d2c89dfb0127651150",
+        "DiffID": "sha256:f3df9b053ae9a898e08f8a60ae116cd7bbc8d6da4c036fbdea1f681bd95dba5f"
+      },
+      {
+        "Size": 4158976,
+        "Digest": "sha256:144ebeb1a8b3272c1f408e18b2874027ab36e86f20dac36d2c5b2b7d4a054d52",
+        "DiffID": "sha256:1b351ef20a023b2ecb43a4130abf5f7d98d058fee881c70f371c0bfb1d0e2eec"
+      },
+      {
+        "Size": 92303872,
+        "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+        "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+      },
+      {
+        "Size": 1024,
+        "Digest": "sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1",
+        "DiffID": "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+      },
+      {
+        "Size": 16896,
+        "Digest": "sha256:e74445fc6a70703ee387f127aa172a509a9582149bafba8ea72a931e3dcdfee6",
+        "DiffID": "sha256:a1f0baffc71a51adc33c8729fd1177d21ca43412ef0aadc8b3edfe9790aaaff2"
+      }
+    ]
+  },
+  "Results": [
+    {
+      "Target": "zabbix/zabbix-server-mysql (alpine 3.22.1)",
+      "Class": "os-pkgs",
+      "Type": "alpine",
+      "Packages": [
+        {
+          "ID": "alpine-baselayout@3.7.0-r0",
+          "Name": "alpine-baselayout",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/alpine-baselayout@3.7.0-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "a0750984ae0ee280"
+          },
+          "Version": "3.7.0-r0",
+          "Arch": "x86_64",
+          "SrcName": "alpine-baselayout",
+          "SrcVersion": "3.7.0-r0",
+          "Licenses": [
+            "GPL-2.0-only"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "alpine-baselayout-data@3.7.0-r0",
+            "busybox-binsh@1.37.0-r18"
+          ],
+          "Layer": {
+            "Digest": "sha256:9824c27679d3b27c5e1cb00a73adb6f4f8d556994111c12db3c5d61a0c843df8",
+            "DiffID": "sha256:418dccb7d85a63a6aa574439840f7a6fa6fd2321b3e2394568a317735e867d35"
+          },
+          "Digest": "sha1:29f99748eea1ffe01f70b34024dc45c46d211f8d",
+          "InstalledFiles": [
+            "etc/motd",
+            "etc/crontabs/root",
+            "etc/modprobe.d/aliases.conf",
+            "etc/modprobe.d/blacklist.conf",
+            "etc/modprobe.d/i386.conf",
+            "etc/profile.d/20locale.sh",
+            "etc/profile.d/README",
+            "etc/profile.d/color_prompt.sh.disabled",
+            "usr/lib/sysctl.d/00-alpine.conf",
+            "var/lock",
+            "var/run",
+            "var/spool/mail",
+            "var/spool/cron/crontabs"
+          ]
+        },
+        {
+          "ID": "alpine-baselayout-data@3.7.0-r0",
+          "Name": "alpine-baselayout-data",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/alpine-baselayout-data@3.7.0-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "f5b86fea926440c2"
+          },
+          "Version": "3.7.0-r0",
+          "Arch": "x86_64",
+          "SrcName": "alpine-baselayout",
+          "SrcVersion": "3.7.0-r0",
+          "Licenses": [
+            "GPL-2.0-only"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "Layer": {
+            "Digest": "sha256:9824c27679d3b27c5e1cb00a73adb6f4f8d556994111c12db3c5d61a0c843df8",
+            "DiffID": "sha256:418dccb7d85a63a6aa574439840f7a6fa6fd2321b3e2394568a317735e867d35"
+          },
+          "Digest": "sha1:73f5ef65f8333a1784102df973c076d5a7d5b5fe",
+          "InstalledFiles": [
+            "etc/fstab",
+            "etc/group",
+            "etc/hostname",
+            "etc/hosts",
+            "etc/inittab",
+            "etc/modules",
+            "etc/mtab",
+            "etc/nsswitch.conf",
+            "etc/passwd",
+            "etc/profile",
+            "etc/protocols",
+            "etc/services",
+            "etc/shadow",
+            "etc/shells",
+            "etc/sysctl.conf"
+          ]
+        },
+        {
+          "ID": "alpine-keys@2.5-r0",
+          "Name": "alpine-keys",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/alpine-keys@2.5-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "81813228b0ffdc30"
+          },
+          "Version": "2.5-r0",
+          "Arch": "x86_64",
+          "SrcName": "alpine-keys",
+          "SrcVersion": "2.5-r0",
+          "Licenses": [
+            "MIT"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "Layer": {
+            "Digest": "sha256:9824c27679d3b27c5e1cb00a73adb6f4f8d556994111c12db3c5d61a0c843df8",
+            "DiffID": "sha256:418dccb7d85a63a6aa574439840f7a6fa6fd2321b3e2394568a317735e867d35"
+          },
+          "Digest": "sha1:b175e48144ebad03d6ba11d45b25aafc2de310c1",
+          "InstalledFiles": [
+            "etc/apk/keys/alpine-devel@lists.alpinelinux.org-4a6a0840.rsa.pub",
+            "etc/apk/keys/alpine-devel@lists.alpinelinux.org-5243ef4b.rsa.pub",
+            "etc/apk/keys/alpine-devel@lists.alpinelinux.org-5261cecb.rsa.pub",
+            "etc/apk/keys/alpine-devel@lists.alpinelinux.org-6165ee59.rsa.pub",
+            "etc/apk/keys/alpine-devel@lists.alpinelinux.org-61666e3f.rsa.pub",
+            "usr/share/apk/keys/alpine-devel@lists.alpinelinux.org-4a6a0840.rsa.pub",
+            "usr/share/apk/keys/alpine-devel@lists.alpinelinux.org-5243ef4b.rsa.pub",
+            "usr/share/apk/keys/alpine-devel@lists.alpinelinux.org-524d27bb.rsa.pub",
+            "usr/share/apk/keys/alpine-devel@lists.alpinelinux.org-5261cecb.rsa.pub",
+            "usr/share/apk/keys/alpine-devel@lists.alpinelinux.org-58199dcc.rsa.pub",
+            "usr/share/apk/keys/alpine-devel@lists.alpinelinux.org-58cbb476.rsa.pub",
+            "usr/share/apk/keys/alpine-devel@lists.alpinelinux.org-58e4f17d.rsa.pub",
+            "usr/share/apk/keys/alpine-devel@lists.alpinelinux.org-5e69ca50.rsa.pub",
+            "usr/share/apk/keys/alpine-devel@lists.alpinelinux.org-60ac2099.rsa.pub",
+            "usr/share/apk/keys/alpine-devel@lists.alpinelinux.org-6165ee59.rsa.pub",
+            "usr/share/apk/keys/alpine-devel@lists.alpinelinux.org-61666e3f.rsa.pub",
+            "usr/share/apk/keys/alpine-devel@lists.alpinelinux.org-616a9724.rsa.pub",
+            "usr/share/apk/keys/alpine-devel@lists.alpinelinux.org-616abc23.rsa.pub",
+            "usr/share/apk/keys/alpine-devel@lists.alpinelinux.org-616ac3bc.rsa.pub",
+            "usr/share/apk/keys/alpine-devel@lists.alpinelinux.org-616adfeb.rsa.pub",
+            "usr/share/apk/keys/alpine-devel@lists.alpinelinux.org-616ae350.rsa.pub",
+            "usr/share/apk/keys/alpine-devel@lists.alpinelinux.org-616db30d.rsa.pub",
+            "usr/share/apk/keys/alpine-devel@lists.alpinelinux.org-66ba20fe.rsa.pub",
+            "usr/share/apk/keys/aarch64/alpine-devel@lists.alpinelinux.org-58199dcc.rsa.pub",
+            "usr/share/apk/keys/aarch64/alpine-devel@lists.alpinelinux.org-616ae350.rsa.pub",
+            "usr/share/apk/keys/armhf/alpine-devel@lists.alpinelinux.org-524d27bb.rsa.pub",
+            "usr/share/apk/keys/armhf/alpine-devel@lists.alpinelinux.org-616a9724.rsa.pub",
+            "usr/share/apk/keys/armv7/alpine-devel@lists.alpinelinux.org-524d27bb.rsa.pub",
+            "usr/share/apk/keys/armv7/alpine-devel@lists.alpinelinux.org-616adfeb.rsa.pub",
+            "usr/share/apk/keys/loongarch64/alpine-devel@lists.alpinelinux.org-66ba20fe.rsa.pub",
+            "usr/share/apk/keys/mips64/alpine-devel@lists.alpinelinux.org-5e69ca50.rsa.pub",
+            "usr/share/apk/keys/ppc64le/alpine-devel@lists.alpinelinux.org-58cbb476.rsa.pub",
+            "usr/share/apk/keys/ppc64le/alpine-devel@lists.alpinelinux.org-616abc23.rsa.pub",
+            "usr/share/apk/keys/riscv64/alpine-devel@lists.alpinelinux.org-60ac2099.rsa.pub",
+            "usr/share/apk/keys/riscv64/alpine-devel@lists.alpinelinux.org-616db30d.rsa.pub",
+            "usr/share/apk/keys/s390x/alpine-devel@lists.alpinelinux.org-58e4f17d.rsa.pub",
+            "usr/share/apk/keys/s390x/alpine-devel@lists.alpinelinux.org-616ac3bc.rsa.pub",
+            "usr/share/apk/keys/x86/alpine-devel@lists.alpinelinux.org-4a6a0840.rsa.pub",
+            "usr/share/apk/keys/x86/alpine-devel@lists.alpinelinux.org-5243ef4b.rsa.pub",
+            "usr/share/apk/keys/x86/alpine-devel@lists.alpinelinux.org-61666e3f.rsa.pub",
+            "usr/share/apk/keys/x86_64/alpine-devel@lists.alpinelinux.org-4a6a0840.rsa.pub",
+            "usr/share/apk/keys/x86_64/alpine-devel@lists.alpinelinux.org-5261cecb.rsa.pub",
+            "usr/share/apk/keys/x86_64/alpine-devel@lists.alpinelinux.org-6165ee59.rsa.pub"
+          ]
+        },
+        {
+          "ID": "alpine-release@3.22.1-r0",
+          "Name": "alpine-release",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/alpine-release@3.22.1-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "d4956fe0f256933c"
+          },
+          "Version": "3.22.1-r0",
+          "Arch": "x86_64",
+          "SrcName": "alpine-base",
+          "SrcVersion": "3.22.1-r0",
+          "Licenses": [
+            "MIT"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "alpine-keys@2.5-r0"
+          ],
+          "Layer": {
+            "Digest": "sha256:9824c27679d3b27c5e1cb00a73adb6f4f8d556994111c12db3c5d61a0c843df8",
+            "DiffID": "sha256:418dccb7d85a63a6aa574439840f7a6fa6fd2321b3e2394568a317735e867d35"
+          },
+          "Digest": "sha1:20af3bbd2f59403c19b22576e458428bf8c09c12",
+          "InstalledFiles": [
+            "etc/alpine-release",
+            "etc/issue",
+            "etc/os-release",
+            "etc/secfixes.d/alpine",
+            "usr/lib/os-release"
+          ]
+        },
+        {
+          "ID": "apk-tools@2.14.9-r2",
+          "Name": "apk-tools",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/apk-tools@2.14.9-r2?arch=x86_64\u0026distro=3.22.1",
+            "UID": "2c0ab4b872e493f"
+          },
+          "Version": "2.14.9-r2",
+          "Arch": "x86_64",
+          "SrcName": "apk-tools",
+          "SrcVersion": "2.14.9-r2",
+          "Licenses": [
+            "GPL-2.0-only"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "ca-certificates-bundle@20250619-r0",
+            "libapk2@2.14.9-r2",
+            "libcrypto3@3.5.4-r0",
+            "musl@1.2.5-r10",
+            "zlib@1.3.1-r2"
+          ],
+          "Layer": {
+            "Digest": "sha256:9824c27679d3b27c5e1cb00a73adb6f4f8d556994111c12db3c5d61a0c843df8",
+            "DiffID": "sha256:418dccb7d85a63a6aa574439840f7a6fa6fd2321b3e2394568a317735e867d35"
+          },
+          "Digest": "sha1:2a8910d00ac31df2e1ccd94127488ea3a06e2d48",
+          "InstalledFiles": [
+            "sbin/apk"
+          ]
+        },
+        {
+          "ID": "bash@5.2.37-r0",
+          "Name": "bash",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/bash@5.2.37-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "56d1ab33e8cf745f"
+          },
+          "Version": "5.2.37-r0",
+          "Arch": "x86_64",
+          "SrcName": "bash",
+          "SrcVersion": "5.2.37-r0",
+          "Licenses": [
+            "GPL-3.0-or-later"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "busybox-binsh@1.37.0-r18",
+            "musl@1.2.5-r10",
+            "readline@8.2.13-r1"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:e2e7691628b43701a0fe7228b8d986a7aeb58aa9",
+          "InstalledFiles": [
+            "bin/bash",
+            "etc/bash/bashrc",
+            "etc/profile.d/00-bashrc.sh",
+            "usr/lib/bash/accept",
+            "usr/lib/bash/basename",
+            "usr/lib/bash/csv",
+            "usr/lib/bash/cut",
+            "usr/lib/bash/dirname",
+            "usr/lib/bash/dsv",
+            "usr/lib/bash/fdflags",
+            "usr/lib/bash/finfo",
+            "usr/lib/bash/getconf",
+            "usr/lib/bash/head",
+            "usr/lib/bash/id",
+            "usr/lib/bash/ln",
+            "usr/lib/bash/logname",
+            "usr/lib/bash/mkdir",
+            "usr/lib/bash/mkfifo",
+            "usr/lib/bash/mktemp",
+            "usr/lib/bash/mypid",
+            "usr/lib/bash/pathchk",
+            "usr/lib/bash/print",
+            "usr/lib/bash/printenv",
+            "usr/lib/bash/push",
+            "usr/lib/bash/realpath",
+            "usr/lib/bash/rm",
+            "usr/lib/bash/rmdir",
+            "usr/lib/bash/seq",
+            "usr/lib/bash/setpgid",
+            "usr/lib/bash/sleep",
+            "usr/lib/bash/stat",
+            "usr/lib/bash/strftime",
+            "usr/lib/bash/sync",
+            "usr/lib/bash/tee",
+            "usr/lib/bash/truefalse",
+            "usr/lib/bash/tty",
+            "usr/lib/bash/uname",
+            "usr/lib/bash/unlink",
+            "usr/lib/bash/whoami"
+          ]
+        },
+        {
+          "ID": "brotli-libs@1.1.0-r2",
+          "Name": "brotli-libs",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/brotli-libs@1.1.0-r2?arch=x86_64\u0026distro=3.22.1",
+            "UID": "d1b0cbfc86c6ec8c"
+          },
+          "Version": "1.1.0-r2",
+          "Arch": "x86_64",
+          "SrcName": "brotli",
+          "SrcVersion": "1.1.0-r2",
+          "Licenses": [
+            "MIT"
+          ],
+          "Maintainer": "prspkt \u003cprspkt@protonmail.com\u003e",
+          "DependsOn": [
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:889fa02c5f7cdd90283ce2b68959e9c44e5dfbf2",
+          "InstalledFiles": [
+            "usr/lib/libbrotlicommon.so.1",
+            "usr/lib/libbrotlicommon.so.1.1.0",
+            "usr/lib/libbrotlidec.so.1",
+            "usr/lib/libbrotlidec.so.1.1.0",
+            "usr/lib/libbrotlienc.so.1",
+            "usr/lib/libbrotlienc.so.1.1.0"
+          ]
+        },
+        {
+          "ID": "busybox@1.37.0-r18",
+          "Name": "busybox",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/busybox@1.37.0-r18?arch=x86_64\u0026distro=3.22.1",
+            "UID": "4a7463dc29f631ad"
+          },
+          "Version": "1.37.0-r18",
+          "Arch": "x86_64",
+          "SrcName": "busybox",
+          "SrcVersion": "1.37.0-r18",
+          "Licenses": [
+            "GPL-2.0-only"
+          ],
+          "Maintainer": "Sören Tempel \u003csoeren+alpine@soeren-tempel.net\u003e",
+          "DependsOn": [
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:9824c27679d3b27c5e1cb00a73adb6f4f8d556994111c12db3c5d61a0c843df8",
+            "DiffID": "sha256:418dccb7d85a63a6aa574439840f7a6fa6fd2321b3e2394568a317735e867d35"
+          },
+          "Digest": "sha1:21558d4968f31dcc377c0f27dae9bb0f32bb25d2",
+          "InstalledFiles": [
+            "bin/busybox",
+            "etc/securetty",
+            "etc/busybox-paths.d/busybox",
+            "etc/logrotate.d/acpid",
+            "etc/network/if-up.d/dad",
+            "etc/udhcpc/udhcpc.conf",
+            "usr/share/udhcpc/default.script"
+          ]
+        },
+        {
+          "ID": "busybox-binsh@1.37.0-r18",
+          "Name": "busybox-binsh",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/busybox-binsh@1.37.0-r18?arch=x86_64\u0026distro=3.22.1",
+            "UID": "b8d6846cf19313be"
+          },
+          "Version": "1.37.0-r18",
+          "Arch": "x86_64",
+          "SrcName": "busybox",
+          "SrcVersion": "1.37.0-r18",
+          "Licenses": [
+            "GPL-2.0-only"
+          ],
+          "Maintainer": "Sören Tempel \u003csoeren+alpine@soeren-tempel.net\u003e",
+          "DependsOn": [
+            "busybox@1.37.0-r18"
+          ],
+          "Layer": {
+            "Digest": "sha256:9824c27679d3b27c5e1cb00a73adb6f4f8d556994111c12db3c5d61a0c843df8",
+            "DiffID": "sha256:418dccb7d85a63a6aa574439840f7a6fa6fd2321b3e2394568a317735e867d35"
+          },
+          "Digest": "sha1:4bcdab5f9122afb4de71bfe8b1125c0c02796793",
+          "InstalledFiles": [
+            "bin/sh"
+          ]
+        },
+        {
+          "ID": "c-ares@1.34.5-r0",
+          "Name": "c-ares",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/c-ares@1.34.5-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "b9e94bf520df1ed0"
+          },
+          "Version": "1.34.5-r0",
+          "Arch": "x86_64",
+          "SrcName": "c-ares",
+          "SrcVersion": "1.34.5-r0",
+          "Licenses": [
+            "MIT"
+          ],
+          "Maintainer": "Carlo Landmeter \u003cclandmeter@alpinelinux.org\u003e",
+          "DependsOn": [
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:beda10a0487b4e456c5a25d5bae9af8b6d4b6be1",
+          "InstalledFiles": [
+            "usr/lib/libcares.so.2",
+            "usr/lib/libcares.so.2.19.4"
+          ]
+        },
+        {
+          "ID": "ca-certificates-bundle@20250619-r0",
+          "Name": "ca-certificates-bundle",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/ca-certificates-bundle@20250619-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "d9017363edffc93e"
+          },
+          "Version": "20250619-r0",
+          "Arch": "x86_64",
+          "SrcName": "ca-certificates",
+          "SrcVersion": "20250619-r0",
+          "Licenses": [
+            "MPL-2.0",
+            "MIT"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "Layer": {
+            "Digest": "sha256:9824c27679d3b27c5e1cb00a73adb6f4f8d556994111c12db3c5d61a0c843df8",
+            "DiffID": "sha256:418dccb7d85a63a6aa574439840f7a6fa6fd2321b3e2394568a317735e867d35"
+          },
+          "Digest": "sha1:32be9117f1879f48b44823fbbd2d9e26a6a9a500",
+          "InstalledFiles": [
+            "etc/ssl/cert.pem",
+            "etc/ssl/certs/ca-certificates.crt",
+            "etc/ssl1.1/cert.pem",
+            "etc/ssl1.1/certs"
+          ]
+        },
+        {
+          "ID": "e2fsprogs-libs@1.47.2-r2",
+          "Name": "e2fsprogs-libs",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/e2fsprogs-libs@1.47.2-r2?arch=x86_64\u0026distro=3.22.1",
+            "UID": "661a4b331374d86f"
+          },
+          "Version": "1.47.2-r2",
+          "Arch": "x86_64",
+          "SrcName": "e2fsprogs",
+          "SrcVersion": "1.47.2-r2",
+          "Licenses": [
+            "GPL-2.0-or-later",
+            "LGPL-2.0-or-later",
+            "BSD-3-Clause",
+            "MIT"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "libcom_err@1.47.2-r2",
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:fb2a6f6926cde1e08abff9a171e15ca40464fa00",
+          "InstalledFiles": [
+            "usr/lib/libe2p.so.2",
+            "usr/lib/libe2p.so.2.3",
+            "usr/lib/libext2fs.so.2",
+            "usr/lib/libext2fs.so.2.4",
+            "usr/lib/libss.so.2",
+            "usr/lib/libss.so.2.0"
+          ]
+        },
+        {
+          "ID": "fping@5.3-r0",
+          "Name": "fping",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/fping@5.3-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "13f85bdf417487ea"
+          },
+          "Version": "5.3-r0",
+          "Arch": "x86_64",
+          "SrcName": "fping",
+          "SrcVersion": "5.3-r0",
+          "Licenses": [
+            "MIT"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:279d96ad549d0725ed54f92743bbed221b01f684",
+          "InstalledFiles": [
+            "usr/sbin/fping"
+          ]
+        },
+        {
+          "ID": "gdbm@1.24-r0",
+          "Name": "gdbm",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/gdbm@1.24-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "326e044bc9801852"
+          },
+          "Version": "1.24-r0",
+          "Arch": "x86_64",
+          "SrcName": "gdbm",
+          "SrcVersion": "1.24-r0",
+          "Licenses": [
+            "GPL-3.0-or-later"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:248e0fcce23357408afa5b82137e97b781ecb790",
+          "InstalledFiles": [
+            "usr/lib/libgdbm.so.6",
+            "usr/lib/libgdbm.so.6.0.0",
+            "usr/lib/libgdbm_compat.so.4",
+            "usr/lib/libgdbm_compat.so.4.0.0"
+          ]
+        },
+        {
+          "ID": "glib@2.84.4-r0",
+          "Name": "glib",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/glib@2.84.4-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "9b4a746539f13de0"
+          },
+          "Version": "2.84.4-r0",
+          "Arch": "x86_64",
+          "SrcName": "glib",
+          "SrcVersion": "2.84.4-r0",
+          "Licenses": [
+            "LGPL-2.1-or-later"
+          ],
+          "Maintainer": "team/gnome \u003cpabloyoyoista@postmarketos.org\u003e",
+          "DependsOn": [
+            "busybox-binsh@1.37.0-r18",
+            "libffi@3.4.8-r0",
+            "libintl@0.24.1-r0",
+            "libmount@2.41-r9",
+            "musl@1.2.5-r10",
+            "pcre2@10.43-r1",
+            "zlib@1.3.1-r2"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:fcad0997b4cb10ff97e2d88b0b37120fa08070c7",
+          "InstalledFiles": [
+            "usr/bin/gapplication",
+            "usr/bin/gdbus",
+            "usr/bin/gi-compile-repository",
+            "usr/bin/gi-decompile-typelib",
+            "usr/bin/gi-inspect-typelib",
+            "usr/bin/gio",
+            "usr/bin/gio-querymodules",
+            "usr/bin/glib-compile-schemas",
+            "usr/bin/gsettings",
+            "usr/lib/libgio-2.0.so.0",
+            "usr/lib/libgio-2.0.so.0.8400.4",
+            "usr/lib/libgirepository-2.0.so.0",
+            "usr/lib/libgirepository-2.0.so.0.8400.4",
+            "usr/lib/libglib-2.0.so.0",
+            "usr/lib/libglib-2.0.so.0.8400.4",
+            "usr/lib/libgmodule-2.0.so.0",
+            "usr/lib/libgmodule-2.0.so.0.8400.4",
+            "usr/lib/libgobject-2.0.so.0",
+            "usr/lib/libgobject-2.0.so.0.8400.4",
+            "usr/lib/libgthread-2.0.so.0",
+            "usr/lib/libgthread-2.0.so.0.8400.4",
+            "usr/lib/girepository-1.0/GIRepository-3.0.typelib",
+            "usr/lib/girepository-1.0/GLib-2.0.typelib",
+            "usr/lib/girepository-1.0/GLibUnix-2.0.typelib",
+            "usr/lib/girepository-1.0/GModule-2.0.typelib",
+            "usr/lib/girepository-1.0/GObject-2.0.typelib",
+            "usr/lib/girepository-1.0/Gio-2.0.typelib",
+            "usr/lib/girepository-1.0/GioUnix-2.0.typelib",
+            "usr/libexec/gio-launch-desktop"
+          ]
+        },
+        {
+          "ID": "gzip@1.14-r1",
+          "Name": "gzip",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/gzip@1.14-r1?arch=x86_64\u0026distro=3.22.1",
+            "UID": "c6c8c229567c8e92"
+          },
+          "Version": "1.14-r1",
+          "Arch": "x86_64",
+          "SrcName": "gzip",
+          "SrcVersion": "1.14-r1",
+          "Licenses": [
+            "GPL-3.0-or-later"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "less@679-r0",
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:892558b19bcb0eb33009bde09c5b5ba54aad559c",
+          "InstalledFiles": [
+            "bin/gunzip",
+            "bin/gzip",
+            "bin/zcat",
+            "usr/bin/gunzip",
+            "usr/bin/gzexe",
+            "usr/bin/gzip",
+            "usr/bin/uncompress",
+            "usr/bin/zcmp",
+            "usr/bin/zdiff",
+            "usr/bin/zegrep",
+            "usr/bin/zfgrep",
+            "usr/bin/zforce",
+            "usr/bin/zgrep",
+            "usr/bin/zless",
+            "usr/bin/zmore",
+            "usr/bin/znew"
+          ]
+        },
+        {
+          "ID": "iputils@20240905-r0",
+          "Name": "iputils",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/iputils@20240905-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "3b90e71fa121bef5"
+          },
+          "Version": "20240905-r0",
+          "Arch": "x86_64",
+          "SrcName": "iputils",
+          "SrcVersion": "20240905-r0",
+          "Licenses": [
+            "BSD-3-Clause",
+            "GPL-2.0-or-later"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "iputils-arping@20240905-r0",
+            "iputils-clockdiff@20240905-r0",
+            "iputils-ping@20240905-r0",
+            "iputils-tracepath@20240905-r0"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:0426c1600c7aee069ea5cacb908ec8ac8a1986f4"
+        },
+        {
+          "ID": "iputils-arping@20240905-r0",
+          "Name": "iputils-arping",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/iputils-arping@20240905-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "cdbaa417d15dcc83"
+          },
+          "Version": "20240905-r0",
+          "Arch": "x86_64",
+          "SrcName": "iputils",
+          "SrcVersion": "20240905-r0",
+          "Licenses": [
+            "BSD-3-Clause",
+            "GPL-2.0-or-later"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "libcap2@2.76-r0",
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:19ec5d85dc40f15a2c9015f11eefdb5105eed8f9",
+          "InstalledFiles": [
+            "usr/sbin/arping"
+          ]
+        },
+        {
+          "ID": "iputils-clockdiff@20240905-r0",
+          "Name": "iputils-clockdiff",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/iputils-clockdiff@20240905-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "5f13c07bc967d6fa"
+          },
+          "Version": "20240905-r0",
+          "Arch": "x86_64",
+          "SrcName": "iputils",
+          "SrcVersion": "20240905-r0",
+          "Licenses": [
+            "BSD-3-Clause",
+            "GPL-2.0-or-later"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "libcap2@2.76-r0",
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:32a20125543f542993646f037e844f5201f9b3f1",
+          "InstalledFiles": [
+            "usr/sbin/clockdiff"
+          ]
+        },
+        {
+          "ID": "iputils-ping@20240905-r0",
+          "Name": "iputils-ping",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/iputils-ping@20240905-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "a812e03901a23c5d"
+          },
+          "Version": "20240905-r0",
+          "Arch": "x86_64",
+          "SrcName": "iputils",
+          "SrcVersion": "20240905-r0",
+          "Licenses": [
+            "BSD-3-Clause",
+            "GPL-2.0-or-later"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "libcap2@2.76-r0",
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:075b883f014c5168df7f59e776fd7255711bb571",
+          "InstalledFiles": [
+            "bin/ping",
+            "bin/ping6"
+          ]
+        },
+        {
+          "ID": "iputils-tracepath@20240905-r0",
+          "Name": "iputils-tracepath",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/iputils-tracepath@20240905-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "26f2f7e311b4ed86"
+          },
+          "Version": "20240905-r0",
+          "Arch": "x86_64",
+          "SrcName": "iputils",
+          "SrcVersion": "20240905-r0",
+          "Licenses": [
+            "BSD-3-Clause",
+            "GPL-2.0-or-later"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:5576967e36462188b6c4e3f6facd4da2fe4958a9",
+          "InstalledFiles": [
+            "usr/sbin/tracepath",
+            "usr/sbin/tracepath6"
+          ]
+        },
+        {
+          "ID": "keyutils-libs@1.6.3-r4",
+          "Name": "keyutils-libs",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/keyutils-libs@1.6.3-r4?arch=x86_64\u0026distro=3.22.1",
+            "UID": "433b220732e4e394"
+          },
+          "Version": "1.6.3-r4",
+          "Arch": "x86_64",
+          "SrcName": "keyutils",
+          "SrcVersion": "1.6.3-r4",
+          "Licenses": [
+            "GPL-2.0-or-later",
+            "LGPL-2.0-or-later"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:0c5f5dbd57df03ae6ccc1485f00169870aed02c4",
+          "InstalledFiles": [
+            "usr/lib/libkeyutils.so.1",
+            "usr/lib/libkeyutils.so.1.10"
+          ]
+        },
+        {
+          "ID": "krb5@1.21.3-r0",
+          "Name": "krb5",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/krb5@1.21.3-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "42baacdd0e3c2e1d"
+          },
+          "Version": "1.21.3-r0",
+          "Arch": "x86_64",
+          "SrcName": "krb5",
+          "SrcVersion": "1.21.3-r0",
+          "Licenses": [
+            "MIT"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "e2fsprogs-libs@1.47.2-r2",
+            "krb5-conf@1.0-r2",
+            "krb5-libs@1.21.3-r0",
+            "libcom_err@1.47.2-r2",
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:39a76ccf4e9ee5f91684855fa0523a25028bf117",
+          "InstalledFiles": [
+            "usr/bin/gss-client",
+            "usr/bin/k5srvutil",
+            "usr/bin/kadmin",
+            "usr/bin/kdestroy",
+            "usr/bin/kinit",
+            "usr/bin/klist",
+            "usr/bin/kpasswd",
+            "usr/bin/ksu",
+            "usr/bin/kswitch",
+            "usr/bin/ktutil",
+            "usr/bin/kvno",
+            "usr/bin/sim_client",
+            "usr/bin/uuclient"
+          ]
+        },
+        {
+          "ID": "krb5-conf@1.0-r2",
+          "Name": "krb5-conf",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/krb5-conf@1.0-r2?arch=x86_64\u0026distro=3.22.1",
+            "UID": "17d6d9a5366931c6"
+          },
+          "Version": "1.0-r2",
+          "Arch": "x86_64",
+          "SrcName": "krb5-conf",
+          "SrcVersion": "1.0-r2",
+          "Licenses": [
+            "MIT"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:930df739a7b756baefab25c20c23a46cefda8260",
+          "InstalledFiles": [
+            "etc/krb5.conf"
+          ]
+        },
+        {
+          "ID": "krb5-libs@1.21.3-r0",
+          "Name": "krb5-libs",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/krb5-libs@1.21.3-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "61bee09928de492"
+          },
+          "Version": "1.21.3-r0",
+          "Arch": "x86_64",
+          "SrcName": "krb5",
+          "SrcVersion": "1.21.3-r0",
+          "Licenses": [
+            "MIT"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "keyutils-libs@1.6.3-r4",
+            "krb5-conf@1.0-r2",
+            "libcom_err@1.47.2-r2",
+            "libcrypto3@3.5.4-r0",
+            "libssl3@3.5.4-r0",
+            "libverto@0.3.2-r2",
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:08d2b4bdbac1f77959180c6a1f665ed0e456a463",
+          "InstalledFiles": [
+            "usr/lib/libgssapi_krb5.so.2",
+            "usr/lib/libgssapi_krb5.so.2.2",
+            "usr/lib/libgssrpc.so.4",
+            "usr/lib/libgssrpc.so.4.2",
+            "usr/lib/libk5crypto.so.3",
+            "usr/lib/libk5crypto.so.3.1",
+            "usr/lib/libkadm5clnt_mit.so.12",
+            "usr/lib/libkadm5clnt_mit.so.12.0",
+            "usr/lib/libkadm5srv_mit.so.12",
+            "usr/lib/libkadm5srv_mit.so.12.0",
+            "usr/lib/libkdb5.so.10",
+            "usr/lib/libkdb5.so.10.0",
+            "usr/lib/libkrad.so.0",
+            "usr/lib/libkrad.so.0.0",
+            "usr/lib/libkrb5.so.3",
+            "usr/lib/libkrb5.so.3.3",
+            "usr/lib/libkrb5support.so.0",
+            "usr/lib/libkrb5support.so.0.1",
+            "usr/lib/krb5/plugins/kdb/db2.so",
+            "usr/lib/krb5/plugins/preauth/otp.so",
+            "usr/lib/krb5/plugins/preauth/spake.so",
+            "usr/lib/krb5/plugins/preauth/test.so",
+            "usr/lib/krb5/plugins/tls/k5tls.so"
+          ]
+        },
+        {
+          "ID": "less@679-r0",
+          "Name": "less",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/less@679-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "9936597e8fb81961"
+          },
+          "Version": "679-r0",
+          "Arch": "x86_64",
+          "SrcName": "less",
+          "SrcVersion": "679-r0",
+          "Licenses": [
+            "GPL-3.0-or-later",
+            "BSD-2-Clause"
+          ],
+          "Maintainer": "Celeste \u003ccielesti@protonmail.com\u003e",
+          "DependsOn": [
+            "libncursesw@6.5_p20250503-r0",
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:edb0834d24afea0a4ae0dde13b3ab5ac49023b47",
+          "InstalledFiles": [
+            "usr/bin/less",
+            "usr/bin/lessecho",
+            "usr/bin/lesskey"
+          ]
+        },
+        {
+          "ID": "libapk2@2.14.9-r2",
+          "Name": "libapk2",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/libapk2@2.14.9-r2?arch=x86_64\u0026distro=3.22.1",
+            "UID": "ac9204a686d4d507"
+          },
+          "Version": "2.14.9-r2",
+          "Arch": "x86_64",
+          "SrcName": "apk-tools",
+          "SrcVersion": "2.14.9-r2",
+          "Licenses": [
+            "GPL-2.0-only"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "ca-certificates-bundle@20250619-r0",
+            "libcrypto3@3.5.4-r0",
+            "libssl3@3.5.4-r0",
+            "musl@1.2.5-r10",
+            "zlib@1.3.1-r2"
+          ],
+          "Layer": {
+            "Digest": "sha256:9824c27679d3b27c5e1cb00a73adb6f4f8d556994111c12db3c5d61a0c843df8",
+            "DiffID": "sha256:418dccb7d85a63a6aa574439840f7a6fa6fd2321b3e2394568a317735e867d35"
+          },
+          "Digest": "sha1:d3a20797fcda1b5742c119ffc146c1e110ed418e",
+          "InstalledFiles": [
+            "usr/lib/libapk.so.2.14.9"
+          ]
+        },
+        {
+          "ID": "libblkid@2.41-r9",
+          "Name": "libblkid",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/libblkid@2.41-r9?arch=x86_64\u0026distro=3.22.1",
+            "UID": "f59439a1f41318b7"
+          },
+          "Version": "2.41-r9",
+          "Arch": "x86_64",
+          "SrcName": "util-linux",
+          "SrcVersion": "2.41-r9",
+          "Licenses": [
+            "LGPL-2.1-or-later"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "libeconf@0.6.3-r0",
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:da7a104ebe1e7f00b56527f1423fcd8193ef1aab",
+          "InstalledFiles": [
+            "usr/lib/libblkid.so.1",
+            "usr/lib/libblkid.so.1.1.0"
+          ]
+        },
+        {
+          "ID": "libcap@2.76-r0",
+          "Name": "libcap",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/libcap@2.76-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "3980ce4f1e7f0aa7"
+          },
+          "Version": "2.76-r0",
+          "Arch": "x86_64",
+          "SrcName": "libcap",
+          "SrcVersion": "2.76-r0",
+          "Licenses": [
+            "BSD-3-Clause",
+            "GPL-2.0-only"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "libcap-utils@2.76-r0",
+            "libcap2@2.76-r0"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:cdd11f24df5c1faefd8b852751fc73883176768c"
+        },
+        {
+          "ID": "libcap-getcap@2.76-r0",
+          "Name": "libcap-getcap",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/libcap-getcap@2.76-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "e5eb7b61e4cd8dae"
+          },
+          "Version": "2.76-r0",
+          "Arch": "x86_64",
+          "SrcName": "libcap",
+          "SrcVersion": "2.76-r0",
+          "Licenses": [
+            "BSD-3-Clause",
+            "GPL-2.0-only"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "libcap2@2.76-r0",
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:dedd5db14c20ea756e60be83a5e9f9dc095ea24c",
+          "InstalledFiles": [
+            "usr/sbin/getcap"
+          ]
+        },
+        {
+          "ID": "libcap-setcap@2.76-r0",
+          "Name": "libcap-setcap",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/libcap-setcap@2.76-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "be8e16fd02e53b20"
+          },
+          "Version": "2.76-r0",
+          "Arch": "x86_64",
+          "SrcName": "libcap",
+          "SrcVersion": "2.76-r0",
+          "Licenses": [
+            "BSD-3-Clause",
+            "GPL-2.0-only"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "libcap2@2.76-r0",
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:26314008a06b5915e993c1a9617cb0a2214212f5",
+          "InstalledFiles": [
+            "usr/sbin/setcap"
+          ]
+        },
+        {
+          "ID": "libcap-utils@2.76-r0",
+          "Name": "libcap-utils",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/libcap-utils@2.76-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "409ac9c1e491a43d"
+          },
+          "Version": "2.76-r0",
+          "Arch": "x86_64",
+          "SrcName": "libcap",
+          "SrcVersion": "2.76-r0",
+          "Licenses": [
+            "BSD-3-Clause",
+            "GPL-2.0-only"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "libcap-getcap@2.76-r0",
+            "libcap-setcap@2.76-r0",
+            "libcap2@2.76-r0",
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:18147b4eb8acb1eb10acdabd1a085f62c6df05be",
+          "InstalledFiles": [
+            "usr/sbin/capsh",
+            "usr/sbin/getpcaps"
+          ]
+        },
+        {
+          "ID": "libcap2@2.76-r0",
+          "Name": "libcap2",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/libcap2@2.76-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "1846f618792f7304"
+          },
+          "Version": "2.76-r0",
+          "Arch": "x86_64",
+          "SrcName": "libcap",
+          "SrcVersion": "2.76-r0",
+          "Licenses": [
+            "BSD-3-Clause",
+            "GPL-2.0-only"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:10e33c980520083454e09651e0e12f43589af0d3",
+          "InstalledFiles": [
+            "usr/lib/libcap.so.2",
+            "usr/lib/libcap.so.2.76",
+            "usr/lib/libpsx.so.2",
+            "usr/lib/libpsx.so.2.76"
+          ]
+        },
+        {
+          "ID": "libcom_err@1.47.2-r2",
+          "Name": "libcom_err",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/libcom_err@1.47.2-r2?arch=x86_64\u0026distro=3.22.1",
+            "UID": "4aca2420073efd61"
+          },
+          "Version": "1.47.2-r2",
+          "Arch": "x86_64",
+          "SrcName": "e2fsprogs",
+          "SrcVersion": "1.47.2-r2",
+          "Licenses": [
+            "GPL-2.0-or-later",
+            "LGPL-2.0-or-later",
+            "BSD-3-Clause",
+            "MIT"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:dcc6bb187889cee872e063ac6245f04fd52bce0f",
+          "InstalledFiles": [
+            "usr/lib/libcom_err.so.2",
+            "usr/lib/libcom_err.so.2.1"
+          ]
+        },
+        {
+          "ID": "libcrypto3@3.5.4-r0",
+          "Name": "libcrypto3",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/libcrypto3@3.5.4-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "f58e56ef5c63f37f"
+          },
+          "Version": "3.5.4-r0",
+          "Arch": "x86_64",
+          "SrcName": "openssl",
+          "SrcVersion": "3.5.4-r0",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:814a132b631e919ef418475879e7bcec216a0a62",
+          "InstalledFiles": [
+            "etc/ssl/ct_log_list.cnf",
+            "etc/ssl/ct_log_list.cnf.dist",
+            "etc/ssl/openssl.cnf",
+            "etc/ssl/openssl.cnf.dist",
+            "usr/lib/libcrypto.so.3",
+            "usr/lib/engines-3/afalg.so",
+            "usr/lib/engines-3/capi.so",
+            "usr/lib/engines-3/loader_attic.so",
+            "usr/lib/engines-3/padlock.so",
+            "usr/lib/ossl-modules/legacy.so"
+          ]
+        },
+        {
+          "ID": "libcurl@8.14.1-r2",
+          "Name": "libcurl",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/libcurl@8.14.1-r2?arch=x86_64\u0026distro=3.22.1",
+            "UID": "2c3c46875797c45b"
+          },
+          "Version": "8.14.1-r2",
+          "Arch": "x86_64",
+          "SrcName": "curl",
+          "SrcVersion": "8.14.1-r2",
+          "Licenses": [
+            "curl"
+          ],
+          "Maintainer": "fossdd \u003cfossdd@pwned.life\u003e",
+          "DependsOn": [
+            "brotli-libs@1.1.0-r2",
+            "c-ares@1.34.5-r0",
+            "ca-certificates-bundle@20250619-r0",
+            "libcrypto3@3.5.4-r0",
+            "libidn2@2.3.7-r0",
+            "libpsl@0.21.5-r3",
+            "libssl3@3.5.4-r0",
+            "musl@1.2.5-r10",
+            "nghttp2-libs@1.65.0-r0",
+            "zlib@1.3.1-r2",
+            "zstd-libs@1.5.7-r0"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:d0c265e4db3a95d6e31e13e5ea29dd20b19ea768",
+          "InstalledFiles": [
+            "usr/lib/libcurl.so.4",
+            "usr/lib/libcurl.so.4.8.0"
+          ]
+        },
+        {
+          "ID": "libeconf@0.6.3-r0",
+          "Name": "libeconf",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/libeconf@0.6.3-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "49be604854f5aab8"
+          },
+          "Version": "0.6.3-r0",
+          "Arch": "x86_64",
+          "SrcName": "libeconf",
+          "SrcVersion": "0.6.3-r0",
+          "Licenses": [
+            "MIT"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:194e60221ae9601f42f6c7a859ef8f447857415d",
+          "InstalledFiles": [
+            "usr/bin/econftool",
+            "usr/lib/libeconf.so.0",
+            "usr/lib/libeconf.so.0.6.2"
+          ]
+        },
+        {
+          "ID": "libevent@2.1.12-r8",
+          "Name": "libevent",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/libevent@2.1.12-r8?arch=x86_64\u0026distro=3.22.1",
+            "UID": "e32052b8800c2a29"
+          },
+          "Version": "2.1.12-r8",
+          "Arch": "x86_64",
+          "SrcName": "libevent",
+          "SrcVersion": "2.1.12-r8",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "libcrypto3@3.5.4-r0",
+            "libssl3@3.5.4-r0",
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:8ed34191a695b12487e5dc75797dfc0a7aa79c31",
+          "InstalledFiles": [
+            "usr/lib/libevent-2.1.so.7",
+            "usr/lib/libevent-2.1.so.7.0.1",
+            "usr/lib/libevent_core-2.1.so.7",
+            "usr/lib/libevent_core-2.1.so.7.0.1",
+            "usr/lib/libevent_extra-2.1.so.7",
+            "usr/lib/libevent_extra-2.1.so.7.0.1",
+            "usr/lib/libevent_openssl-2.1.so.7",
+            "usr/lib/libevent_openssl-2.1.so.7.0.1",
+            "usr/lib/libevent_pthreads-2.1.so.7",
+            "usr/lib/libevent_pthreads-2.1.so.7.0.1"
+          ]
+        },
+        {
+          "ID": "libffi@3.4.8-r0",
+          "Name": "libffi",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/libffi@3.4.8-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "5d75f056e5a99cc0"
+          },
+          "Version": "3.4.8-r0",
+          "Arch": "x86_64",
+          "SrcName": "libffi",
+          "SrcVersion": "3.4.8-r0",
+          "Licenses": [
+            "MIT"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:e5d01118f5ad008bb2df07635af364933b4ff20f",
+          "InstalledFiles": [
+            "usr/lib/libffi.so.8",
+            "usr/lib/libffi.so.8.1.4"
+          ]
+        },
+        {
+          "ID": "libgcc@14.2.0-r6",
+          "Name": "libgcc",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/libgcc@14.2.0-r6?arch=x86_64\u0026distro=3.22.1",
+            "UID": "f45eb5d8e6330ef9"
+          },
+          "Version": "14.2.0-r6",
+          "Arch": "x86_64",
+          "SrcName": "gcc",
+          "SrcVersion": "14.2.0-r6",
+          "Licenses": [
+            "GPL-2.0-or-later",
+            "LGPL-2.1-or-later"
+          ],
+          "Maintainer": "Ariadne Conill \u003cariadne@dereferenced.org\u003e",
+          "DependsOn": [
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:6945911dc2b13485e97460d9df2716ad1a0aa32d",
+          "InstalledFiles": [
+            "usr/lib/libgcc_s.so.1"
+          ]
+        },
+        {
+          "ID": "libidn2@2.3.7-r0",
+          "Name": "libidn2",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/libidn2@2.3.7-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "b6b9a9508a2405d1"
+          },
+          "Version": "2.3.7-r0",
+          "Arch": "x86_64",
+          "SrcName": "libidn2",
+          "SrcVersion": "2.3.7-r0",
+          "Licenses": [
+            "GPL-2.0-or-later",
+            "LGPL-3.0-or-later"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "libunistring@1.3-r0",
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:e2e93b247187a15a2164f4b7e5f4a725a3b5d488",
+          "InstalledFiles": [
+            "usr/lib/libidn2.so.0",
+            "usr/lib/libidn2.so.0.4.0"
+          ]
+        },
+        {
+          "ID": "libintl@0.24.1-r0",
+          "Name": "libintl",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/libintl@0.24.1-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "20a24a0240d6f4b"
+          },
+          "Version": "0.24.1-r0",
+          "Arch": "x86_64",
+          "SrcName": "gettext",
+          "SrcVersion": "0.24.1-r0",
+          "Licenses": [
+            "LGPL-2.1-or-later"
+          ],
+          "Maintainer": "Carlo Landmeter \u003cclandmeter@alpinelinux.org\u003e",
+          "DependsOn": [
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:8f44275c3149194ffa1b7bae29469289f758ed3d",
+          "InstalledFiles": [
+            "usr/lib/libintl.so.8",
+            "usr/lib/libintl.so.8.4.3"
+          ]
+        },
+        {
+          "ID": "libldap@2.6.8-r0",
+          "Name": "libldap",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/libldap@2.6.8-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "3a5953c646d5c642"
+          },
+          "Version": "2.6.8-r0",
+          "Arch": "x86_64",
+          "SrcName": "openldap",
+          "SrcVersion": "2.6.8-r0",
+          "Licenses": [
+            "OLDAP-2.8"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "libcrypto3@3.5.4-r0",
+            "libsasl@2.1.28-r8",
+            "libssl3@3.5.4-r0",
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:7d8736383926aa215da508f88cafb428fd4fa20f",
+          "InstalledFiles": [
+            "etc/openldap/ldap.conf",
+            "usr/lib/liblber.so.2",
+            "usr/lib/liblber.so.2.0.200",
+            "usr/lib/libldap.so.2",
+            "usr/lib/libldap.so.2.0.200"
+          ]
+        },
+        {
+          "ID": "libmount@2.41-r9",
+          "Name": "libmount",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/libmount@2.41-r9?arch=x86_64\u0026distro=3.22.1",
+            "UID": "7ed843645c90c229"
+          },
+          "Version": "2.41-r9",
+          "Arch": "x86_64",
+          "SrcName": "util-linux",
+          "SrcVersion": "2.41-r9",
+          "Licenses": [
+            "LGPL-2.1-or-later"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "libblkid@2.41-r9",
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:9abc2e49772236dab2bbf506488ebdd500d4c1d6",
+          "InstalledFiles": [
+            "usr/lib/libmount.so.1",
+            "usr/lib/libmount.so.1.1.0"
+          ]
+        },
+        {
+          "ID": "libncursesw@6.5_p20250503-r0",
+          "Name": "libncursesw",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/libncursesw@6.5_p20250503-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "5219595568530c18"
+          },
+          "Version": "6.5_p20250503-r0",
+          "Arch": "x86_64",
+          "SrcName": "ncurses",
+          "SrcVersion": "6.5_p20250503-r0",
+          "Licenses": [
+            "X-11"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "musl@1.2.5-r10",
+            "ncurses-terminfo-base@6.5_p20250503-r0"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:42901f1528399d67e07e14085ee53f1a369b240a",
+          "InstalledFiles": [
+            "usr/lib/libncursesw.so.6",
+            "usr/lib/libncursesw.so.6.5"
+          ]
+        },
+        {
+          "ID": "libpcap@1.10.5-r1",
+          "Name": "libpcap",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/libpcap@1.10.5-r1?arch=x86_64\u0026distro=3.22.1",
+            "UID": "f3dfe40946259c49"
+          },
+          "Version": "1.10.5-r1",
+          "Arch": "x86_64",
+          "SrcName": "libpcap",
+          "SrcVersion": "1.10.5-r1",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Maintainer": "Celeste \u003ccielesti@protonmail.com\u003e",
+          "DependsOn": [
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:fdf2b34456157e4de9dce2cf77b824fcdbc030fe",
+          "InstalledFiles": [
+            "usr/lib/libpcap.so.1",
+            "usr/lib/libpcap.so.1.10.5"
+          ]
+        },
+        {
+          "ID": "libpsl@0.21.5-r3",
+          "Name": "libpsl",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/libpsl@0.21.5-r3?arch=x86_64\u0026distro=3.22.1",
+            "UID": "97ccfe3dd406df33"
+          },
+          "Version": "0.21.5-r3",
+          "Arch": "x86_64",
+          "SrcName": "libpsl",
+          "SrcVersion": "0.21.5-r3",
+          "Licenses": [
+            "MIT"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "libidn2@2.3.7-r0",
+            "libunistring@1.3-r0",
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:351ae123ebf705f090c43fc793996dba2fa21ebb",
+          "InstalledFiles": [
+            "usr/lib/libpsl.so.5",
+            "usr/lib/libpsl.so.5.3.5"
+          ]
+        },
+        {
+          "ID": "libsasl@2.1.28-r8",
+          "Name": "libsasl",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/libsasl@2.1.28-r8?arch=x86_64\u0026distro=3.22.1",
+            "UID": "acbb712769875542"
+          },
+          "Version": "2.1.28-r8",
+          "Arch": "x86_64",
+          "SrcName": "cyrus-sasl",
+          "SrcVersion": "2.1.28-r8",
+          "Licenses": [
+            "BSD-3-Clause-Attribution",
+            "BSD-4-Clause"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "gdbm@1.24-r0",
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:6318f8a8d76801400f56b8aaefa9fc6654565cda",
+          "InstalledFiles": [
+            "usr/lib/libsasl2.so.3",
+            "usr/lib/libsasl2.so.3.0.0",
+            "usr/lib/sasl2/libanonymous.so",
+            "usr/lib/sasl2/libanonymous.so.3",
+            "usr/lib/sasl2/libanonymous.so.3.0.0",
+            "usr/lib/sasl2/libplain.so",
+            "usr/lib/sasl2/libplain.so.3",
+            "usr/lib/sasl2/libplain.so.3.0.0",
+            "usr/lib/sasl2/libsasldb.so",
+            "usr/lib/sasl2/libsasldb.so.3",
+            "usr/lib/sasl2/libsasldb.so.3.0.0"
+          ]
+        },
+        {
+          "ID": "libssh@0.11.2-r0",
+          "Name": "libssh",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/libssh@0.11.2-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "76e883ecf5fc100c"
+          },
+          "Version": "0.11.2-r0",
+          "Arch": "x86_64",
+          "SrcName": "libssh",
+          "SrcVersion": "0.11.2-r0",
+          "Licenses": [
+            "LGPL-2.1-or-later",
+            "BSD-2-Clause"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "libcrypto3@3.5.4-r0",
+            "musl@1.2.5-r10",
+            "zlib@1.3.1-r2"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:e881b27ec5156153b63f141a426f3869d859e50a",
+          "InstalledFiles": [
+            "usr/lib/libssh.so.4",
+            "usr/lib/libssh.so.4.10.2"
+          ]
+        },
+        {
+          "ID": "libssh2@1.11.1-r0",
+          "Name": "libssh2",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/libssh2@1.11.1-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "c36fbbd90bf4bc84"
+          },
+          "Version": "1.11.1-r0",
+          "Arch": "x86_64",
+          "SrcName": "libssh2",
+          "SrcVersion": "1.11.1-r0",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "libcrypto3@3.5.4-r0",
+            "musl@1.2.5-r10",
+            "zlib@1.3.1-r2"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:5a4ea1e08d6f58318742b9310dabefd907eefb23",
+          "InstalledFiles": [
+            "usr/lib/libssh2.so.1",
+            "usr/lib/libssh2.so.1.0.1"
+          ]
+        },
+        {
+          "ID": "libssl3@3.5.4-r0",
+          "Name": "libssl3",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/libssl3@3.5.4-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "34d76910cb64da71"
+          },
+          "Version": "3.5.4-r0",
+          "Arch": "x86_64",
+          "SrcName": "openssl",
+          "SrcVersion": "3.5.4-r0",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "libcrypto3@3.5.4-r0",
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:f8c18645483723a9416218a52eba3d34c86858cf",
+          "InstalledFiles": [
+            "usr/lib/libssl.so.3"
+          ]
+        },
+        {
+          "ID": "libstdc++@14.2.0-r6",
+          "Name": "libstdc++",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/libstdc%2B%2B@14.2.0-r6?arch=x86_64\u0026distro=3.22.1",
+            "UID": "6b2eddd252bb3326"
+          },
+          "Version": "14.2.0-r6",
+          "Arch": "x86_64",
+          "SrcName": "gcc",
+          "SrcVersion": "14.2.0-r6",
+          "Licenses": [
+            "GPL-2.0-or-later",
+            "LGPL-2.1-or-later"
+          ],
+          "Maintainer": "Ariadne Conill \u003cariadne@dereferenced.org\u003e",
+          "DependsOn": [
+            "libgcc@14.2.0-r6",
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:edf5cac1e98ffe4fb3609f48ded83b35bec14c9d",
+          "InstalledFiles": [
+            "usr/lib/libstdc++.so.6",
+            "usr/lib/libstdc++.so.6.0.33"
+          ]
+        },
+        {
+          "ID": "libunistring@1.3-r0",
+          "Name": "libunistring",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/libunistring@1.3-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "3fe5ae0fcccaea57"
+          },
+          "Version": "1.3-r0",
+          "Arch": "x86_64",
+          "SrcName": "libunistring",
+          "SrcVersion": "1.3-r0",
+          "Licenses": [
+            "GPL-2.0-or-later",
+            "LGPL-3.0-or-later"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:9472d9ab2b634a61ad5edc9b4754fdb1e34bdef9",
+          "InstalledFiles": [
+            "usr/lib/libunistring.so.5",
+            "usr/lib/libunistring.so.5.2.0"
+          ]
+        },
+        {
+          "ID": "libverto@0.3.2-r2",
+          "Name": "libverto",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/libverto@0.3.2-r2?arch=x86_64\u0026distro=3.22.1",
+            "UID": "3a2c21aee19e327a"
+          },
+          "Version": "0.3.2-r2",
+          "Arch": "x86_64",
+          "SrcName": "libverto",
+          "SrcVersion": "0.3.2-r2",
+          "Licenses": [
+            "MIT"
+          ],
+          "Maintainer": "Francesco Colista \u003cfcolista@alpinelinux.org\u003e",
+          "DependsOn": [
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:1bacdb42a427c2e77937e1a9a00576ddae99df8f",
+          "InstalledFiles": [
+            "usr/lib/libverto.so.1",
+            "usr/lib/libverto.so.1.0.0"
+          ]
+        },
+        {
+          "ID": "libxml2@2.13.8-r0",
+          "Name": "libxml2",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/libxml2@2.13.8-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "f6365fe7fd7ac5f1"
+          },
+          "Version": "2.13.8-r0",
+          "Arch": "x86_64",
+          "SrcName": "libxml2",
+          "SrcVersion": "2.13.8-r0",
+          "Licenses": [
+            "MIT"
+          ],
+          "Maintainer": "Carlo Landmeter \u003cclandmeter@alpinelinux.org\u003e",
+          "DependsOn": [
+            "musl@1.2.5-r10",
+            "xz-libs@5.8.1-r0",
+            "zlib@1.3.1-r2"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:0b927e56e207430656606848bfc2b87d56e47144",
+          "InstalledFiles": [
+            "usr/lib/libxml2.so.2",
+            "usr/lib/libxml2.so.2.13.8"
+          ]
+        },
+        {
+          "ID": "lua5.4-libs@5.4.7-r0",
+          "Name": "lua5.4-libs",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/lua5.4-libs@5.4.7-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "687d88fc66cbf0c1"
+          },
+          "Version": "5.4.7-r0",
+          "Arch": "x86_64",
+          "SrcName": "lua5.4",
+          "SrcVersion": "5.4.7-r0",
+          "Licenses": [
+            "MIT"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:7fa421afddb99a6e42acb4edaa226f101ee7501e",
+          "InstalledFiles": [
+            "usr/lib/liblua-5.4.so.0",
+            "usr/lib/liblua-5.4.so.0.0.0",
+            "usr/lib/lua5.4/liblua-5.4.so.0",
+            "usr/lib/lua5.4/liblua-5.4.so.0.0.0"
+          ]
+        },
+        {
+          "ID": "mariadb-client@11.4.8-r0",
+          "Name": "mariadb-client",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/mariadb-client@11.4.8-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "eedafbb7ff4c433d"
+          },
+          "Version": "11.4.8-r0",
+          "Arch": "x86_64",
+          "SrcName": "mariadb",
+          "SrcVersion": "11.4.8-r0",
+          "Licenses": [
+            "GPL-2.0-or-later"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "libcrypto3@3.5.4-r0",
+            "libgcc@14.2.0-r6",
+            "libncursesw@6.5_p20250503-r0",
+            "libssl3@3.5.4-r0",
+            "libstdc++@14.2.0-r6",
+            "mariadb-common@11.4.8-r0",
+            "musl@1.2.5-r10",
+            "zlib@1.3.1-r2"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:d5b06db65627fce6f497ed39c3a4053c35b64eb9",
+          "InstalledFiles": [
+            "usr/bin/mariadb",
+            "usr/bin/mariadb-admin",
+            "usr/bin/mariadb-check",
+            "usr/bin/mariadb-dump",
+            "usr/bin/mariadb-import",
+            "usr/bin/mariadb-secure-installation",
+            "usr/bin/mariadb-show",
+            "usr/bin/mariadb-waitpid",
+            "usr/bin/myisam_ftdump",
+            "usr/bin/mysql",
+            "usr/bin/mysql_secure_installation",
+            "usr/bin/mysql_waitpid",
+            "usr/bin/mysqladmin",
+            "usr/bin/mysqlcheck",
+            "usr/bin/mysqldump",
+            "usr/bin/mysqlimport",
+            "usr/bin/mysqlshow"
+          ]
+        },
+        {
+          "ID": "mariadb-common@11.4.8-r0",
+          "Name": "mariadb-common",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/mariadb-common@11.4.8-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "d81eae4093b767bb"
+          },
+          "Version": "11.4.8-r0",
+          "Arch": "x86_64",
+          "SrcName": "mariadb",
+          "SrcVersion": "11.4.8-r0",
+          "Licenses": [
+            "GPL-2.0-or-later"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "busybox-binsh@1.37.0-r18"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:27837ff47bae9e1c19527644b32c0ac748a59cd6",
+          "InstalledFiles": [
+            "etc/my.cnf",
+            "etc/my.cnf.d/mariadb-server.cnf",
+            "usr/share/mariadb/charsets/Index.xml",
+            "usr/share/mariadb/charsets/README",
+            "usr/share/mariadb/charsets/armscii8.xml",
+            "usr/share/mariadb/charsets/ascii.xml",
+            "usr/share/mariadb/charsets/cp1250.xml",
+            "usr/share/mariadb/charsets/cp1251.xml",
+            "usr/share/mariadb/charsets/cp1256.xml",
+            "usr/share/mariadb/charsets/cp1257.xml",
+            "usr/share/mariadb/charsets/cp850.xml",
+            "usr/share/mariadb/charsets/cp852.xml",
+            "usr/share/mariadb/charsets/cp866.xml",
+            "usr/share/mariadb/charsets/dec8.xml",
+            "usr/share/mariadb/charsets/geostd8.xml",
+            "usr/share/mariadb/charsets/greek.xml",
+            "usr/share/mariadb/charsets/hebrew.xml",
+            "usr/share/mariadb/charsets/hp8.xml",
+            "usr/share/mariadb/charsets/keybcs2.xml",
+            "usr/share/mariadb/charsets/koi8r.xml",
+            "usr/share/mariadb/charsets/koi8u.xml",
+            "usr/share/mariadb/charsets/latin1.xml",
+            "usr/share/mariadb/charsets/latin2.xml",
+            "usr/share/mariadb/charsets/latin5.xml",
+            "usr/share/mariadb/charsets/latin7.xml",
+            "usr/share/mariadb/charsets/macce.xml",
+            "usr/share/mariadb/charsets/macroman.xml",
+            "usr/share/mariadb/charsets/swe7.xml",
+            "usr/share/mariadb/czech/errmsg.sys",
+            "usr/share/mariadb/danish/errmsg.sys",
+            "usr/share/mariadb/dutch/errmsg.sys",
+            "usr/share/mariadb/english/errmsg.sys",
+            "usr/share/mariadb/estonian/errmsg.sys",
+            "usr/share/mariadb/french/errmsg.sys",
+            "usr/share/mariadb/german/errmsg.sys",
+            "usr/share/mariadb/greek/errmsg.sys",
+            "usr/share/mariadb/hungarian/errmsg.sys",
+            "usr/share/mariadb/italian/errmsg.sys",
+            "usr/share/mariadb/japanese/errmsg.sys",
+            "usr/share/mariadb/korean/errmsg.sys",
+            "usr/share/mariadb/norwegian/errmsg.sys",
+            "usr/share/mariadb/norwegian-ny/errmsg.sys",
+            "usr/share/mariadb/polish/errmsg.sys",
+            "usr/share/mariadb/portuguese/errmsg.sys",
+            "usr/share/mariadb/romanian/errmsg.sys",
+            "usr/share/mariadb/russian/errmsg.sys",
+            "usr/share/mariadb/serbian/errmsg.sys",
+            "usr/share/mariadb/slovak/errmsg.sys",
+            "usr/share/mariadb/spanish/errmsg.sys",
+            "usr/share/mariadb/swedish/errmsg.sys",
+            "usr/share/mariadb/ukrainian/errmsg.sys"
+          ]
+        },
+        {
+          "ID": "mariadb-connector-c@3.3.10-r0",
+          "Name": "mariadb-connector-c",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/mariadb-connector-c@3.3.10-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "58b8de75167eac6d"
+          },
+          "Version": "3.3.10-r0",
+          "Arch": "x86_64",
+          "SrcName": "mariadb-connector-c",
+          "SrcVersion": "3.3.10-r0",
+          "Licenses": [
+            "LGPL-2.1-or-later"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "libcrypto3@3.5.4-r0",
+            "libssl3@3.5.4-r0",
+            "musl@1.2.5-r10",
+            "zlib@1.3.1-r2"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:2efe6c97b58432772aa4ef741ba3dc3cc09bc00b",
+          "InstalledFiles": [
+            "usr/lib/libmariadb.so.3",
+            "usr/lib/mariadb/plugin/caching_sha2_password.so",
+            "usr/lib/mariadb/plugin/client_ed25519.so",
+            "usr/lib/mariadb/plugin/dialog.so",
+            "usr/lib/mariadb/plugin/mysql_clear_password.so",
+            "usr/lib/mariadb/plugin/sha256_password.so"
+          ]
+        },
+        {
+          "ID": "musl@1.2.5-r10",
+          "Name": "musl",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/musl@1.2.5-r10?arch=x86_64\u0026distro=3.22.1",
+            "UID": "df3a33abddfcb855"
+          },
+          "Version": "1.2.5-r10",
+          "Arch": "x86_64",
+          "SrcName": "musl",
+          "SrcVersion": "1.2.5-r10",
+          "Licenses": [
+            "MIT"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "Layer": {
+            "Digest": "sha256:9824c27679d3b27c5e1cb00a73adb6f4f8d556994111c12db3c5d61a0c843df8",
+            "DiffID": "sha256:418dccb7d85a63a6aa574439840f7a6fa6fd2321b3e2394568a317735e867d35"
+          },
+          "Digest": "sha1:59283b61db830a0a0309c98f4db906a2d8fa342b",
+          "InstalledFiles": [
+            "lib/ld-musl-x86_64.so.1",
+            "lib/libc.musl-x86_64.so.1"
+          ]
+        },
+        {
+          "ID": "musl-utils@1.2.5-r10",
+          "Name": "musl-utils",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/musl-utils@1.2.5-r10?arch=x86_64\u0026distro=3.22.1",
+            "UID": "5d2cabc1c2603ddb"
+          },
+          "Version": "1.2.5-r10",
+          "Arch": "x86_64",
+          "SrcName": "musl",
+          "SrcVersion": "1.2.5-r10",
+          "Licenses": [
+            "MIT",
+            "BSD-2-Clause",
+            "GPL-2.0-or-later"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "musl@1.2.5-r10",
+            "scanelf@1.3.8-r1"
+          ],
+          "Layer": {
+            "Digest": "sha256:9824c27679d3b27c5e1cb00a73adb6f4f8d556994111c12db3c5d61a0c843df8",
+            "DiffID": "sha256:418dccb7d85a63a6aa574439840f7a6fa6fd2321b3e2394568a317735e867d35"
+          },
+          "Digest": "sha1:7e60d0820813baa8ac266bee158394c0a69f104a",
+          "InstalledFiles": [
+            "sbin/ldconfig",
+            "usr/bin/getconf",
+            "usr/bin/getent",
+            "usr/bin/iconv",
+            "usr/bin/ldd"
+          ]
+        },
+        {
+          "ID": "ncurses-terminfo-base@6.5_p20250503-r0",
+          "Name": "ncurses-terminfo-base",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/ncurses-terminfo-base@6.5_p20250503-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "1e577b0c437d840b"
+          },
+          "Version": "6.5_p20250503-r0",
+          "Arch": "x86_64",
+          "SrcName": "ncurses",
+          "SrcVersion": "6.5_p20250503-r0",
+          "Licenses": [
+            "X-11"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:fea2cc088f02df2feb5da718e70123647f0ef8f7",
+          "InstalledFiles": [
+            "etc/terminfo/a/alacritty",
+            "etc/terminfo/a/ansi",
+            "etc/terminfo/d/dumb",
+            "etc/terminfo/g/gnome",
+            "etc/terminfo/g/gnome-256color",
+            "etc/terminfo/k/konsole",
+            "etc/terminfo/k/konsole-256color",
+            "etc/terminfo/k/konsole-linux",
+            "etc/terminfo/l/linux",
+            "etc/terminfo/p/putty",
+            "etc/terminfo/p/putty-256color",
+            "etc/terminfo/r/rxvt",
+            "etc/terminfo/r/rxvt-256color",
+            "etc/terminfo/s/screen",
+            "etc/terminfo/s/screen-256color",
+            "etc/terminfo/s/st-0.6",
+            "etc/terminfo/s/st-0.7",
+            "etc/terminfo/s/st-0.8",
+            "etc/terminfo/s/st-0.8.5",
+            "etc/terminfo/s/st-16color",
+            "etc/terminfo/s/st-256color",
+            "etc/terminfo/s/st-direct",
+            "etc/terminfo/s/sun",
+            "etc/terminfo/t/terminator",
+            "etc/terminfo/t/terminology",
+            "etc/terminfo/t/terminology-0.6.1",
+            "etc/terminfo/t/terminology-1.0.0",
+            "etc/terminfo/t/terminology-1.8.1",
+            "etc/terminfo/t/tmux",
+            "etc/terminfo/t/tmux-256color",
+            "etc/terminfo/v/vt100",
+            "etc/terminfo/v/vt102",
+            "etc/terminfo/v/vt200",
+            "etc/terminfo/v/vt220",
+            "etc/terminfo/v/vt52",
+            "etc/terminfo/v/vte",
+            "etc/terminfo/v/vte-256color",
+            "etc/terminfo/x/xterm",
+            "etc/terminfo/x/xterm-256color",
+            "etc/terminfo/x/xterm-color",
+            "etc/terminfo/x/xterm-xfree86"
+          ]
+        },
+        {
+          "ID": "net-snmp-agent-libs@5.9.4-r1",
+          "Name": "net-snmp-agent-libs",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/net-snmp-agent-libs@5.9.4-r1?arch=x86_64\u0026distro=3.22.1",
+            "UID": "1c13e8047bee18fe"
+          },
+          "Version": "5.9.4-r1",
+          "Arch": "x86_64",
+          "SrcName": "net-snmp",
+          "SrcVersion": "5.9.4-r1",
+          "Licenses": [
+            "Net-SNMP"
+          ],
+          "Maintainer": "Carlo Landmeter \u003cclandmeter@alpinelinux.org\u003e",
+          "DependsOn": [
+            "musl@1.2.5-r10",
+            "net-snmp-libs@5.9.4-r1"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:e406a9446db480dd2e192d583d75a13dc4713016",
+          "InstalledFiles": [
+            "usr/lib/libnetsnmpagent.so.40",
+            "usr/lib/libnetsnmpagent.so.40.2.1",
+            "usr/lib/libnetsnmphelpers.so.40",
+            "usr/lib/libnetsnmphelpers.so.40.2.1",
+            "usr/lib/libnetsnmpmibs.so.40",
+            "usr/lib/libnetsnmpmibs.so.40.2.1",
+            "usr/lib/libnetsnmptrapd.so.40",
+            "usr/lib/libnetsnmptrapd.so.40.2.1"
+          ]
+        },
+        {
+          "ID": "net-snmp-libs@5.9.4-r1",
+          "Name": "net-snmp-libs",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/net-snmp-libs@5.9.4-r1?arch=x86_64\u0026distro=3.22.1",
+            "UID": "8e4a05f2842137d2"
+          },
+          "Version": "5.9.4-r1",
+          "Arch": "x86_64",
+          "SrcName": "net-snmp",
+          "SrcVersion": "5.9.4-r1",
+          "Licenses": [
+            "Net-SNMP"
+          ],
+          "Maintainer": "Carlo Landmeter \u003cclandmeter@alpinelinux.org\u003e",
+          "DependsOn": [
+            "libcrypto3@3.5.4-r0",
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:3b8d94d91c009d101464657d50fee33e272686d5",
+          "InstalledFiles": [
+            "usr/lib/libnetsnmp.so.40",
+            "usr/lib/libnetsnmp.so.40.2.1",
+            "usr/share/snmp/mibs/AGENTX-MIB.txt",
+            "usr/share/snmp/mibs/BRIDGE-MIB.txt",
+            "usr/share/snmp/mibs/DISMAN-EVENT-MIB.txt",
+            "usr/share/snmp/mibs/DISMAN-SCHEDULE-MIB.txt",
+            "usr/share/snmp/mibs/DISMAN-SCRIPT-MIB.txt",
+            "usr/share/snmp/mibs/EtherLike-MIB.txt",
+            "usr/share/snmp/mibs/HCNUM-TC.txt",
+            "usr/share/snmp/mibs/HOST-RESOURCES-MIB.txt",
+            "usr/share/snmp/mibs/HOST-RESOURCES-TYPES.txt",
+            "usr/share/snmp/mibs/IANA-ADDRESS-FAMILY-NUMBERS-MIB.txt",
+            "usr/share/snmp/mibs/IANA-LANGUAGE-MIB.txt",
+            "usr/share/snmp/mibs/IANA-RTPROTO-MIB.txt",
+            "usr/share/snmp/mibs/IANAifType-MIB.txt",
+            "usr/share/snmp/mibs/IF-INVERTED-STACK-MIB.txt",
+            "usr/share/snmp/mibs/IF-MIB.txt",
+            "usr/share/snmp/mibs/INET-ADDRESS-MIB.txt",
+            "usr/share/snmp/mibs/IP-FORWARD-MIB.txt",
+            "usr/share/snmp/mibs/IP-MIB.txt",
+            "usr/share/snmp/mibs/IPV6-FLOW-LABEL-MIB.txt",
+            "usr/share/snmp/mibs/IPV6-ICMP-MIB.txt",
+            "usr/share/snmp/mibs/IPV6-MIB.txt",
+            "usr/share/snmp/mibs/IPV6-TC.txt",
+            "usr/share/snmp/mibs/IPV6-TCP-MIB.txt",
+            "usr/share/snmp/mibs/IPV6-UDP-MIB.txt",
+            "usr/share/snmp/mibs/NET-SNMP-AGENT-MIB.txt",
+            "usr/share/snmp/mibs/NET-SNMP-EXAMPLES-MIB.txt",
+            "usr/share/snmp/mibs/NET-SNMP-EXTEND-MIB.txt",
+            "usr/share/snmp/mibs/NET-SNMP-MIB.txt",
+            "usr/share/snmp/mibs/NET-SNMP-PASS-MIB.txt",
+            "usr/share/snmp/mibs/NET-SNMP-TC.txt",
+            "usr/share/snmp/mibs/NET-SNMP-VACM-MIB.txt",
+            "usr/share/snmp/mibs/NOTIFICATION-LOG-MIB.txt",
+            "usr/share/snmp/mibs/RFC-1215.txt",
+            "usr/share/snmp/mibs/RFC1155-SMI.txt",
+            "usr/share/snmp/mibs/RFC1213-MIB.txt",
+            "usr/share/snmp/mibs/RMON-MIB.txt",
+            "usr/share/snmp/mibs/SCTP-MIB.txt",
+            "usr/share/snmp/mibs/SMUX-MIB.txt",
+            "usr/share/snmp/mibs/SNMP-COMMUNITY-MIB.txt",
+            "usr/share/snmp/mibs/SNMP-FRAMEWORK-MIB.txt",
+            "usr/share/snmp/mibs/SNMP-MPD-MIB.txt",
+            "usr/share/snmp/mibs/SNMP-NOTIFICATION-MIB.txt",
+            "usr/share/snmp/mibs/SNMP-PROXY-MIB.txt",
+            "usr/share/snmp/mibs/SNMP-TARGET-MIB.txt",
+            "usr/share/snmp/mibs/SNMP-TLS-TM-MIB.txt",
+            "usr/share/snmp/mibs/SNMP-TSM-MIB.txt",
+            "usr/share/snmp/mibs/SNMP-USER-BASED-SM-MIB.txt",
+            "usr/share/snmp/mibs/SNMP-USM-AES-MIB.txt",
+            "usr/share/snmp/mibs/SNMP-USM-DH-OBJECTS-MIB.txt",
+            "usr/share/snmp/mibs/SNMP-USM-HMAC-SHA2-MIB.txt",
+            "usr/share/snmp/mibs/SNMP-VIEW-BASED-ACM-MIB.txt",
+            "usr/share/snmp/mibs/SNMPv2-CONF.txt",
+            "usr/share/snmp/mibs/SNMPv2-MIB.txt",
+            "usr/share/snmp/mibs/SNMPv2-SMI.txt",
+            "usr/share/snmp/mibs/SNMPv2-TC.txt",
+            "usr/share/snmp/mibs/SNMPv2-TM.txt",
+            "usr/share/snmp/mibs/TCP-MIB.txt",
+            "usr/share/snmp/mibs/TRANSPORT-ADDRESS-MIB.txt",
+            "usr/share/snmp/mibs/TUNNEL-MIB.txt",
+            "usr/share/snmp/mibs/UCD-DEMO-MIB.txt",
+            "usr/share/snmp/mibs/UCD-DISKIO-MIB.txt",
+            "usr/share/snmp/mibs/UCD-DLMOD-MIB.txt",
+            "usr/share/snmp/mibs/UCD-IPFWACC-MIB.txt",
+            "usr/share/snmp/mibs/UCD-SNMP-MIB.txt",
+            "usr/share/snmp/mibs/UDP-MIB.txt"
+          ]
+        },
+        {
+          "ID": "nghttp2-libs@1.65.0-r0",
+          "Name": "nghttp2-libs",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/nghttp2-libs@1.65.0-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "7e0316df833e76f2"
+          },
+          "Version": "1.65.0-r0",
+          "Arch": "x86_64",
+          "SrcName": "nghttp2",
+          "SrcVersion": "1.65.0-r0",
+          "Licenses": [
+            "MIT"
+          ],
+          "Maintainer": "Francesco Colista \u003cfcolista@alpinelinux.org\u003e",
+          "DependsOn": [
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:25feb492160beba9dd4bea4a169a65fd2eccc493",
+          "InstalledFiles": [
+            "usr/lib/libnghttp2.so.14",
+            "usr/lib/libnghttp2.so.14.28.4"
+          ]
+        },
+        {
+          "ID": "nmap@7.97-r0",
+          "Name": "nmap",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/nmap@7.97-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "1dd613e2f5706478"
+          },
+          "Version": "7.97-r0",
+          "Arch": "x86_64",
+          "SrcName": "nmap",
+          "SrcVersion": "7.97-r0",
+          "Licenses": [
+            "custom"
+          ],
+          "Maintainer": "Leonardo Arena \u003crnalrd@alpinelinux.org\u003e",
+          "DependsOn": [
+            "libcrypto3@3.5.4-r0",
+            "libgcc@14.2.0-r6",
+            "libpcap@1.10.5-r1",
+            "libssh2@1.11.1-r0",
+            "libssl3@3.5.4-r0",
+            "libstdc++@14.2.0-r6",
+            "lua5.4-libs@5.4.7-r0",
+            "musl@1.2.5-r10",
+            "zlib@1.3.1-r2"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:a06be627d49bf641af2b07f8a1a12eecedbccb8f",
+          "InstalledFiles": [
+            "usr/bin/nmap",
+            "usr/share/ncat/ca-bundle.crt",
+            "usr/share/nmap/nmap-mac-prefixes",
+            "usr/share/nmap/nmap-os-db",
+            "usr/share/nmap/nmap-protocols",
+            "usr/share/nmap/nmap-rpc",
+            "usr/share/nmap/nmap-service-probes",
+            "usr/share/nmap/nmap-services",
+            "usr/share/nmap/nmap.dtd",
+            "usr/share/nmap/nmap.xsl"
+          ]
+        },
+        {
+          "ID": "openipmi-libs@2.0.36-r0",
+          "Name": "openipmi-libs",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/openipmi-libs@2.0.36-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "7e54330532d7c2ac"
+          },
+          "Version": "2.0.36-r0",
+          "Arch": "x86_64",
+          "SrcName": "openipmi",
+          "SrcVersion": "2.0.36-r0",
+          "Licenses": [
+            "LGPL-2.0-or-later",
+            "and",
+            "GPL-2.0-or-later",
+            "or",
+            "BSD-3-Clause"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "glib@2.84.4-r0",
+            "libcrypto3@3.5.4-r0",
+            "libncursesw@6.5_p20250503-r0",
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:13e5c714bc61263aeea6a1a62c67b225510d2e1a",
+          "InstalledFiles": [
+            "usr/lib/libOpenIPMI.so.0",
+            "usr/lib/libOpenIPMI.so.0.0.5",
+            "usr/lib/libOpenIPMIcmdlang.so.0",
+            "usr/lib/libOpenIPMIcmdlang.so.0.0.5",
+            "usr/lib/libOpenIPMIglib.so.0",
+            "usr/lib/libOpenIPMIglib.so.0.0.1",
+            "usr/lib/libOpenIPMIposix.so.0",
+            "usr/lib/libOpenIPMIposix.so.0.0.1",
+            "usr/lib/libOpenIPMIpthread.so.0",
+            "usr/lib/libOpenIPMIpthread.so.0.0.1",
+            "usr/lib/libOpenIPMIui.so.1",
+            "usr/lib/libOpenIPMIui.so.1.0.1",
+            "usr/lib/libOpenIPMIutils.so.0",
+            "usr/lib/libOpenIPMIutils.so.0.0.1"
+          ]
+        },
+        {
+          "ID": "openssl@3.5.4-r0",
+          "Name": "openssl",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/openssl@3.5.4-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "7991df372c6a7d49"
+          },
+          "Version": "3.5.4-r0",
+          "Arch": "x86_64",
+          "SrcName": "openssl",
+          "SrcVersion": "3.5.4-r0",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "libcrypto3@3.5.4-r0",
+            "libssl3@3.5.4-r0",
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:886b38018c15a06954914c7484254a5091bc75fe",
+          "InstalledFiles": [
+            "usr/bin/openssl"
+          ]
+        },
+        {
+          "ID": "pcre2@10.43-r1",
+          "Name": "pcre2",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/pcre2@10.43-r1?arch=x86_64\u0026distro=3.22.1",
+            "UID": "8520896ebdb68699"
+          },
+          "Version": "10.43-r1",
+          "Arch": "x86_64",
+          "SrcName": "pcre2",
+          "SrcVersion": "10.43-r1",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Maintainer": "Jakub Jirutka \u003cjakub@jirutka.cz\u003e",
+          "DependsOn": [
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:b3ef6da02d09ea70001e9770b314b6adf3586c7a",
+          "InstalledFiles": [
+            "usr/lib/libpcre2-8.so.0",
+            "usr/lib/libpcre2-8.so.0.12.0",
+            "usr/lib/libpcre2-posix.so.3",
+            "usr/lib/libpcre2-posix.so.3.0.5"
+          ]
+        },
+        {
+          "ID": "readline@8.2.13-r1",
+          "Name": "readline",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/readline@8.2.13-r1?arch=x86_64\u0026distro=3.22.1",
+            "UID": "997366c1d157db69"
+          },
+          "Version": "8.2.13-r1",
+          "Arch": "x86_64",
+          "SrcName": "readline",
+          "SrcVersion": "8.2.13-r1",
+          "Licenses": [
+            "GPL-3.0-or-later"
+          ],
+          "Maintainer": "Celeste \u003ccielesti@protonmail.com\u003e",
+          "DependsOn": [
+            "libncursesw@6.5_p20250503-r0",
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:d305640121793fd79a7636ed10fcc6cb10155e38",
+          "InstalledFiles": [
+            "etc/inputrc",
+            "usr/lib/libreadline.so.8",
+            "usr/lib/libreadline.so.8.2"
+          ]
+        },
+        {
+          "ID": "scanelf@1.3.8-r1",
+          "Name": "scanelf",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/scanelf@1.3.8-r1?arch=x86_64\u0026distro=3.22.1",
+            "UID": "c162fa31840265de"
+          },
+          "Version": "1.3.8-r1",
+          "Arch": "x86_64",
+          "SrcName": "pax-utils",
+          "SrcVersion": "1.3.8-r1",
+          "Licenses": [
+            "GPL-2.0-only"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:9824c27679d3b27c5e1cb00a73adb6f4f8d556994111c12db3c5d61a0c843df8",
+            "DiffID": "sha256:418dccb7d85a63a6aa574439840f7a6fa6fd2321b3e2394568a317735e867d35"
+          },
+          "Digest": "sha1:bd6dd1c820d476bcdf8ee38f003bcf2a73323b13",
+          "InstalledFiles": [
+            "usr/bin/scanelf"
+          ]
+        },
+        {
+          "ID": "ssl_client@1.37.0-r18",
+          "Name": "ssl_client",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/ssl_client@1.37.0-r18?arch=x86_64\u0026distro=3.22.1",
+            "UID": "4915926172155ff5"
+          },
+          "Version": "1.37.0-r18",
+          "Arch": "x86_64",
+          "SrcName": "busybox",
+          "SrcVersion": "1.37.0-r18",
+          "Licenses": [
+            "GPL-2.0-only"
+          ],
+          "Maintainer": "Sören Tempel \u003csoeren+alpine@soeren-tempel.net\u003e",
+          "DependsOn": [
+            "libcrypto3@3.5.4-r0",
+            "libssl3@3.5.4-r0",
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:9824c27679d3b27c5e1cb00a73adb6f4f8d556994111c12db3c5d61a0c843df8",
+            "DiffID": "sha256:418dccb7d85a63a6aa574439840f7a6fa6fd2321b3e2394568a317735e867d35"
+          },
+          "Digest": "sha1:7fa2e0f5a78d7061d18653bc5e38cb83c42d2f3a",
+          "InstalledFiles": [
+            "usr/bin/ssl_client"
+          ]
+        },
+        {
+          "ID": "traceroute@2.1.6-r0",
+          "Name": "traceroute",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/traceroute@2.1.6-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "56ed0e3228ed1d93"
+          },
+          "Version": "2.1.6-r0",
+          "Arch": "x86_64",
+          "SrcName": "traceroute",
+          "SrcVersion": "2.1.6-r0",
+          "Licenses": [
+            "GPL-2.0-or-later"
+          ],
+          "Maintainer": "John Vogel \u003cjvogel@stygian.me\u003e",
+          "DependsOn": [
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:19feb7bcbfd882ce96b9e904e84f2e8c47ea28fe",
+          "InstalledFiles": [
+            "usr/bin/traceroute"
+          ]
+        },
+        {
+          "ID": "tzdata@2025b-r0",
+          "Name": "tzdata",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/tzdata@2025b-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "7b70eccd3a32918f"
+          },
+          "Version": "2025b-r0",
+          "Arch": "x86_64",
+          "SrcName": "tzdata",
+          "SrcVersion": "2025b-r0",
+          "Licenses": [
+            "Public-Domain"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:182532a94e272a7ae1d262249729c8bcbb10891d",
+          "InstalledFiles": [
+            "usr/share/zoneinfo/CET",
+            "usr/share/zoneinfo/CST6CDT",
+            "usr/share/zoneinfo/Cuba",
+            "usr/share/zoneinfo/EET",
+            "usr/share/zoneinfo/EST",
+            "usr/share/zoneinfo/EST5EDT",
+            "usr/share/zoneinfo/Egypt",
+            "usr/share/zoneinfo/Eire",
+            "usr/share/zoneinfo/Factory",
+            "usr/share/zoneinfo/GB",
+            "usr/share/zoneinfo/GB-Eire",
+            "usr/share/zoneinfo/GMT",
+            "usr/share/zoneinfo/GMT+0",
+            "usr/share/zoneinfo/GMT-0",
+            "usr/share/zoneinfo/GMT0",
+            "usr/share/zoneinfo/Greenwich",
+            "usr/share/zoneinfo/HST",
+            "usr/share/zoneinfo/Hongkong",
+            "usr/share/zoneinfo/Iceland",
+            "usr/share/zoneinfo/Iran",
+            "usr/share/zoneinfo/Israel",
+            "usr/share/zoneinfo/Jamaica",
+            "usr/share/zoneinfo/Japan",
+            "usr/share/zoneinfo/Kwajalein",
+            "usr/share/zoneinfo/Libya",
+            "usr/share/zoneinfo/MET",
+            "usr/share/zoneinfo/MST",
+            "usr/share/zoneinfo/MST7MDT",
+            "usr/share/zoneinfo/NZ",
+            "usr/share/zoneinfo/NZ-CHAT",
+            "usr/share/zoneinfo/Navajo",
+            "usr/share/zoneinfo/PRC",
+            "usr/share/zoneinfo/PST8PDT",
+            "usr/share/zoneinfo/Poland",
+            "usr/share/zoneinfo/Portugal",
+            "usr/share/zoneinfo/ROC",
+            "usr/share/zoneinfo/ROK",
+            "usr/share/zoneinfo/Singapore",
+            "usr/share/zoneinfo/Turkey",
+            "usr/share/zoneinfo/UCT",
+            "usr/share/zoneinfo/UTC",
+            "usr/share/zoneinfo/Universal",
+            "usr/share/zoneinfo/W-SU",
+            "usr/share/zoneinfo/WET",
+            "usr/share/zoneinfo/Zulu",
+            "usr/share/zoneinfo/iso3166.tab",
+            "usr/share/zoneinfo/leap-seconds.list",
+            "usr/share/zoneinfo/posixrules",
+            "usr/share/zoneinfo/zone.tab",
+            "usr/share/zoneinfo/zone1970.tab",
+            "usr/share/zoneinfo/Africa/Abidjan",
+            "usr/share/zoneinfo/Africa/Accra",
+            "usr/share/zoneinfo/Africa/Addis_Ababa",
+            "usr/share/zoneinfo/Africa/Algiers",
+            "usr/share/zoneinfo/Africa/Asmara",
+            "usr/share/zoneinfo/Africa/Asmera",
+            "usr/share/zoneinfo/Africa/Bamako",
+            "usr/share/zoneinfo/Africa/Bangui",
+            "usr/share/zoneinfo/Africa/Banjul",
+            "usr/share/zoneinfo/Africa/Bissau",
+            "usr/share/zoneinfo/Africa/Blantyre",
+            "usr/share/zoneinfo/Africa/Brazzaville",
+            "usr/share/zoneinfo/Africa/Bujumbura",
+            "usr/share/zoneinfo/Africa/Cairo",
+            "usr/share/zoneinfo/Africa/Casablanca",
+            "usr/share/zoneinfo/Africa/Ceuta",
+            "usr/share/zoneinfo/Africa/Conakry",
+            "usr/share/zoneinfo/Africa/Dakar",
+            "usr/share/zoneinfo/Africa/Dar_es_Salaam",
+            "usr/share/zoneinfo/Africa/Djibouti",
+            "usr/share/zoneinfo/Africa/Douala",
+            "usr/share/zoneinfo/Africa/El_Aaiun",
+            "usr/share/zoneinfo/Africa/Freetown",
+            "usr/share/zoneinfo/Africa/Gaborone",
+            "usr/share/zoneinfo/Africa/Harare",
+            "usr/share/zoneinfo/Africa/Johannesburg",
+            "usr/share/zoneinfo/Africa/Juba",
+            "usr/share/zoneinfo/Africa/Kampala",
+            "usr/share/zoneinfo/Africa/Khartoum",
+            "usr/share/zoneinfo/Africa/Kigali",
+            "usr/share/zoneinfo/Africa/Kinshasa",
+            "usr/share/zoneinfo/Africa/Lagos",
+            "usr/share/zoneinfo/Africa/Libreville",
+            "usr/share/zoneinfo/Africa/Lome",
+            "usr/share/zoneinfo/Africa/Luanda",
+            "usr/share/zoneinfo/Africa/Lubumbashi",
+            "usr/share/zoneinfo/Africa/Lusaka",
+            "usr/share/zoneinfo/Africa/Malabo",
+            "usr/share/zoneinfo/Africa/Maputo",
+            "usr/share/zoneinfo/Africa/Maseru",
+            "usr/share/zoneinfo/Africa/Mbabane",
+            "usr/share/zoneinfo/Africa/Mogadishu",
+            "usr/share/zoneinfo/Africa/Monrovia",
+            "usr/share/zoneinfo/Africa/Nairobi",
+            "usr/share/zoneinfo/Africa/Ndjamena",
+            "usr/share/zoneinfo/Africa/Niamey",
+            "usr/share/zoneinfo/Africa/Nouakchott",
+            "usr/share/zoneinfo/Africa/Ouagadougou",
+            "usr/share/zoneinfo/Africa/Porto-Novo",
+            "usr/share/zoneinfo/Africa/Sao_Tome",
+            "usr/share/zoneinfo/Africa/Timbuktu",
+            "usr/share/zoneinfo/Africa/Tripoli",
+            "usr/share/zoneinfo/Africa/Tunis",
+            "usr/share/zoneinfo/Africa/Windhoek",
+            "usr/share/zoneinfo/America/Adak",
+            "usr/share/zoneinfo/America/Anchorage",
+            "usr/share/zoneinfo/America/Anguilla",
+            "usr/share/zoneinfo/America/Antigua",
+            "usr/share/zoneinfo/America/Araguaina",
+            "usr/share/zoneinfo/America/Aruba",
+            "usr/share/zoneinfo/America/Asuncion",
+            "usr/share/zoneinfo/America/Atikokan",
+            "usr/share/zoneinfo/America/Atka",
+            "usr/share/zoneinfo/America/Bahia",
+            "usr/share/zoneinfo/America/Bahia_Banderas",
+            "usr/share/zoneinfo/America/Barbados",
+            "usr/share/zoneinfo/America/Belem",
+            "usr/share/zoneinfo/America/Belize",
+            "usr/share/zoneinfo/America/Blanc-Sablon",
+            "usr/share/zoneinfo/America/Boa_Vista",
+            "usr/share/zoneinfo/America/Bogota",
+            "usr/share/zoneinfo/America/Boise",
+            "usr/share/zoneinfo/America/Buenos_Aires",
+            "usr/share/zoneinfo/America/Cambridge_Bay",
+            "usr/share/zoneinfo/America/Campo_Grande",
+            "usr/share/zoneinfo/America/Cancun",
+            "usr/share/zoneinfo/America/Caracas",
+            "usr/share/zoneinfo/America/Catamarca",
+            "usr/share/zoneinfo/America/Cayenne",
+            "usr/share/zoneinfo/America/Cayman",
+            "usr/share/zoneinfo/America/Chicago",
+            "usr/share/zoneinfo/America/Chihuahua",
+            "usr/share/zoneinfo/America/Ciudad_Juarez",
+            "usr/share/zoneinfo/America/Coral_Harbour",
+            "usr/share/zoneinfo/America/Cordoba",
+            "usr/share/zoneinfo/America/Costa_Rica",
+            "usr/share/zoneinfo/America/Coyhaique",
+            "usr/share/zoneinfo/America/Creston",
+            "usr/share/zoneinfo/America/Cuiaba",
+            "usr/share/zoneinfo/America/Curacao",
+            "usr/share/zoneinfo/America/Danmarkshavn",
+            "usr/share/zoneinfo/America/Dawson",
+            "usr/share/zoneinfo/America/Dawson_Creek",
+            "usr/share/zoneinfo/America/Denver",
+            "usr/share/zoneinfo/America/Detroit",
+            "usr/share/zoneinfo/America/Dominica",
+            "usr/share/zoneinfo/America/Edmonton",
+            "usr/share/zoneinfo/America/Eirunepe",
+            "usr/share/zoneinfo/America/El_Salvador",
+            "usr/share/zoneinfo/America/Ensenada",
+            "usr/share/zoneinfo/America/Fort_Nelson",
+            "usr/share/zoneinfo/America/Fort_Wayne",
+            "usr/share/zoneinfo/America/Fortaleza",
+            "usr/share/zoneinfo/America/Glace_Bay",
+            "usr/share/zoneinfo/America/Godthab",
+            "usr/share/zoneinfo/America/Goose_Bay",
+            "usr/share/zoneinfo/America/Grand_Turk",
+            "usr/share/zoneinfo/America/Grenada",
+            "usr/share/zoneinfo/America/Guadeloupe",
+            "usr/share/zoneinfo/America/Guatemala",
+            "usr/share/zoneinfo/America/Guayaquil",
+            "usr/share/zoneinfo/America/Guyana",
+            "usr/share/zoneinfo/America/Halifax",
+            "usr/share/zoneinfo/America/Havana",
+            "usr/share/zoneinfo/America/Hermosillo",
+            "usr/share/zoneinfo/America/Indianapolis",
+            "usr/share/zoneinfo/America/Inuvik",
+            "usr/share/zoneinfo/America/Iqaluit",
+            "usr/share/zoneinfo/America/Jamaica",
+            "usr/share/zoneinfo/America/Jujuy",
+            "usr/share/zoneinfo/America/Juneau",
+            "usr/share/zoneinfo/America/Knox_IN",
+            "usr/share/zoneinfo/America/Kralendijk",
+            "usr/share/zoneinfo/America/La_Paz",
+            "usr/share/zoneinfo/America/Lima",
+            "usr/share/zoneinfo/America/Los_Angeles",
+            "usr/share/zoneinfo/America/Louisville",
+            "usr/share/zoneinfo/America/Lower_Princes",
+            "usr/share/zoneinfo/America/Maceio",
+            "usr/share/zoneinfo/America/Managua",
+            "usr/share/zoneinfo/America/Manaus",
+            "usr/share/zoneinfo/America/Marigot",
+            "usr/share/zoneinfo/America/Martinique",
+            "usr/share/zoneinfo/America/Matamoros",
+            "usr/share/zoneinfo/America/Mazatlan",
+            "usr/share/zoneinfo/America/Mendoza",
+            "usr/share/zoneinfo/America/Menominee",
+            "usr/share/zoneinfo/America/Merida",
+            "usr/share/zoneinfo/America/Metlakatla",
+            "usr/share/zoneinfo/America/Mexico_City",
+            "usr/share/zoneinfo/America/Miquelon",
+            "usr/share/zoneinfo/America/Moncton",
+            "usr/share/zoneinfo/America/Monterrey",
+            "usr/share/zoneinfo/America/Montevideo",
+            "usr/share/zoneinfo/America/Montreal",
+            "usr/share/zoneinfo/America/Montserrat",
+            "usr/share/zoneinfo/America/Nassau",
+            "usr/share/zoneinfo/America/New_York",
+            "usr/share/zoneinfo/America/Nipigon",
+            "usr/share/zoneinfo/America/Nome",
+            "usr/share/zoneinfo/America/Noronha",
+            "usr/share/zoneinfo/America/Nuuk",
+            "usr/share/zoneinfo/America/Ojinaga",
+            "usr/share/zoneinfo/America/Panama",
+            "usr/share/zoneinfo/America/Pangnirtung",
+            "usr/share/zoneinfo/America/Paramaribo",
+            "usr/share/zoneinfo/America/Phoenix",
+            "usr/share/zoneinfo/America/Port-au-Prince",
+            "usr/share/zoneinfo/America/Port_of_Spain",
+            "usr/share/zoneinfo/America/Porto_Acre",
+            "usr/share/zoneinfo/America/Porto_Velho",
+            "usr/share/zoneinfo/America/Puerto_Rico",
+            "usr/share/zoneinfo/America/Punta_Arenas",
+            "usr/share/zoneinfo/America/Rainy_River",
+            "usr/share/zoneinfo/America/Rankin_Inlet",
+            "usr/share/zoneinfo/America/Recife",
+            "usr/share/zoneinfo/America/Regina",
+            "usr/share/zoneinfo/America/Resolute",
+            "usr/share/zoneinfo/America/Rio_Branco",
+            "usr/share/zoneinfo/America/Rosario",
+            "usr/share/zoneinfo/America/Santa_Isabel",
+            "usr/share/zoneinfo/America/Santarem",
+            "usr/share/zoneinfo/America/Santiago",
+            "usr/share/zoneinfo/America/Santo_Domingo",
+            "usr/share/zoneinfo/America/Sao_Paulo",
+            "usr/share/zoneinfo/America/Scoresbysund",
+            "usr/share/zoneinfo/America/Shiprock",
+            "usr/share/zoneinfo/America/Sitka",
+            "usr/share/zoneinfo/America/St_Barthelemy",
+            "usr/share/zoneinfo/America/St_Johns",
+            "usr/share/zoneinfo/America/St_Kitts",
+            "usr/share/zoneinfo/America/St_Lucia",
+            "usr/share/zoneinfo/America/St_Thomas",
+            "usr/share/zoneinfo/America/St_Vincent",
+            "usr/share/zoneinfo/America/Swift_Current",
+            "usr/share/zoneinfo/America/Tegucigalpa",
+            "usr/share/zoneinfo/America/Thule",
+            "usr/share/zoneinfo/America/Thunder_Bay",
+            "usr/share/zoneinfo/America/Tijuana",
+            "usr/share/zoneinfo/America/Toronto",
+            "usr/share/zoneinfo/America/Tortola",
+            "usr/share/zoneinfo/America/Vancouver",
+            "usr/share/zoneinfo/America/Virgin",
+            "usr/share/zoneinfo/America/Whitehorse",
+            "usr/share/zoneinfo/America/Winnipeg",
+            "usr/share/zoneinfo/America/Yakutat",
+            "usr/share/zoneinfo/America/Yellowknife",
+            "usr/share/zoneinfo/America/Argentina/Buenos_Aires",
+            "usr/share/zoneinfo/America/Argentina/Catamarca",
+            "usr/share/zoneinfo/America/Argentina/ComodRivadavia",
+            "usr/share/zoneinfo/America/Argentina/Cordoba",
+            "usr/share/zoneinfo/America/Argentina/Jujuy",
+            "usr/share/zoneinfo/America/Argentina/La_Rioja",
+            "usr/share/zoneinfo/America/Argentina/Mendoza",
+            "usr/share/zoneinfo/America/Argentina/Rio_Gallegos",
+            "usr/share/zoneinfo/America/Argentina/Salta",
+            "usr/share/zoneinfo/America/Argentina/San_Juan",
+            "usr/share/zoneinfo/America/Argentina/San_Luis",
+            "usr/share/zoneinfo/America/Argentina/Tucuman",
+            "usr/share/zoneinfo/America/Argentina/Ushuaia",
+            "usr/share/zoneinfo/America/Indiana/Indianapolis",
+            "usr/share/zoneinfo/America/Indiana/Knox",
+            "usr/share/zoneinfo/America/Indiana/Marengo",
+            "usr/share/zoneinfo/America/Indiana/Petersburg",
+            "usr/share/zoneinfo/America/Indiana/Tell_City",
+            "usr/share/zoneinfo/America/Indiana/Vevay",
+            "usr/share/zoneinfo/America/Indiana/Vincennes",
+            "usr/share/zoneinfo/America/Indiana/Winamac",
+            "usr/share/zoneinfo/America/Kentucky/Louisville",
+            "usr/share/zoneinfo/America/Kentucky/Monticello",
+            "usr/share/zoneinfo/America/North_Dakota/Beulah",
+            "usr/share/zoneinfo/America/North_Dakota/Center",
+            "usr/share/zoneinfo/America/North_Dakota/New_Salem",
+            "usr/share/zoneinfo/Antarctica/Casey",
+            "usr/share/zoneinfo/Antarctica/Davis",
+            "usr/share/zoneinfo/Antarctica/DumontDUrville",
+            "usr/share/zoneinfo/Antarctica/Macquarie",
+            "usr/share/zoneinfo/Antarctica/Mawson",
+            "usr/share/zoneinfo/Antarctica/McMurdo",
+            "usr/share/zoneinfo/Antarctica/Palmer",
+            "usr/share/zoneinfo/Antarctica/Rothera",
+            "usr/share/zoneinfo/Antarctica/South_Pole",
+            "usr/share/zoneinfo/Antarctica/Syowa",
+            "usr/share/zoneinfo/Antarctica/Troll",
+            "usr/share/zoneinfo/Antarctica/Vostok",
+            "usr/share/zoneinfo/Arctic/Longyearbyen",
+            "usr/share/zoneinfo/Asia/Aden",
+            "usr/share/zoneinfo/Asia/Almaty",
+            "usr/share/zoneinfo/Asia/Amman",
+            "usr/share/zoneinfo/Asia/Anadyr",
+            "usr/share/zoneinfo/Asia/Aqtau",
+            "usr/share/zoneinfo/Asia/Aqtobe",
+            "usr/share/zoneinfo/Asia/Ashgabat",
+            "usr/share/zoneinfo/Asia/Ashkhabad",
+            "usr/share/zoneinfo/Asia/Atyrau",
+            "usr/share/zoneinfo/Asia/Baghdad",
+            "usr/share/zoneinfo/Asia/Bahrain",
+            "usr/share/zoneinfo/Asia/Baku",
+            "usr/share/zoneinfo/Asia/Bangkok",
+            "usr/share/zoneinfo/Asia/Barnaul",
+            "usr/share/zoneinfo/Asia/Beirut",
+            "usr/share/zoneinfo/Asia/Bishkek",
+            "usr/share/zoneinfo/Asia/Brunei",
+            "usr/share/zoneinfo/Asia/Calcutta",
+            "usr/share/zoneinfo/Asia/Chita",
+            "usr/share/zoneinfo/Asia/Choibalsan",
+            "usr/share/zoneinfo/Asia/Chongqing",
+            "usr/share/zoneinfo/Asia/Chungking",
+            "usr/share/zoneinfo/Asia/Colombo",
+            "usr/share/zoneinfo/Asia/Dacca",
+            "usr/share/zoneinfo/Asia/Damascus",
+            "usr/share/zoneinfo/Asia/Dhaka",
+            "usr/share/zoneinfo/Asia/Dili",
+            "usr/share/zoneinfo/Asia/Dubai",
+            "usr/share/zoneinfo/Asia/Dushanbe",
+            "usr/share/zoneinfo/Asia/Famagusta",
+            "usr/share/zoneinfo/Asia/Gaza",
+            "usr/share/zoneinfo/Asia/Harbin",
+            "usr/share/zoneinfo/Asia/Hebron",
+            "usr/share/zoneinfo/Asia/Ho_Chi_Minh",
+            "usr/share/zoneinfo/Asia/Hong_Kong",
+            "usr/share/zoneinfo/Asia/Hovd",
+            "usr/share/zoneinfo/Asia/Irkutsk",
+            "usr/share/zoneinfo/Asia/Istanbul",
+            "usr/share/zoneinfo/Asia/Jakarta",
+            "usr/share/zoneinfo/Asia/Jayapura",
+            "usr/share/zoneinfo/Asia/Jerusalem",
+            "usr/share/zoneinfo/Asia/Kabul",
+            "usr/share/zoneinfo/Asia/Kamchatka",
+            "usr/share/zoneinfo/Asia/Karachi",
+            "usr/share/zoneinfo/Asia/Kashgar",
+            "usr/share/zoneinfo/Asia/Kathmandu",
+            "usr/share/zoneinfo/Asia/Katmandu",
+            "usr/share/zoneinfo/Asia/Khandyga",
+            "usr/share/zoneinfo/Asia/Kolkata",
+            "usr/share/zoneinfo/Asia/Krasnoyarsk",
+            "usr/share/zoneinfo/Asia/Kuala_Lumpur",
+            "usr/share/zoneinfo/Asia/Kuching",
+            "usr/share/zoneinfo/Asia/Kuwait",
+            "usr/share/zoneinfo/Asia/Macao",
+            "usr/share/zoneinfo/Asia/Macau",
+            "usr/share/zoneinfo/Asia/Magadan",
+            "usr/share/zoneinfo/Asia/Makassar",
+            "usr/share/zoneinfo/Asia/Manila",
+            "usr/share/zoneinfo/Asia/Muscat",
+            "usr/share/zoneinfo/Asia/Nicosia",
+            "usr/share/zoneinfo/Asia/Novokuznetsk",
+            "usr/share/zoneinfo/Asia/Novosibirsk",
+            "usr/share/zoneinfo/Asia/Omsk",
+            "usr/share/zoneinfo/Asia/Oral",
+            "usr/share/zoneinfo/Asia/Phnom_Penh",
+            "usr/share/zoneinfo/Asia/Pontianak",
+            "usr/share/zoneinfo/Asia/Pyongyang",
+            "usr/share/zoneinfo/Asia/Qatar",
+            "usr/share/zoneinfo/Asia/Qostanay",
+            "usr/share/zoneinfo/Asia/Qyzylorda",
+            "usr/share/zoneinfo/Asia/Rangoon",
+            "usr/share/zoneinfo/Asia/Riyadh",
+            "usr/share/zoneinfo/Asia/Saigon",
+            "usr/share/zoneinfo/Asia/Sakhalin",
+            "usr/share/zoneinfo/Asia/Samarkand",
+            "usr/share/zoneinfo/Asia/Seoul",
+            "usr/share/zoneinfo/Asia/Shanghai",
+            "usr/share/zoneinfo/Asia/Singapore",
+            "usr/share/zoneinfo/Asia/Srednekolymsk",
+            "usr/share/zoneinfo/Asia/Taipei",
+            "usr/share/zoneinfo/Asia/Tashkent",
+            "usr/share/zoneinfo/Asia/Tbilisi",
+            "usr/share/zoneinfo/Asia/Tehran",
+            "usr/share/zoneinfo/Asia/Tel_Aviv",
+            "usr/share/zoneinfo/Asia/Thimbu",
+            "usr/share/zoneinfo/Asia/Thimphu",
+            "usr/share/zoneinfo/Asia/Tokyo",
+            "usr/share/zoneinfo/Asia/Tomsk",
+            "usr/share/zoneinfo/Asia/Ujung_Pandang",
+            "usr/share/zoneinfo/Asia/Ulaanbaatar",
+            "usr/share/zoneinfo/Asia/Ulan_Bator",
+            "usr/share/zoneinfo/Asia/Urumqi",
+            "usr/share/zoneinfo/Asia/Ust-Nera",
+            "usr/share/zoneinfo/Asia/Vientiane",
+            "usr/share/zoneinfo/Asia/Vladivostok",
+            "usr/share/zoneinfo/Asia/Yakutsk",
+            "usr/share/zoneinfo/Asia/Yangon",
+            "usr/share/zoneinfo/Asia/Yekaterinburg",
+            "usr/share/zoneinfo/Asia/Yerevan",
+            "usr/share/zoneinfo/Atlantic/Azores",
+            "usr/share/zoneinfo/Atlantic/Bermuda",
+            "usr/share/zoneinfo/Atlantic/Canary",
+            "usr/share/zoneinfo/Atlantic/Cape_Verde",
+            "usr/share/zoneinfo/Atlantic/Faeroe",
+            "usr/share/zoneinfo/Atlantic/Faroe",
+            "usr/share/zoneinfo/Atlantic/Jan_Mayen",
+            "usr/share/zoneinfo/Atlantic/Madeira",
+            "usr/share/zoneinfo/Atlantic/Reykjavik",
+            "usr/share/zoneinfo/Atlantic/South_Georgia",
+            "usr/share/zoneinfo/Atlantic/St_Helena",
+            "usr/share/zoneinfo/Atlantic/Stanley",
+            "usr/share/zoneinfo/Australia/ACT",
+            "usr/share/zoneinfo/Australia/Adelaide",
+            "usr/share/zoneinfo/Australia/Brisbane",
+            "usr/share/zoneinfo/Australia/Broken_Hill",
+            "usr/share/zoneinfo/Australia/Canberra",
+            "usr/share/zoneinfo/Australia/Currie",
+            "usr/share/zoneinfo/Australia/Darwin",
+            "usr/share/zoneinfo/Australia/Eucla",
+            "usr/share/zoneinfo/Australia/Hobart",
+            "usr/share/zoneinfo/Australia/LHI",
+            "usr/share/zoneinfo/Australia/Lindeman",
+            "usr/share/zoneinfo/Australia/Lord_Howe",
+            "usr/share/zoneinfo/Australia/Melbourne",
+            "usr/share/zoneinfo/Australia/NSW",
+            "usr/share/zoneinfo/Australia/North",
+            "usr/share/zoneinfo/Australia/Perth",
+            "usr/share/zoneinfo/Australia/Queensland",
+            "usr/share/zoneinfo/Australia/South",
+            "usr/share/zoneinfo/Australia/Sydney",
+            "usr/share/zoneinfo/Australia/Tasmania",
+            "usr/share/zoneinfo/Australia/Victoria",
+            "usr/share/zoneinfo/Australia/West",
+            "usr/share/zoneinfo/Australia/Yancowinna",
+            "usr/share/zoneinfo/Brazil/Acre",
+            "usr/share/zoneinfo/Brazil/DeNoronha",
+            "usr/share/zoneinfo/Brazil/East",
+            "usr/share/zoneinfo/Brazil/West",
+            "usr/share/zoneinfo/Canada/Atlantic",
+            "usr/share/zoneinfo/Canada/Central",
+            "usr/share/zoneinfo/Canada/Eastern",
+            "usr/share/zoneinfo/Canada/Mountain",
+            "usr/share/zoneinfo/Canada/Newfoundland",
+            "usr/share/zoneinfo/Canada/Pacific",
+            "usr/share/zoneinfo/Canada/Saskatchewan",
+            "usr/share/zoneinfo/Canada/Yukon",
+            "usr/share/zoneinfo/Chile/Continental",
+            "usr/share/zoneinfo/Chile/EasterIsland",
+            "usr/share/zoneinfo/Etc/GMT",
+            "usr/share/zoneinfo/Etc/GMT+0",
+            "usr/share/zoneinfo/Etc/GMT+1",
+            "usr/share/zoneinfo/Etc/GMT+10",
+            "usr/share/zoneinfo/Etc/GMT+11",
+            "usr/share/zoneinfo/Etc/GMT+12",
+            "usr/share/zoneinfo/Etc/GMT+2",
+            "usr/share/zoneinfo/Etc/GMT+3",
+            "usr/share/zoneinfo/Etc/GMT+4",
+            "usr/share/zoneinfo/Etc/GMT+5",
+            "usr/share/zoneinfo/Etc/GMT+6",
+            "usr/share/zoneinfo/Etc/GMT+7",
+            "usr/share/zoneinfo/Etc/GMT+8",
+            "usr/share/zoneinfo/Etc/GMT+9",
+            "usr/share/zoneinfo/Etc/GMT-0",
+            "usr/share/zoneinfo/Etc/GMT-1",
+            "usr/share/zoneinfo/Etc/GMT-10",
+            "usr/share/zoneinfo/Etc/GMT-11",
+            "usr/share/zoneinfo/Etc/GMT-12",
+            "usr/share/zoneinfo/Etc/GMT-13",
+            "usr/share/zoneinfo/Etc/GMT-14",
+            "usr/share/zoneinfo/Etc/GMT-2",
+            "usr/share/zoneinfo/Etc/GMT-3",
+            "usr/share/zoneinfo/Etc/GMT-4",
+            "usr/share/zoneinfo/Etc/GMT-5",
+            "usr/share/zoneinfo/Etc/GMT-6",
+            "usr/share/zoneinfo/Etc/GMT-7",
+            "usr/share/zoneinfo/Etc/GMT-8",
+            "usr/share/zoneinfo/Etc/GMT-9",
+            "usr/share/zoneinfo/Etc/GMT0",
+            "usr/share/zoneinfo/Etc/Greenwich",
+            "usr/share/zoneinfo/Etc/UCT",
+            "usr/share/zoneinfo/Etc/UTC",
+            "usr/share/zoneinfo/Etc/Universal",
+            "usr/share/zoneinfo/Etc/Zulu",
+            "usr/share/zoneinfo/Europe/Amsterdam",
+            "usr/share/zoneinfo/Europe/Andorra",
+            "usr/share/zoneinfo/Europe/Astrakhan",
+            "usr/share/zoneinfo/Europe/Athens",
+            "usr/share/zoneinfo/Europe/Belfast",
+            "usr/share/zoneinfo/Europe/Belgrade",
+            "usr/share/zoneinfo/Europe/Berlin",
+            "usr/share/zoneinfo/Europe/Bratislava",
+            "usr/share/zoneinfo/Europe/Brussels",
+            "usr/share/zoneinfo/Europe/Bucharest",
+            "usr/share/zoneinfo/Europe/Budapest",
+            "usr/share/zoneinfo/Europe/Busingen",
+            "usr/share/zoneinfo/Europe/Chisinau",
+            "usr/share/zoneinfo/Europe/Copenhagen",
+            "usr/share/zoneinfo/Europe/Dublin",
+            "usr/share/zoneinfo/Europe/Gibraltar",
+            "usr/share/zoneinfo/Europe/Guernsey",
+            "usr/share/zoneinfo/Europe/Helsinki",
+            "usr/share/zoneinfo/Europe/Isle_of_Man",
+            "usr/share/zoneinfo/Europe/Istanbul",
+            "usr/share/zoneinfo/Europe/Jersey",
+            "usr/share/zoneinfo/Europe/Kaliningrad",
+            "usr/share/zoneinfo/Europe/Kiev",
+            "usr/share/zoneinfo/Europe/Kirov",
+            "usr/share/zoneinfo/Europe/Kyiv",
+            "usr/share/zoneinfo/Europe/Lisbon",
+            "usr/share/zoneinfo/Europe/Ljubljana",
+            "usr/share/zoneinfo/Europe/London",
+            "usr/share/zoneinfo/Europe/Luxembourg",
+            "usr/share/zoneinfo/Europe/Madrid",
+            "usr/share/zoneinfo/Europe/Malta",
+            "usr/share/zoneinfo/Europe/Mariehamn",
+            "usr/share/zoneinfo/Europe/Minsk",
+            "usr/share/zoneinfo/Europe/Monaco",
+            "usr/share/zoneinfo/Europe/Moscow",
+            "usr/share/zoneinfo/Europe/Nicosia",
+            "usr/share/zoneinfo/Europe/Oslo",
+            "usr/share/zoneinfo/Europe/Paris",
+            "usr/share/zoneinfo/Europe/Podgorica",
+            "usr/share/zoneinfo/Europe/Prague",
+            "usr/share/zoneinfo/Europe/Riga",
+            "usr/share/zoneinfo/Europe/Rome",
+            "usr/share/zoneinfo/Europe/Samara",
+            "usr/share/zoneinfo/Europe/San_Marino",
+            "usr/share/zoneinfo/Europe/Sarajevo",
+            "usr/share/zoneinfo/Europe/Saratov",
+            "usr/share/zoneinfo/Europe/Simferopol",
+            "usr/share/zoneinfo/Europe/Skopje",
+            "usr/share/zoneinfo/Europe/Sofia",
+            "usr/share/zoneinfo/Europe/Stockholm",
+            "usr/share/zoneinfo/Europe/Tallinn",
+            "usr/share/zoneinfo/Europe/Tirane",
+            "usr/share/zoneinfo/Europe/Tiraspol",
+            "usr/share/zoneinfo/Europe/Ulyanovsk",
+            "usr/share/zoneinfo/Europe/Uzhgorod",
+            "usr/share/zoneinfo/Europe/Vaduz",
+            "usr/share/zoneinfo/Europe/Vatican",
+            "usr/share/zoneinfo/Europe/Vienna",
+            "usr/share/zoneinfo/Europe/Vilnius",
+            "usr/share/zoneinfo/Europe/Volgograd",
+            "usr/share/zoneinfo/Europe/Warsaw",
+            "usr/share/zoneinfo/Europe/Zagreb",
+            "usr/share/zoneinfo/Europe/Zaporozhye",
+            "usr/share/zoneinfo/Europe/Zurich",
+            "usr/share/zoneinfo/Indian/Antananarivo",
+            "usr/share/zoneinfo/Indian/Chagos",
+            "usr/share/zoneinfo/Indian/Christmas",
+            "usr/share/zoneinfo/Indian/Cocos",
+            "usr/share/zoneinfo/Indian/Comoro",
+            "usr/share/zoneinfo/Indian/Kerguelen",
+            "usr/share/zoneinfo/Indian/Mahe",
+            "usr/share/zoneinfo/Indian/Maldives",
+            "usr/share/zoneinfo/Indian/Mauritius",
+            "usr/share/zoneinfo/Indian/Mayotte",
+            "usr/share/zoneinfo/Indian/Reunion",
+            "usr/share/zoneinfo/Mexico/BajaNorte",
+            "usr/share/zoneinfo/Mexico/BajaSur",
+            "usr/share/zoneinfo/Mexico/General",
+            "usr/share/zoneinfo/Pacific/Apia",
+            "usr/share/zoneinfo/Pacific/Auckland",
+            "usr/share/zoneinfo/Pacific/Bougainville",
+            "usr/share/zoneinfo/Pacific/Chatham",
+            "usr/share/zoneinfo/Pacific/Chuuk",
+            "usr/share/zoneinfo/Pacific/Easter",
+            "usr/share/zoneinfo/Pacific/Efate",
+            "usr/share/zoneinfo/Pacific/Enderbury",
+            "usr/share/zoneinfo/Pacific/Fakaofo",
+            "usr/share/zoneinfo/Pacific/Fiji",
+            "usr/share/zoneinfo/Pacific/Funafuti",
+            "usr/share/zoneinfo/Pacific/Galapagos",
+            "usr/share/zoneinfo/Pacific/Gambier",
+            "usr/share/zoneinfo/Pacific/Guadalcanal",
+            "usr/share/zoneinfo/Pacific/Guam",
+            "usr/share/zoneinfo/Pacific/Honolulu",
+            "usr/share/zoneinfo/Pacific/Johnston",
+            "usr/share/zoneinfo/Pacific/Kanton",
+            "usr/share/zoneinfo/Pacific/Kiritimati",
+            "usr/share/zoneinfo/Pacific/Kosrae",
+            "usr/share/zoneinfo/Pacific/Kwajalein",
+            "usr/share/zoneinfo/Pacific/Majuro",
+            "usr/share/zoneinfo/Pacific/Marquesas",
+            "usr/share/zoneinfo/Pacific/Midway",
+            "usr/share/zoneinfo/Pacific/Nauru",
+            "usr/share/zoneinfo/Pacific/Niue",
+            "usr/share/zoneinfo/Pacific/Norfolk",
+            "usr/share/zoneinfo/Pacific/Noumea",
+            "usr/share/zoneinfo/Pacific/Pago_Pago",
+            "usr/share/zoneinfo/Pacific/Palau",
+            "usr/share/zoneinfo/Pacific/Pitcairn",
+            "usr/share/zoneinfo/Pacific/Pohnpei",
+            "usr/share/zoneinfo/Pacific/Ponape",
+            "usr/share/zoneinfo/Pacific/Port_Moresby",
+            "usr/share/zoneinfo/Pacific/Rarotonga",
+            "usr/share/zoneinfo/Pacific/Saipan",
+            "usr/share/zoneinfo/Pacific/Samoa",
+            "usr/share/zoneinfo/Pacific/Tahiti",
+            "usr/share/zoneinfo/Pacific/Tarawa",
+            "usr/share/zoneinfo/Pacific/Tongatapu",
+            "usr/share/zoneinfo/Pacific/Truk",
+            "usr/share/zoneinfo/Pacific/Wake",
+            "usr/share/zoneinfo/Pacific/Wallis",
+            "usr/share/zoneinfo/Pacific/Yap",
+            "usr/share/zoneinfo/US/Alaska",
+            "usr/share/zoneinfo/US/Aleutian",
+            "usr/share/zoneinfo/US/Arizona",
+            "usr/share/zoneinfo/US/Central",
+            "usr/share/zoneinfo/US/East-Indiana",
+            "usr/share/zoneinfo/US/Eastern",
+            "usr/share/zoneinfo/US/Hawaii",
+            "usr/share/zoneinfo/US/Indiana-Starke",
+            "usr/share/zoneinfo/US/Michigan",
+            "usr/share/zoneinfo/US/Mountain",
+            "usr/share/zoneinfo/US/Pacific",
+            "usr/share/zoneinfo/US/Samoa"
+          ]
+        },
+        {
+          "ID": "unixodbc@2.3.12-r0",
+          "Name": "unixodbc",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/unixodbc@2.3.12-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "400504f9daf66862"
+          },
+          "Version": "2.3.12-r0",
+          "Arch": "x86_64",
+          "SrcName": "unixodbc",
+          "SrcVersion": "2.3.12-r0",
+          "Licenses": [
+            "LGPL-2.0-or-later"
+          ],
+          "Maintainer": "Carlo Landmeter \u003cclandmeter@alpinelinux.org\u003e",
+          "DependsOn": [
+            "musl@1.2.5-r10",
+            "readline@8.2.13-r1"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:8691d8a21ab96a74228459b054fba9a360599707",
+          "InstalledFiles": [
+            "etc/odbc.ini",
+            "etc/odbcinst.ini",
+            "usr/bin/dltest",
+            "usr/bin/isql",
+            "usr/bin/iusql",
+            "usr/bin/odbc_config",
+            "usr/bin/odbcinst",
+            "usr/bin/slencheck",
+            "usr/lib/libodbc.so.2",
+            "usr/lib/libodbc.so.2.0.0",
+            "usr/lib/libodbccr.so.2",
+            "usr/lib/libodbccr.so.2.0.0",
+            "usr/lib/libodbcinst.so.2",
+            "usr/lib/libodbcinst.so.2.0.0"
+          ]
+        },
+        {
+          "ID": "xz-libs@5.8.1-r0",
+          "Name": "xz-libs",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/xz-libs@5.8.1-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "a13f79ef947cdade"
+          },
+          "Version": "5.8.1-r0",
+          "Arch": "x86_64",
+          "SrcName": "xz",
+          "SrcVersion": "5.8.1-r0",
+          "Licenses": [
+            "GPL-2.0-or-later",
+            "0BSD",
+            "Public-Domain",
+            "LGPL-2.1-or-later"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:fdcdb7d0dc44dd546165ae313122b01d6a20f931",
+          "InstalledFiles": [
+            "usr/lib/liblzma.so.5",
+            "usr/lib/liblzma.so.5.8.1"
+          ]
+        },
+        {
+          "ID": "zlib@1.3.1-r2",
+          "Name": "zlib",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/zlib@1.3.1-r2?arch=x86_64\u0026distro=3.22.1",
+            "UID": "a165403c2117fdcf"
+          },
+          "Version": "1.3.1-r2",
+          "Arch": "x86_64",
+          "SrcName": "zlib",
+          "SrcVersion": "1.3.1-r2",
+          "Licenses": [
+            "Zlib"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:9824c27679d3b27c5e1cb00a73adb6f4f8d556994111c12db3c5d61a0c843df8",
+            "DiffID": "sha256:418dccb7d85a63a6aa574439840f7a6fa6fd2321b3e2394568a317735e867d35"
+          },
+          "Digest": "sha1:bf7d90d89e5429c18167b91ab8d7e6256cfc7fdf",
+          "InstalledFiles": [
+            "usr/lib/libz.so.1",
+            "usr/lib/libz.so.1.3.1"
+          ]
+        },
+        {
+          "ID": "zstd-libs@1.5.7-r0",
+          "Name": "zstd-libs",
+          "Identifier": {
+            "PURL": "pkg:apk/alpine/zstd-libs@1.5.7-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "3a0f4016657815a5"
+          },
+          "Version": "1.5.7-r0",
+          "Arch": "x86_64",
+          "SrcName": "zstd",
+          "SrcVersion": "1.5.7-r0",
+          "Licenses": [
+            "BSD-3-Clause",
+            "GPL-2.0-or-later"
+          ],
+          "Maintainer": "Natanael Copa \u003cncopa@alpinelinux.org\u003e",
+          "DependsOn": [
+            "musl@1.2.5-r10"
+          ],
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "Digest": "sha1:50c83112b5619f48d36d69190a4cb7c71f15c7d2",
+          "InstalledFiles": [
+            "usr/lib/libzstd.so.1",
+            "usr/lib/libzstd.so.1.5.7"
+          ]
+        }
+      ],
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "CVE-2025-49794",
+          "PkgID": "libxml2@2.13.8-r0",
+          "PkgName": "libxml2",
+          "PkgIdentifier": {
+            "PURL": "pkg:apk/alpine/libxml2@2.13.8-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "f6365fe7fd7ac5f1"
+          },
+          "InstalledVersion": "2.13.8-r0",
+          "FixedVersion": "2.13.9-r0",
+          "Status": "fixed",
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-49794",
+          "DataSource": {
+            "ID": "alpine",
+            "Name": "Alpine Secdb",
+            "URL": "https://secdb.alpinelinux.org/"
+          },
+          "Title": "libxml: Heap use after free (UAF) leads to Denial of service (DoS)",
+          "Description": "A use-after-free vulnerability was found in libxml2. This issue occurs when parsing XPath elements under certain circumstances when the XML schematron has the \u003csch:name path=\"...\"/\u003e schema elements. This flaw allows a malicious actor to craft a malicious XML document used as input for libxml, resulting in the program's crash using libxml or other possible undefined behaviors.",
+          "Severity": "CRITICAL",
+          "CweIDs": [
+            "CWE-825"
+          ],
+          "VendorSeverity": {
+            "alma": 3,
+            "amazon": 3,
+            "azure": 4,
+            "cbl-mariner": 4,
+            "oracle-oval": 3,
+            "photon": 4,
+            "redhat": 3,
+            "rocky": 3,
+            "ubuntu": 2
+          },
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+              "V3Score": 9.1
+            }
+          },
+          "References": [
+            "https://access.redhat.com/errata/RHSA-2025:10630",
+            "https://access.redhat.com/errata/RHSA-2025:10698",
+            "https://access.redhat.com/errata/RHSA-2025:10699",
+            "https://access.redhat.com/errata/RHSA-2025:11580",
+            "https://access.redhat.com/errata/RHSA-2025:12098",
+            "https://access.redhat.com/errata/RHSA-2025:12099",
+            "https://access.redhat.com/errata/RHSA-2025:12199",
+            "https://access.redhat.com/errata/RHSA-2025:12237",
+            "https://access.redhat.com/errata/RHSA-2025:12239",
+            "https://access.redhat.com/errata/RHSA-2025:12240",
+            "https://access.redhat.com/errata/RHSA-2025:12241",
+            "https://access.redhat.com/errata/RHSA-2025:13335",
+            "https://access.redhat.com/errata/RHSA-2025:15397",
+            "https://access.redhat.com/errata/RHSA-2025:15827",
+            "https://access.redhat.com/errata/RHSA-2025:15828",
+            "https://access.redhat.com/errata/RHSA-2025:18217",
+            "https://access.redhat.com/errata/RHSA-2025:18218",
+            "https://access.redhat.com/errata/RHSA-2025:18219",
+            "https://access.redhat.com/errata/RHSA-2025:18240",
+            "https://access.redhat.com/security/cve/CVE-2025-49794",
+            "https://bugzilla.redhat.com/2372373",
+            "https://bugzilla.redhat.com/2372385",
+            "https://bugzilla.redhat.com/2372406",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2372373",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2372385",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2372406",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-49794",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-49796",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-6021",
+            "https://errata.almalinux.org/9/ALSA-2025-10699.html",
+            "https://errata.rockylinux.org/RLSA-2025:10698",
+            "https://gitlab.gnome.org/GNOME/libxml2/-/issues/931",
+            "https://linux.oracle.com/cve/CVE-2025-49794.html",
+            "https://linux.oracle.com/errata/ELSA-2025-12240.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-49794",
+            "https://ubuntu.com/security/notices/USN-7694-1",
+            "https://www.cve.org/CVERecord?id=CVE-2025-49794"
+          ],
+          "PublishedDate": "2025-06-16T16:15:18.997Z",
+          "LastModifiedDate": "2025-10-24T00:15:40.063Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2025-49796",
+          "PkgID": "libxml2@2.13.8-r0",
+          "PkgName": "libxml2",
+          "PkgIdentifier": {
+            "PURL": "pkg:apk/alpine/libxml2@2.13.8-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "f6365fe7fd7ac5f1"
+          },
+          "InstalledVersion": "2.13.8-r0",
+          "FixedVersion": "2.13.9-r0",
+          "Status": "fixed",
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-49796",
+          "DataSource": {
+            "ID": "alpine",
+            "Name": "Alpine Secdb",
+            "URL": "https://secdb.alpinelinux.org/"
+          },
+          "Title": "libxml: Type confusion leads to Denial of service (DoS)",
+          "Description": "A vulnerability was found in libxml2. Processing certain sch:name elements from the input XML file can trigger a memory corruption issue. This flaw allows an attacker to craft a malicious XML input file that can lead libxml to crash, resulting in a denial of service or other possible undefined behavior due to sensitive data being corrupted in memory.",
+          "Severity": "CRITICAL",
+          "CweIDs": [
+            "CWE-125"
+          ],
+          "VendorSeverity": {
+            "alma": 3,
+            "amazon": 3,
+            "azure": 4,
+            "cbl-mariner": 4,
+            "oracle-oval": 3,
+            "photon": 4,
+            "redhat": 3,
+            "rocky": 3,
+            "ubuntu": 2
+          },
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+              "V3Score": 9.1
+            }
+          },
+          "References": [
+            "https://access.redhat.com/errata/RHSA-2025:10630",
+            "https://access.redhat.com/errata/RHSA-2025:10698",
+            "https://access.redhat.com/errata/RHSA-2025:10699",
+            "https://access.redhat.com/errata/RHSA-2025:11580",
+            "https://access.redhat.com/errata/RHSA-2025:12098",
+            "https://access.redhat.com/errata/RHSA-2025:12099",
+            "https://access.redhat.com/errata/RHSA-2025:12199",
+            "https://access.redhat.com/errata/RHSA-2025:12237",
+            "https://access.redhat.com/errata/RHSA-2025:12239",
+            "https://access.redhat.com/errata/RHSA-2025:12240",
+            "https://access.redhat.com/errata/RHSA-2025:12241",
+            "https://access.redhat.com/errata/RHSA-2025:13267",
+            "https://access.redhat.com/errata/RHSA-2025:13335",
+            "https://access.redhat.com/errata/RHSA-2025:15397",
+            "https://access.redhat.com/errata/RHSA-2025:15827",
+            "https://access.redhat.com/errata/RHSA-2025:15828",
+            "https://access.redhat.com/errata/RHSA-2025:18217",
+            "https://access.redhat.com/errata/RHSA-2025:18218",
+            "https://access.redhat.com/errata/RHSA-2025:18219",
+            "https://access.redhat.com/errata/RHSA-2025:18240",
+            "https://access.redhat.com/security/cve/CVE-2025-49796",
+            "https://bugzilla.redhat.com/2372373",
+            "https://bugzilla.redhat.com/2372385",
+            "https://bugzilla.redhat.com/2372406",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2372373",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2372385",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2372406",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-49794",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-49796",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-6021",
+            "https://errata.almalinux.org/9/ALSA-2025-10699.html",
+            "https://errata.rockylinux.org/RLSA-2025:10698",
+            "https://gitlab.gnome.org/GNOME/libxml2/-/issues/933",
+            "https://linux.oracle.com/cve/CVE-2025-49796.html",
+            "https://linux.oracle.com/errata/ELSA-2025-12240.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-49796",
+            "https://ubuntu.com/security/notices/USN-7694-1",
+            "https://www.cve.org/CVERecord?id=CVE-2025-49796"
+          ],
+          "PublishedDate": "2025-06-16T16:15:19.37Z",
+          "LastModifiedDate": "2025-10-24T00:15:40.243Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2025-49795",
+          "PkgID": "libxml2@2.13.8-r0",
+          "PkgName": "libxml2",
+          "PkgIdentifier": {
+            "PURL": "pkg:apk/alpine/libxml2@2.13.8-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "f6365fe7fd7ac5f1"
+          },
+          "InstalledVersion": "2.13.8-r0",
+          "FixedVersion": "2.13.9-r0",
+          "Status": "fixed",
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-49795",
+          "DataSource": {
+            "ID": "alpine",
+            "Name": "Alpine Secdb",
+            "URL": "https://secdb.alpinelinux.org/"
+          },
+          "Title": "libxml: Null pointer dereference leads to Denial of service (DoS)",
+          "Description": "A NULL pointer dereference vulnerability was found in libxml2 when processing XPath XML expressions. This flaw allows an attacker to craft a malicious XML input to libxml2, leading to a denial of service.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-825"
+          ],
+          "VendorSeverity": {
+            "alma": 3,
+            "amazon": 3,
+            "oracle-oval": 3,
+            "photon": 3,
+            "redhat": 3,
+            "rocky": 3
+          },
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "https://access.redhat.com/errata/RHSA-2025:10630",
+            "https://access.redhat.com/security/cve/CVE-2025-49795",
+            "https://bugzilla.redhat.com/2372373",
+            "https://bugzilla.redhat.com/2372379",
+            "https://bugzilla.redhat.com/2372385",
+            "https://bugzilla.redhat.com/2372406",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2372373",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2372379",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2372385",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2372406",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-49794",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-49795",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-49796",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-6021",
+            "https://errata.almalinux.org/10/ALSA-2025-10630.html",
+            "https://errata.rockylinux.org/RLSA-2025:10630",
+            "https://linux.oracle.com/cve/CVE-2025-49795.html",
+            "https://linux.oracle.com/errata/ELSA-2025-10630.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-49795",
+            "https://www.cve.org/CVERecord?id=CVE-2025-49795"
+          ],
+          "PublishedDate": "2025-06-16T16:15:19.203Z",
+          "LastModifiedDate": "2025-07-09T03:15:30.183Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2025-6021",
+          "PkgID": "libxml2@2.13.8-r0",
+          "PkgName": "libxml2",
+          "PkgIdentifier": {
+            "PURL": "pkg:apk/alpine/libxml2@2.13.8-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "f6365fe7fd7ac5f1"
+          },
+          "InstalledVersion": "2.13.8-r0",
+          "FixedVersion": "2.13.9-r0",
+          "Status": "fixed",
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-6021",
+          "DataSource": {
+            "ID": "alpine",
+            "Name": "Alpine Secdb",
+            "URL": "https://secdb.alpinelinux.org/"
+          },
+          "Title": "libxml2: Integer Overflow in xmlBuildQName() Leads to Stack Buffer Overflow in libxml2",
+          "Description": "A flaw was found in libxml2's xmlBuildQName function, where integer overflows in buffer size calculations can lead to a stack-based buffer overflow. This issue can result in memory corruption or a denial of service when processing crafted input.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-121",
+            "CWE-787"
+          ],
+          "VendorSeverity": {
+            "alma": 3,
+            "amazon": 3,
+            "azure": 2,
+            "cbl-mariner": 2,
+            "oracle-oval": 3,
+            "photon": 3,
+            "redhat": 2,
+            "rocky": 3,
+            "ubuntu": 2
+          },
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "https://access.redhat.com/errata/RHSA-2025:10630",
+            "https://access.redhat.com/errata/RHSA-2025:10698",
+            "https://access.redhat.com/errata/RHSA-2025:10699",
+            "https://access.redhat.com/errata/RHSA-2025:11580",
+            "https://access.redhat.com/errata/RHSA-2025:12098",
+            "https://access.redhat.com/errata/RHSA-2025:12099",
+            "https://access.redhat.com/errata/RHSA-2025:12199",
+            "https://access.redhat.com/errata/RHSA-2025:12237",
+            "https://access.redhat.com/errata/RHSA-2025:12239",
+            "https://access.redhat.com/errata/RHSA-2025:12240",
+            "https://access.redhat.com/errata/RHSA-2025:12241",
+            "https://access.redhat.com/errata/RHSA-2025:13267",
+            "https://access.redhat.com/errata/RHSA-2025:13289",
+            "https://access.redhat.com/errata/RHSA-2025:13325",
+            "https://access.redhat.com/errata/RHSA-2025:13335",
+            "https://access.redhat.com/errata/RHSA-2025:13336",
+            "https://access.redhat.com/errata/RHSA-2025:14059",
+            "https://access.redhat.com/errata/RHSA-2025:14396",
+            "https://access.redhat.com/errata/RHSA-2025:15308",
+            "https://access.redhat.com/errata/RHSA-2025:15672",
+            "https://access.redhat.com/security/cve/CVE-2025-6021",
+            "https://bugzilla.redhat.com/2372373",
+            "https://bugzilla.redhat.com/2372385",
+            "https://bugzilla.redhat.com/2372406",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2372373",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2372385",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2372406",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-49794",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-49796",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-6021",
+            "https://errata.almalinux.org/9/ALSA-2025-10699.html",
+            "https://errata.rockylinux.org/RLSA-2025:10698",
+            "https://gitlab.gnome.org/GNOME/libxml2/-/issues/926",
+            "https://linux.oracle.com/cve/CVE-2025-6021.html",
+            "https://linux.oracle.com/errata/ELSA-2025-12240.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-6021",
+            "https://ubuntu.com/security/notices/USN-7694-1",
+            "https://www.cve.org/CVERecord?id=CVE-2025-6021"
+          ],
+          "PublishedDate": "2025-06-12T13:15:25.59Z",
+          "LastModifiedDate": "2025-10-22T13:08:44.16Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2025-6170",
+          "PkgID": "libxml2@2.13.8-r0",
+          "PkgName": "libxml2",
+          "PkgIdentifier": {
+            "PURL": "pkg:apk/alpine/libxml2@2.13.8-r0?arch=x86_64\u0026distro=3.22.1",
+            "UID": "f6365fe7fd7ac5f1"
+          },
+          "InstalledVersion": "2.13.8-r0",
+          "FixedVersion": "2.13.9-r0",
+          "Status": "fixed",
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "SeveritySource": "nvd",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-6170",
+          "DataSource": {
+            "ID": "alpine",
+            "Name": "Alpine Secdb",
+            "URL": "https://secdb.alpinelinux.org/"
+          },
+          "Title": "libxml2: Stack Buffer Overflow in xmllint Interactive Shell Command Handling",
+          "Description": "A flaw was found in the interactive shell of the xmllint command-line tool, used for parsing XML files. When a user inputs an overly long command, the program does not check the input size properly, which can cause it to crash. This issue might allow attackers to run harmful code in rare configurations without modern protections.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-121"
+          ],
+          "VendorSeverity": {
+            "azure": 1,
+            "cbl-mariner": 1,
+            "nvd": 1,
+            "redhat": 1,
+            "ubuntu": 2
+          },
+          "CVSS": {
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:L",
+              "V3Score": 2.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:L",
+              "V3Score": 2.5
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2025-6170",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2372952",
+            "https://gitlab.gnome.org/GNOME/libxml2/-/issues/941",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-6170",
+            "https://ubuntu.com/security/notices/USN-7694-1",
+            "https://www.cve.org/CVERecord?id=CVE-2025-6170"
+          ],
+          "PublishedDate": "2025-06-16T16:15:20.43Z",
+          "LastModifiedDate": "2025-08-12T13:04:06.117Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2025-58050",
+          "PkgID": "pcre2@10.43-r1",
+          "PkgName": "pcre2",
+          "PkgIdentifier": {
+            "PURL": "pkg:apk/alpine/pcre2@10.43-r1?arch=x86_64\u0026distro=3.22.1",
+            "UID": "8520896ebdb68699"
+          },
+          "InstalledVersion": "10.43-r1",
+          "FixedVersion": "10.46-r0",
+          "Status": "fixed",
+          "Layer": {
+            "Digest": "sha256:c96cbfbfc8fe7306b0b9b8feaf465e9140ee54d879be2b34ab668f139e39e1e2",
+            "DiffID": "sha256:3f5986d38479b14ed22635ce1d7a6c517b736d585a655bec8d3e24b3b42514e6"
+          },
+          "SeveritySource": "nvd",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-58050",
+          "DataSource": {
+            "ID": "alpine",
+            "Name": "Alpine Secdb",
+            "URL": "https://secdb.alpinelinux.org/"
+          },
+          "Title": "pcre2: PCRE2: heap-buffer-overflow read in match_ref due to missing boundary restoration in SCS",
+          "Description": "The PCRE2 library is a set of C functions that implement regular expression pattern matching. In version 10.45, a heap-buffer-overflow read vulnerability exists in the PCRE2 regular expression matching engine, specifically within the handling of the (*scs:...) (Scan SubString) verb when combined with (*ACCEPT) in src/pcre2_match.c. This vulnerability may potentially lead to information disclosure if the out-of-bounds data read during the memcmp affects the final match result in a way observable by the attacker. This issue has been resolved in version 10.46.",
+          "Severity": "CRITICAL",
+          "CweIDs": [
+            "CWE-122",
+            "CWE-125",
+            "CWE-787"
+          ],
+          "VendorSeverity": {
+            "nvd": 4,
+            "redhat": 2,
+            "ubuntu": 2
+          },
+          "CVSS": {
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "V3Score": 9.1
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L",
+              "V3Score": 6.5
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2025-58050",
+            "https://github.com/PCRE2Project/pcre2/commit/a141712e5967d448c7ce13090ab530c8e3d82254",
+            "https://github.com/PCRE2Project/pcre2/releases/tag/pcre2-10.46",
+            "https://github.com/PCRE2Project/pcre2/security/advisories/GHSA-c2gv-xgf5-5cc2",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-58050",
+            "https://ubuntu.com/security/notices/USN-7777-1",
+            "https://www.cve.org/CVERecord?id=CVE-2025-58050"
+          ],
+          "PublishedDate": "2025-08-27T19:15:37.56Z",
+          "LastModifiedDate": "2025-09-09T15:27:39.573Z"
+        }
+      ]
+    }
+  ]
+}

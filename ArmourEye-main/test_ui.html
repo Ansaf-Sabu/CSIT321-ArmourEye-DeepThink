@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastAPI RAG Tester</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom scrollbar for a cleaner dark mode look */
+        pre::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        pre::-webkit-scrollbar-track {
+            background: #1a202c; /* bg-gray-800 */
+        }
+        pre::-webkit-scrollbar-thumb {
+            background: #4a5568; /* bg-gray-600 */
+            border-radius: 4px;
+        }
+        pre::-webkit-scrollbar-thumb:hover {
+            background: #718096; /* bg-gray-500 */
+        }
+    </style>
+    <script>
+        // Set Tailwind to dark mode
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+</head>
+<body class="bg-gray-900 text-gray-200 min-h-screen flex items-center justify-center p-4 font-sans">
+
+    <div class="w-full max-w-2xl">
+        <div class="bg-gray-800 shadow-xl rounded-2xl p-8">
+            <h1 class="text-3xl font-bold text-white mb-6 text-center">FastAPI RAG Tester</h1>
+
+            <!-- Input Form -->
+            <form id="analyze-form" class="space-y-4">
+                <div>
+                    <label for="package-name" class="block text-sm font-medium text-gray-300 mb-2">Package Name</label>
+                    <input type="text" id="package-name" value="libpq5" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" required>
+                </div>
+
+                <div>
+                    <label for="version" class="block text-sm font-medium text-gray-300 mb-2">Version</label>
+                    <input type="text" id="version" value="9.6.10-0+deb9u1" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" required>
+                </div>
+
+                <button type="submit" id="submit-button" class="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg shadow-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed">
+                    Analyze
+                </button>
+            </form>
+
+            <!-- Status Display -->
+            <div id="status-message" class="text-center mt-6 h-6"></div>
+
+            <!-- Results Section -->
+            <div id="results-container" class="hidden space-y-6 mt-6">
+                <!-- LLM Summary -->
+                <div>
+                    <h2 class="text-xl font-semibold text-white mb-3">LLM Summary</h2>
+                    <pre id="llm-output" class="w-full p-4 bg-gray-950 rounded-lg text-gray-300 whitespace-pre-wrap font-mono text-sm max-h-60 overflow-y-auto"></pre>
+                </div>
+
+                <!-- Full JSON Report -->
+                <div>
+                    <h2 class="text-xl font-semibold text-white mb-3">Full JSON Report</h2>
+                    <pre id="json-output" class="w-full p-4 bg-gray-950 rounded-lg text-gray-300 whitespace-pre-wrap font-mono text-sm max-h-96 overflow-y-auto"></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get references to all the elements
+        const form = document.getElementById('analyze-form');
+        const packageNameInput = document.getElementById('package-name');
+        const versionInput = document.getElementById('version');
+        const submitButton = document.getElementById('submit-button');
+        const statusMessage = document.getElementById('status-message');
+        const resultsContainer = document.getElementById('results-container');
+        const llmOutput = document.getElementById('llm-output');
+        const jsonOutput = document.getElementById('json-output');
+
+        // Handle form submission
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault(); // Stop the form from reloading the page
+
+            // Get form values
+            const packageName = packageNameInput.value;
+            const version = versionInput.value;
+
+            // --- 1. Reset the UI ---
+            submitButton.disabled = true;
+            statusMessage.className = 'text-yellow-400';
+            statusMessage.textContent = 'Analyzing... This may take a minute...';
+            resultsContainer.classList.add('hidden');
+            llmOutput.textContent = '';
+            jsonOutput.textContent = '';
+
+            try {
+                // --- 2. Make the API request ---
+                const response = await fetch('http://127.0.0.1:8000/analyze', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        package_name: packageName,
+                        version: version,
+                    }),
+                });
+
+                if (!response.ok) {
+                    // Handle HTTP errors
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+                const data = await response.json();
+
+                // --- 3. Handle a successful response ---
+                statusMessage.className = 'text-green-400';
+                statusMessage.textContent = 'Analysis Complete!';
+                
+                // Populate the output fields
+                llmOutput.textContent = data.llm_summary;
+                jsonOutput.textContent = JSON.stringify(data.structured_report, null, 2);
+
+                // Show the results
+                resultsContainer.classList.remove('hidden');
+
+            } catch (error) {
+                // --- 4. Handle errors (like CORS or network failure) ---
+                console.error('Fetch error:', error);
+                statusMessage.className = 'text-red-400 font-medium';
+                statusMessage.textContent = 'Error: Connection failed.';
+                
+                llmOutput.className = 'w-full p-4 bg-red-900/50 border border-red-700 text-red-300 rounded-lg whitespace-pre-wrap font-mono text-sm';
+                llmOutput.textContent = `Could not connect to the API.\n\n1. Is your Python server running in the terminal?\n2. Did you add the CORS middleware to your main.py?\n\nError details: ${error.message}`;
+                resultsContainer.classList.remove('hidden');
+                jsonOutput.textContent = ''; // Clear JSON on error
+            } finally {
+                // --- 5. Re-enable the button ---
+                submitButton.disabled = false;
+            }
+        });
+    </script>
+
+</body>
+</html>
