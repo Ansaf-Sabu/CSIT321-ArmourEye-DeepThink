@@ -145,6 +145,11 @@ ArmourEye uses AI-powered analysis for intelligent vulnerability insights. You c
 
 Team DeepThink - CSIT321 Final Project
 
+- Abbas Bhaiji
+- Derick Reni
+- Ansaf Sabu
+- Mohamed Rizvan
+
 ---
 
 For detailed setup instructions and API documentation, see `ArmourEye-main/README.md`
