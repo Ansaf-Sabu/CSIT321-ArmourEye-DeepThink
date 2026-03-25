@@ -137,10 +137,6 @@ ArmourEye uses AI-powered analysis for intelligent vulnerability insights. You c
 - **Project**: ArmourEye - AI-Powered Risk Analysis Platform
 - **Repository**: https://github.com/Ansaf-Sabu/CSIT321-ArmourEye-DeepThink
 
-## 📄 License
-
-[Your License Here]
-
 ## 👥 Team
 
 Team DeepThink - CSIT321 Final Project
